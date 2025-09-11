@@ -1,1 +1,1 @@
-SELECT COUNT(*) from suppliers;
+SELECT COUNT(*) as count from suppliers;

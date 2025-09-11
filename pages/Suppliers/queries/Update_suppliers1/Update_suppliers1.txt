@@ -1,1 +1,7 @@
-UPDATE suppliers SET name= '{{Table1.updatedRow.name}}', date_adjusted= '{{Table1.updatedRow.date_adjusted}}' WHERE id= '{{Table1.updatedRow.id}}';
+UPDATE suppliers
+SET 
+    name = '{{ Table1.updatedRow.name }}',
+    discount = {{ Table1.updatedRow.discount || 0 }},
+    discount_confirmed = {{ Table1.updatedRow.discount_confirmed ? 1 : 0 }},
+		notes = '{{ (Table1.updatedRow || {}).notes || "" }}'
+WHERE id = {{ Table1.updatedRow.id }};

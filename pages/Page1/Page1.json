@@ -1,12 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_3376a2e5-14e6-42c4-9d65-12bd6c9d84e1",
+  "gitSyncId": "68c1972c92810156b121ec4e_5a7fd2b7-959e-4fe9-8a9b-c49ce0d8ab2e",
   "unpublishedPage": {
-    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1100,
+          "bottomRow": 580,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -26,7 +25,7 @@
         }
       }
     ],
-    "name": "Suppliers",
-    "slug": "suppliers"
+    "name": "Page1",
+    "slug": "page1"
   }
 }

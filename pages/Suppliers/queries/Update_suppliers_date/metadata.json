@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_07bdc9cd-a1c8-471b-8fdc-aa5cec3e2b1f",
-  "id": "Suppliers_Insert_suppliers1",
+  "gitSyncId": "68c1972c92810156b121ec4e_7e23c696-9187-4ad7-a789-e92f13160915",
+  "id": "Suppliers_Update_suppliers_date",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "\nINSERT INTO suppliers (name, date_adjusted, discount, discount_confirmed, notes) \nVALUES (\n  '{{ (Table1.newRow || {}).name }}',\n  '{{ moment().format(\"YYYY-MM-DD\") }}',\n  '{{(Table1.newRow || {}).discount || 0}}',\n  {{ (Table1.newRow || {}).discount_confirmed ? 1 : 0 }},\n  '{{ (Table1.newRow || {}).notes || \"\" }}'\n);\n",
+      "body": "UPDATE tempdev_.suppliers\nSET date_adjusted = '{{ moment().format(\"YYYY-MM-DD\") }}'\nWHERE id = {{ Table1.updatedRow.id }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Insert_suppliers1",
+    "name": "Update_suppliers_date",
     "pageId": "Suppliers",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

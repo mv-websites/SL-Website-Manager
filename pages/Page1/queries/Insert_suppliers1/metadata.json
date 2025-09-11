@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_07bdc9cd-a1c8-471b-8fdc-aa5cec3e2b1f",
-  "id": "Suppliers_Insert_suppliers1",
+  "gitSyncId": "68c1972c92810156b121ec4e_f14583be-894f-4adb-8af5-5deb78ec26a9",
+  "id": "Page1_Insert_suppliers1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "\nINSERT INTO suppliers (name, date_adjusted, discount, discount_confirmed, notes) \nVALUES (\n  '{{ (Table1.newRow || {}).name }}',\n  '{{ moment().format(\"YYYY-MM-DD\") }}',\n  '{{(Table1.newRow || {}).discount || 0}}',\n  {{ (Table1.newRow || {}).discount_confirmed ? 1 : 0 }},\n  '{{ (Table1.newRow || {}).notes || \"\" }}'\n);\n",
+      "body": "INSERT INTO suppliers (name,date_adjusted,discount) VALUES ('{{(Table1.newRow || {}).name}}','{{(Table1.newRow || {}).date_adjusted}}','{{(Table1.newRow || {}).discount}}')",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
       }
     ],
     "name": "Insert_suppliers1",
-    "pageId": "Suppliers",
+    "pageId": "Page1",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

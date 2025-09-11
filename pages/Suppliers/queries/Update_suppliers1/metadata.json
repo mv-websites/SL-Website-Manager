@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_920c951e-9c39-49f2-9a31-8c016b37470b",
+  "gitSyncId": "68c1972c92810156b121ec4e_791b8e50-c64f-4206-88e0-645f786237ca",
   "id": "Suppliers_Update_suppliers1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE suppliers SET name= '{{Table1.updatedRow.name}}', date_adjusted= '{{Table1.updatedRow.date_adjusted}}' WHERE id= '{{Table1.updatedRow.id}}';",
+      "body": "UPDATE suppliers\nSET \n    name = '{{ Table1.updatedRow.name }}',\n    discount = {{ Table1.updatedRow.discount || 0 }},\n    discount_confirmed = {{ Table1.updatedRow.discount_confirmed ? 1 : 0 }},\n\t\tnotes = '{{ (Table1.updatedRow || {}).notes || \"\" }}'\nWHERE id = {{ Table1.updatedRow.id }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -1,1 +1,9 @@
-INSERT INTO suppliers (name,date_adjusted) VALUES ('{{(Table1.newRow || {}).name}}','{{(Table1.newRow || {}).date_adjusted}}')
+
+INSERT INTO suppliers (name, date_adjusted, discount, discount_confirmed, notes) 
+VALUES (
+  '{{ (Table1.newRow || {}).name }}',
+  '{{ moment().format("YYYY-MM-DD") }}',
+  '{{(Table1.newRow || {}).discount || 0}}',
+  {{ (Table1.newRow || {}).discount_confirmed ? 1 : 0 }},
+  '{{ (Table1.newRow || {}).notes || "" }}'
+);

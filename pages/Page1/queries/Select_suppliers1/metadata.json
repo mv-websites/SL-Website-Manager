@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_07bdc9cd-a1c8-471b-8fdc-aa5cec3e2b1f",
-  "id": "Suppliers_Insert_suppliers1",
+  "gitSyncId": "68c1972c92810156b121ec4e_31ad9f2c-3a1f-4355-b1fd-c36cfa4394a6",
+  "id": "Page1_Select_suppliers1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "\nINSERT INTO suppliers (name, date_adjusted, discount, discount_confirmed, notes) \nVALUES (\n  '{{ (Table1.newRow || {}).name }}',\n  '{{ moment().format(\"YYYY-MM-DD\") }}',\n  '{{(Table1.newRow || {}).discount || 0}}',\n  {{ (Table1.newRow || {}).discount_confirmed ? 1 : 0 }},\n  '{{ (Table1.newRow || {}).notes || \"\" }}'\n);\n",
+      "body": "SELECT\n  *\nFROM\n  suppliers\nORDER BY\n  {{Table1.sortOrder.column || 'id'}} {{Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{Table1.pageSize}}\nOFFSET\n  {{Table1.pageOffset}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "Insert_suppliers1",
-    "pageId": "Suppliers",
-    "runBehaviour": "MANUAL",
+    "name": "Select_suppliers1",
+    "pageId": "Page1",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
