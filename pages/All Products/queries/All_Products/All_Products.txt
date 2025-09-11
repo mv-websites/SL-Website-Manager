@@ -1,5 +1,6 @@
 SELECT 
     p.ID AS product_id,
+		p.post_parent AS parent_id,  
     p.post_type AS product_type,
     sku.meta_value AS sku,
     p.post_title AS name,
@@ -15,7 +16,5 @@ LEFT JOIN WrARJWM7_postmeta thumb
     ON p.ID = thumb.post_id AND thumb.meta_key = '_thumbnail_id'
 LEFT JOIN WrARJWM7_posts img 
     ON thumb.meta_value = img.ID
-WHERE p.post_type = 'product'
-  AND p.post_status = 'publish'
-	AND p.ID > 9393
-  LIMIT 10;
+WHERE p.post_type IN ('product', 'product_variation')
+  AND p.post_status = 'publish';

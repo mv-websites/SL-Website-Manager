@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 71,
+  "bottomRow": 98,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -38,14 +38,16 @@
     "name",
     "price",
     "main_image_url",
-    "product_url"
+    "product_url",
+    "parent_id"
   ],
-  "columnUpdatedAt": 1757502365638,
+  "columnUpdatedAt": 1757577174849,
   "columnWidthMap": {
     "main_image_url": 123,
-    "name": 487,
+    "name": 397,
     "product_id": 113,
-    "product_type": 73
+    "product_type": 98,
+    "product_url": 104
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -97,6 +99,9 @@
     },
     {
       "key": "primaryColumns.product_url.boxShadow"
+    },
+    {
+      "key": "primaryColumns.parent_id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -197,6 +202,40 @@
       "notation": "standard",
       "originalId": "name",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "parent_id": {
+      "alias": "parent_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"parent_id\"])) : parent_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "parent_id",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "parent_id",
+      "notation": "standard",
+      "originalId": "parent_id",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
