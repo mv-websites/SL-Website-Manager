@@ -1,1 +1,1 @@
-SELECT COUNT(*) from WrARJWM7_easywpsmtp_emails_log;
+SELECT COUNT(*) as count from WrARJWM7_easywpsmtp_emails_log;

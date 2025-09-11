@@ -1,20 +1,3 @@
-SELECT 
-    p.ID AS product_id,
-		p.post_parent AS parent_id,  
-    p.post_type AS product_type,
-    sku.meta_value AS sku,
-    p.post_title AS name,
-    price_table.min_price AS price,
-    img.guid AS main_image_url,
-		CONCAT('https://service-line.co.uk/?p=', p.ID) AS product_url
-FROM WrARJWM7_posts p
-LEFT JOIN WrARJWM7_wc_product_meta_lookup price_table 
-    ON p.ID = price_table.product_id
-LEFT JOIN WrARJWM7_postmeta sku 
-    ON p.ID = sku.post_id AND sku.meta_key = '_sku'
-LEFT JOIN WrARJWM7_postmeta thumb 
-    ON p.ID = thumb.post_id AND thumb.meta_key = '_thumbnail_id'
-LEFT JOIN WrARJWM7_posts img 
-    ON thumb.meta_value = img.ID
-WHERE p.post_type IN ('product', 'product_variation')
-  AND p.post_status = 'publish';
+SELECT product_id, parent_id, product_type, sku, name, price, main_image_url, product_url, all_categories, hasVariants
+FROM tempdev_.all_products
+WHERE parent_id = 0;

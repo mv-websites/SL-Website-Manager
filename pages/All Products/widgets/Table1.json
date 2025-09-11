@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 101,
+  "bottomRow": 144,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -35,21 +35,25 @@
     "product_id",
     "product_type",
     "sku",
+    "main_image_url",
     "name",
     "price",
-    "main_image_url",
+    "parent_id",
     "product_url",
-    "parent_id"
+    "all_categories",
+    "hasVariants"
   ],
-  "columnUpdatedAt": 1757584229596,
+  "columnUpdatedAt": 1757603750008,
   "columnWidthMap": {
-    "main_image_url": 123,
-    "name": 509,
+    "main_image_url": 91,
+    "name": 470,
+    "price": 142,
     "product_id": 78,
     "product_type": 98,
-    "product_url": 104,
+    "product_url": 300,
     "sku": 126
   },
+  "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -90,32 +94,50 @@
       "key": "primaryColumns.main_image_url.computedValue"
     },
     {
+      "key": "primaryColumns.parent_id.computedValue"
+    },
+    {
+      "key": "totalRecordsCount"
+    },
+    {
       "key": "primaryColumns.product_url.computedValue"
     },
     {
-      "key": "primaryColumns.product_url.buttonColor"
+      "key": "primaryColumns.all_categories.computedValue"
     },
     {
-      "key": "primaryColumns.product_url.borderRadius"
+      "key": "primaryColumns.hasVariants.computedValue"
     },
     {
-      "key": "primaryColumns.product_url.boxShadow"
+      "key": "primaryColumns.hasVariants.boxShadow"
     },
     {
-      "key": "primaryColumns.parent_id.computedValue"
+      "key": "primaryColumns.hasVariants.borderRadius"
+    },
+    {
+      "key": "primaryColumns.hasVariants.buttonColor"
+    },
+    {
+      "key": "primaryColumns.hasVariants.isDisabled"
+    },
+    {
+      "key": "primaryColumns.hasVariants.buttonLabel"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.hasVariants.isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
     {
-      "key": "primaryColumns.product_url.onClick"
+      "key": "primaryColumns.main_image_url.onClick"
     },
     {
-      "key": "primaryColumns.main_image_url.onClick"
+      "key": "primaryColumns.hasVariants.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -132,19 +154,94 @@
   "isVisibleSearch": true,
   "key": "lx2h3tdylx",
   "label": "Data",
-  "leftColumn": 0,
+  "leftColumn": 3,
   "minWidth": 450,
   "mobileBottomRow": 52,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 34,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "originalBottomRow": 101,
+  "originalBottomRow": 144,
   "originalTopRow": 11,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
+  "primaryColumnId": "product_id",
   "primaryColumns": {
+    "all_categories": {
+      "alias": "all_categories",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"all_categories\"])) : all_categories })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "all_categories",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "all_categories",
+      "notation": "standard",
+      "originalId": "all_categories",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "hasVariants": {
+      "alias": "hasVariants",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.hasVariants ? \"See Variants\" : \"No Variants\")) : currentRow.hasVariants ? \"See Variants\" : \"No Variants\" })()}}",
+      "cellBackground": "",
+      "columnType": "button",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"hasVariants\"])) : hasVariants })()}}",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "hasVariants",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.hasVariants ? false : true)) : currentRow.hasVariants ? false : true })()}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "hasVariants",
+      "notation": "standard",
+      "onClick": "{{showModal(Modal1.name);\nstoreValue('modalValues', JSON.stringify({\n  name: currentRow.name,\n  id: currentRow.product_id\n}));}}",
+      "originalId": "hasVariants",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "main_image_url": {
       "alias": "main_image_url",
       "allowCellWrapping": false,
@@ -231,7 +328,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "parent_id",
       "notation": "standard",
       "originalId": "parent_id",
@@ -340,20 +437,17 @@
       "alias": "product_url",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "buttonLabel": "See Page",
-      "columnType": "button",
+      "cellBackground": "",
+      "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"product_url\"])) : product_url })()}}",
       "currencyCode": "USD",
-      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "product_url",
-      "index": 6,
+      "index": 7,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -362,11 +456,11 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "View",
+      "label": "product_url",
       "notation": "standard",
-      "onClick": "{{navigateTo(currentRow[\"product_url\"], {}, 'NEW_WINDOW');}}",
       "originalId": "product_url",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -407,12 +501,14 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "searchKey": "",
+  "serverSidePaginationEnabled": false,
+  "showInlineEditingOptionDropdown": true,
   "tableData": "{{All_Products.data}}",
   "textSize": "0.875rem",
   "topRow": 11,
-  "totalRecordsCount": 0,
+  "totalRecordsCount": "{{Total_record_WrARJWM7_easywpsmtp_emails_log1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
