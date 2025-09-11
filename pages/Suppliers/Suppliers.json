@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "68c04fa7cfa7fb5401b83365_82d955a9-ee6e-4286-9a7e-99723dd3b7d1",
+  "gitSyncId": "68c1972c92810156b121ec4e_3376a2e5-14e6-42c4-9d65-12bd6c9d84e1",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1010,
+          "bottomRow": 510,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 1020,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 100,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "All Products",
-    "slug": "all-products"
+    "name": "Suppliers",
+    "slug": "suppliers"
   }
 }

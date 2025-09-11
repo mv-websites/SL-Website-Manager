@@ -29,6 +29,10 @@
     {
       "id": "All Products",
       "isDefault": true
+    },
+    {
+      "id": "Suppliers",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

@@ -1,0 +1,1 @@
+INSERT INTO suppliers (name,date_adjusted) VALUES ('{{(Table1.newRow || {}).name}}','{{(Table1.newRow || {}).date_adjusted}}')
