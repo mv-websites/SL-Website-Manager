@@ -1,0 +1,4 @@
+SELECT
+  name as label, id as value
+FROM
+  suppliers;

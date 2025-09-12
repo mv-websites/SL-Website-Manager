@@ -9,10 +9,7 @@ SELECT
     ap.product_url, 
     ap.all_categories, 
     ap.hasVariants, 
-    s.name AS supplier,
-		s.discount AS supplier_discount,
-		ps.markup_percent AS product_markup,
-		ps.aq_list_price
+    s.name AS supplier
 FROM tempdev_.all_products ap
 LEFT JOIN product_suppliers ps 
     ON ap.product_id = ps.product_id
