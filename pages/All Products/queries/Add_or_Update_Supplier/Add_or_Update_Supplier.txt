@@ -1,0 +1,8 @@
+INSERT INTO product_suppliers (id, supplier_id, product_id)
+VALUES (
+  {{ Table1.updatedRow.id }},
+  {{ Table1.updatedRow.supplier }},
+  {{ Table1.updatedRow.product_id }}
+)
+ON DUPLICATE KEY UPDATE
+  supplier_id = VALUES(supplier_id);

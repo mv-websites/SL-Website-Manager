@@ -1,0 +1,3 @@
+UPDATE product_suppliers
+SET markup_percent = {{ Table1.updatedRow.product_markup }}
+WHERE id = {{ Table1.updatedRow.product_supplier_id }};
