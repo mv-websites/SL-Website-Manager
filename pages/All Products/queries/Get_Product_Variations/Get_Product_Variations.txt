@@ -1,3 +1,22 @@
-SELECT product_id, parent_id, product_type, sku, name, price, main_image_url, product_url, all_categories, hasVariants
-FROM tempdev_.all_products
-WHERE parent_id = {{this.params.id}};
+SELECT 
+    ap.product_id, 
+    ap.parent_id, 
+    ap.product_type, 
+    ap.sku, 
+    ap.name, 
+    ap.price, 
+    ap.main_image_url, 
+    ap.product_url, 
+    ap.all_categories, 
+    ap.hasVariants, 
+    s.name AS supplier,
+		s.discount AS supplier_discount,
+		ps.markup_percent AS product_markup,
+		ps.aq_list_price,
+		ps.id as product_supplier_id
+FROM tempdev_.all_products ap
+LEFT JOIN product_suppliers ps 
+    ON ap.product_id = ps.product_id
+LEFT JOIN suppliers s 
+    ON ps.supplier_id = s.id
+WHERE ap.parent_id = {{this.params.id}};

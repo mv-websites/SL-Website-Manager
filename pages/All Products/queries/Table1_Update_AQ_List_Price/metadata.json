@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68c1972c92810156b121ec4e_cab185e2-3bd9-4689-afda-3a19607f2dbb",
-  "id": "All Products_Update_AQ_List_Price",
+  "id": "All Products_Table1_Update_AQ_List_Price",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Update_AQ_List_Price",
+    "name": "Table1_Update_AQ_List_Price",
     "pageId": "All Products",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

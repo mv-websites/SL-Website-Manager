@@ -1,0 +1,3 @@
+UPDATE product_suppliers
+SET aq_list_price = {{ Modal_Table.updatedRow.aq_list_price }}
+WHERE id = {{ Modal_Table.updatedRow.product_supplier_id }};

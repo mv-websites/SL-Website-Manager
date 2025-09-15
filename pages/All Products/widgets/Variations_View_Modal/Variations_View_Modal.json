@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 564,
+  "bottomRow": 53,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "ursed00xok",
   "widgetName": "Variations_View_Modal",
-  "width": 1836
+  "width": 1568
 }

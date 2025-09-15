@@ -50,7 +50,7 @@
     "parent_id",
     "product_supplier_id"
   ],
-  "columnUpdatedAt": 1757946383600,
+  "columnUpdatedAt": 1757949944492,
   "columnWidthMap": {
     "all_categories": 497,
     "aq_list_price": 133,
@@ -304,7 +304,7 @@
       "isVisible": true,
       "label": "List Price £",
       "notation": "standard",
-      "onSubmit": "{{Update_AQ_List_Price.run().then(() => {\n  Price_Calculation.updatePrice();\n}).catch(() => {\n  showAlert('Cannot update price', 'error');\n});}}",
+      "onSubmit": "{{Table1_Update_AQ_List_Price.run().then(() => {\n  Price_Calculation.updatePrice();\n}).catch(() => {\n  showAlert('Cannot update price', 'error');\n});}}",
       "originalId": "aq_list_price",
       "sticky": "",
       "textColor": "",
@@ -344,7 +344,7 @@
       "isVisible": true,
       "label": "Variations",
       "notation": "standard",
-      "onClick": "{{showModal(Variations_View_Modal.name);\nstoreValue('modalValues', JSON.stringify({\n  name: currentRow.name,\n  id: currentRow.product_id,\n  parent_id: currentRow.parent_id,\n  image_url: currentRow.main_image_url,\n  sku: currentRow.sku,\n  supplier: currentRow,\n  supplier_discount: currentRow.supplier_discount,\n  markup: currentRow.product_markup\n}));}}",
+      "onClick": "{{showModal(Variations_View_Modal.name);\nstoreValue('modalValues', JSON.stringify({\n  name: currentRow.name,\n  id: currentRow.product_id,\n  parent_id: currentRow.parent_id,\n  image_url: currentRow.main_image_url,\n  sku: currentRow.sku,\n  supplier: currentRow,\n  supplier_discount: currentRow.supplier_discount,\n  markup: currentRow.product_markup\n})).then(() => {\n  Custom_Queries.getVariations(currentRow.product_id);\n});}}",
       "originalId": "hasVariants",
       "sticky": "",
       "textColor": "",
