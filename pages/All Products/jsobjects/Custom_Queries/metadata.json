@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68c1972c92810156b121ec4e_4bae6142-79ee-47be-b474-d5e84bc93adb",
+  "id": "All Products_Custom_Queries",
+  "unpublishedCollection": {
+    "name": "Custom_Queries",
+    "pageId": "All Products",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

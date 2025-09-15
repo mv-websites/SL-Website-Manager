@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT product_id, parent_id, product_type, sku, name, price, main_image_url, product_url, all_categories, hasVariants\nFROM tempdev_.all_products\nWHERE parent_id = {{JSON.parse(appsmith.store.modalValues).id}};",
+      "body": "SELECT product_id, parent_id, product_type, sku, name, price, main_image_url, product_url, all_categories, hasVariants\nFROM tempdev_.all_products\nWHERE parent_id = {{this.params.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -29,7 +29,7 @@
     ],
     "name": "Get_Product_Variations",
     "pageId": "All Products",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
