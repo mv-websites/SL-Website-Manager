@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68c1972c92810156b121ec4e_3b35042c-f865-4f6e-b3ea-683143b652da",
+  "id": "All Products_Price_Calculation",
+  "unpublishedCollection": {
+    "name": "Price_Calculation",
+    "pageId": "All Products",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

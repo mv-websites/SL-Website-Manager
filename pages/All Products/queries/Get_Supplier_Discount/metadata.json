@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_49de60d7-07df-40d3-8d96-b423c9d31988",
-  "id": "All Products_Update_Markup",
+  "gitSyncId": "68c1972c92810156b121ec4e_c9bfa196-9127-47ad-9616-7efe2a5eb7c8",
+  "id": "All Products_Get_Supplier_Discount",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE product_suppliers\nSET markup_percent = {{ Table1.updatedRow.product_markup }}\nWHERE id = {{ Table1.updatedRow.product_supplier_id }};\n",
+      "body": "SELECT discount FROM product_suppliers \n\tJOIN suppliers\n\t\tON suppliers.id = product_suppliers.supplier_id \n\tWHERE product_id = {{this.params.product_id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Update_Markup",
+    "name": "Get_Supplier_Discount",
     "pageId": "All Products",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
