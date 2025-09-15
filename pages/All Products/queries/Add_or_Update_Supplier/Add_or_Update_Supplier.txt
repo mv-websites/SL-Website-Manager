@@ -5,4 +5,4 @@ VALUES (
   {{ Table1.updatedRow.product_id }}
 )
 ON DUPLICATE KEY UPDATE
-  supplier_id = VALUES(supplier_id);
+  supplier_id = {{Table1.updatedRow.supplier}};

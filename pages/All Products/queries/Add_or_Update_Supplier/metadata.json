@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO product_suppliers (id, supplier_id, product_id)\nVALUES (\n  {{ Table1.updatedRow.id }},\n  {{ Table1.updatedRow.supplier }},\n  {{ Table1.updatedRow.product_id }}\n)\nON DUPLICATE KEY UPDATE\n  supplier_id = VALUES(supplier_id);\n",
+      "body": "INSERT INTO product_suppliers (id, supplier_id, product_id)\nVALUES (\n  {{ Table1.updatedRow.id }},\n  {{ Table1.updatedRow.supplier }},\n  {{ Table1.updatedRow.product_id }}\n)\nON DUPLICATE KEY UPDATE\n  supplier_id = {{Table1.updatedRow.supplier}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

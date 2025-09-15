@@ -19,4 +19,4 @@ LEFT JOIN product_suppliers ps
     ON ap.product_id = ps.product_id
 LEFT JOIN suppliers s 
     ON ps.supplier_id = s.id
-WHERE ap.parent_id = 0 LIMIT 5;
+WHERE ap.parent_id = 0;
