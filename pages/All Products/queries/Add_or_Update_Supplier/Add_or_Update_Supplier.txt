@@ -13,7 +13,7 @@ INSERT INTO product_suppliers (supplier_id, product_id)
 SELECT 
     {{ Table1.updatedRow.supplier }} AS supplier_id,
     ap.product_id
-FROM tempdev_.all_products ap
+FROM all_products ap
 WHERE ap.parent_id = {{ Table1.updatedRow.product_id }}
 ON DUPLICATE KEY UPDATE
   supplier_id = VALUES(supplier_id);

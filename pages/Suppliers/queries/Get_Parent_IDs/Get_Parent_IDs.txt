@@ -1,5 +1,5 @@
 SELECT DISTINCT ap.parent_id AS parent_product_id
-FROM tempdev_.all_products ap
+FROM all_products ap
 JOIN product_suppliers ps 
     ON ap.parent_id = ps.product_id
 JOIN suppliers s 

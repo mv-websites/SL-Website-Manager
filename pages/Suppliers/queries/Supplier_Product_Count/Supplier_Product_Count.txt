@@ -1,5 +1,5 @@
 SELECT COUNT(*) AS row_count
-FROM tempdev_.all_products ap
+FROM all_products ap
 LEFT JOIN product_suppliers ps 
     ON ap.product_id = ps.product_id
 LEFT JOIN suppliers s 

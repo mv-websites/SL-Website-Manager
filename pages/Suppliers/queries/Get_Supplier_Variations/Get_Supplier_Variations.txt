@@ -20,7 +20,7 @@ SELECT
     ps_variant.aq_list_price,
     ps_variant.id AS variant_product_supplier_id
 
-FROM tempdev_.all_products ap
+FROM all_products ap
 
 -- join parent's supplier info
 LEFT JOIN product_suppliers ps_parent 

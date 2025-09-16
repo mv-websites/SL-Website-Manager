@@ -1,3 +1,3 @@
-UPDATE tempdev_.suppliers
+UPDATE suppliers
 SET date_adjusted = '{{ moment().format("YYYY-MM-DD") }}'
 WHERE id = {{ Table1.updatedRow.id }};
