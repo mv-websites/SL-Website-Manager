@@ -9,7 +9,7 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
-  "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+  "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -39,12 +39,11 @@
     "discount",
     "discount_confirmed",
     "date_adjusted",
-    "notes",
-    "EditActions1"
+    "notes"
   ],
-  "columnUpdatedAt": 1757599538689,
+  "columnUpdatedAt": 1758015653099,
   "columnWidthMap": {
-    "date_adjusted": 98,
+    "date_adjusted": 162,
     "discount": 134,
     "discount_confirmed": 129,
     "name": 471,
@@ -113,21 +112,6 @@
     },
     {
       "key": "primaryColumns.notes.cellBackground"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -136,12 +120,6 @@
     },
     {
       "key": "cellBackground"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -156,6 +134,12 @@
     },
     {
       "key": "primaryColumns.discount.onSubmit"
+    },
+    {
+      "key": "primaryColumns.notes.onSubmit"
+    },
+    {
+      "key": "primaryColumns.name.onSubmit"
     }
   ],
   "enableClientSideSearch": true,
@@ -163,7 +147,7 @@
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "infiniteScrollEnabled": false,
-  "inlineEditingSaveOption": "ROW_LEVEL",
+  "inlineEditingSaveOption": "CUSTOM",
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
@@ -190,51 +174,11 @@
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "discardButtonColor": "#F22B2B",
-      "discardButtonVariant": "TERTIARY",
-      "discardIconAlign": "left",
-      "enableFilter": true,
-      "enableSort": true,
-      "id": "EditActions1",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "originalId": "EditActions1",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "saveIconAlign": "left",
-      "sticky": "right",
-      "thousandSeparator": true,
-      "validation": {},
-      "width": 150
-    },
     "date_adjusted": {
       "alias": "date_adjusted",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+      "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
       "columnType": "date",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_adjusted\"])) : date_adjusted })()}}",
       "currencyCode": "USD",
@@ -252,7 +196,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Updated",
+      "label": "Last Updated",
       "notation": "standard",
       "originalId": "date_adjusted",
       "outputFormat": "DD/MM/YYYY",
@@ -268,7 +212,7 @@
       "alias": "discount",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+      "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"discount\"])) :  currentRow[\"discount\"] })()}}",
       "currencyCode": "USD",
@@ -288,7 +232,7 @@
       "isVisible": true,
       "label": "Discount %",
       "notation": "standard",
-      "onSubmit": "{{Update_suppliers_date.run()}}",
+      "onSubmit": "{{Update_suppliers_date.run().then(() => {}).catch(() => {});\nUpdate_suppliers1.run().then(() => {\n  showAlert('Succesfully updated discount', 'success');\n}).catch(() => {\n  showAlert('Failed to update discount', 'error');\n});}}",
       "originalId": "discount",
       "sticky": "",
       "textColor": "#231f20",
@@ -302,7 +246,7 @@
       "alias": "discount_confirmed",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+      "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
       "columnType": "checkbox",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"discount_confirmed\"])) : discount_confirmed })()}}",
       "currencyCode": "USD",
@@ -320,7 +264,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Confirmed",
       "notation": "standard",
       "originalId": "discount_confirmed",
@@ -336,7 +280,7 @@
       "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+      "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
       "currencyCode": "USD",
@@ -369,7 +313,7 @@
       "alias": "name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+      "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"name\"])) : name })()}}",
       "currencyCode": "USD",
@@ -389,6 +333,7 @@
       "isVisible": true,
       "label": "Supplier",
       "notation": "standard",
+      "onSubmit": "{{Update_suppliers1.run().then(() => {\n  showAlert('Succesfully updated supplier', 'success');\n}).catch(() => {\n  showAlert('Failed to update supplier', 'error');\n});}}",
       "originalId": "name",
       "sticky": "",
       "textColor": "#231f20",
@@ -402,7 +347,7 @@
       "alias": "notes",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{ Table1.tableData.map(row => row.discount_confirmed == 0 ? \"#fee2e2\" : \"#ffffff\") }}",
+      "cellBackground": "{{ Table1.tableData.map(row => row.discount == 0 ? \"#fee2e2\" : \"#ffffff\") }}\n",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"notes\"])) : notes })()}}",
       "currencyCode": "USD",
@@ -423,6 +368,7 @@
       "isVisible": true,
       "label": "Notes",
       "notation": "standard",
+      "onSubmit": "{{Update_suppliers1.run().then(() => {\n  showAlert('Updated notes succesfully', 'success');\n}).catch(() => {\n  showAlert('Failed to update notes', 'error');\n});}}",
       "originalId": "notes",
       "sticky": "",
       "textColor": "#231f20",
