@@ -232,7 +232,7 @@
       "isVisible": true,
       "label": "Discount %",
       "notation": "standard",
-      "onSubmit": "{{Update_suppliers_date.run().then(() => {}).catch(() => {});\nUpdate_suppliers1.run().then(() => {\n  showAlert('Succesfully updated discount', 'success');\n}).catch(() => {\n  showAlert('Failed to update discount', 'error');\n});}}",
+      "onSubmit": "{{Update_suppliers_date.run().then(() => {}).catch(() => {});\nUpdate_suppliers1.run().then(() => {\n  showAlert('Succesfully updated discount', 'success');\n}).catch(() => {\n  showAlert('Failed to update discount', 'error');\n});\nSupplier_Functions.updateProductPricing();}}",
       "originalId": "discount",
       "sticky": "",
       "textColor": "#231f20",
