@@ -1,0 +1,36 @@
+SELECT 
+    ap.product_id, 
+    ap.parent_id, 
+    ap.product_type, 
+    ap.sku, 
+    ap.name, 
+    ap.price, 
+    ap.main_image_url, 
+    ap.product_url, 
+    ap.all_categories, 
+    ap.hasVariants, 
+
+    -- parent supplier fields
+    s.name AS supplier,
+    s.discount AS supplier_discount,
+    ps_parent.markup_percent AS product_markup,
+    ps_parent.id AS parent_product_supplier_id,
+
+    -- variant-specific fields
+    ps_variant.aq_list_price,
+    ps_variant.id AS variant_product_supplier_id
+
+FROM tempdev_.all_products ap
+
+-- join parent's supplier info
+LEFT JOIN product_suppliers ps_parent 
+    ON ap.parent_id = ps_parent.product_id
+LEFT JOIN suppliers s 
+    ON ps_parent.supplier_id = s.id
+
+-- join variant's own supplier info
+LEFT JOIN product_suppliers ps_variant
+    ON ap.product_id = ps_variant.product_id
+
+WHERE ap.parent_id != 0
+  AND ap.parent_id = {{this.params.parent_id}};

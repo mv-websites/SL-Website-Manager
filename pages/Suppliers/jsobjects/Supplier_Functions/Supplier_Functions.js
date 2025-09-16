@@ -9,6 +9,7 @@ export default {
 		const count = await Supplier_Product_Count.run({"id": Table1.updatedRow.id})
 		const loopCount = Math.ceil((count[0]?.row_count || 1)/100);		
 		
+		// Update parent products
 		for (let i = 0; i < loopCount; i++) {
 			const products = await Get_Supplier_Products.run({ offsetVar: 0 * 100 });
 			const mappedProducts = products.map((val) => {
@@ -28,6 +29,29 @@ export default {
 			} catch {
 				showAlert("Failed to update Parent Products", "error")
 			}
+			
+			// UPDATE VARIATIONS
+			const parentIDs = await Get_Parent_IDs.run({parent_id: Table1.updatedRow.id});
+			
+			// Update each variation under parent ID
+			for (const id of parentIDs) {
+				const variations = await Get_Supplier_Variations.run({"parent_id": id.parent_product_id});
+				
+				const childVariations = variations.map((variation) => {
+					const newPrice = Supplier_Functions.calculatePrice(variation.aq_list_price, variation.supplier_discount, variation.product_markup)
+					return {
+						"id": variation.product_id,
+						"regular_price": newPrice
+					}
+				})
+
+				const response = await Update_Variations.run({
+					"parent_id": id.parent_product_id,
+					"update": childVariations
+				})
+				console.log("Update response: ", response)
+			}
+
 		
 		}
 		// console.log(testVar)
