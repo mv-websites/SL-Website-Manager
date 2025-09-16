@@ -6,8 +6,8 @@ export default {
 		return `${priceAfterSupplierDiscount * (1+markup)}`
 	},
 	async updateProductPricing () {
-		const count = await Supplier_Product_Count.data[0].row_count
-		const loopCount = Math.ceil(count/100);
+		const count = await Supplier_Product_Count.run({"id": Table1.updatedRow.id})
+		const loopCount = Math.ceil((count[0]?.row_count || 1)/100);		
 		
 		for (let i = 0; i < loopCount; i++) {
 			const products = await Get_Supplier_Products.run({ offsetVar: 0 * 100 });
@@ -18,12 +18,17 @@ export default {
 					"regular_price": newPrice
 				}
 			})
-			const response = await Batch_Update_Products.run({
-				body: {
-					"update": mappedProducts
-				}
-			});
-			console.log(response)
+			try {
+				await Batch_Update_Products.run({
+					body: {
+						"update": mappedProducts
+					}
+				});
+				showAlert("Succesfully updated parent products", "success")
+			} catch {
+				showAlert("Failed to update Parent Products", "error")
+			}
+		
 		}
 		// console.log(testVar)
 		// Get all products where the supplier ID = 123

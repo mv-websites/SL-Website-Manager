@@ -5,4 +5,4 @@ LEFT JOIN product_suppliers ps
 LEFT JOIN suppliers s 
     ON ps.supplier_id = s.id
 WHERE ap.parent_id = 0
-  AND s.id = {{Table1.updatedRow.id}};
+  AND s.id = {{this.params.id}};
