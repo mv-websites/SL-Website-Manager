@@ -44,14 +44,16 @@ export default{
 		
 		// Update the price using WordPress update product variation API
 		try {
+			console.log("UPDATED PRICE: ", updatedPrice)
 			const response = await Modal_Table_Update_Price.run({
 				body: {
 					"regular_price": updatedPrice
 				}
 			});
+			console.log("RESPONSE: ", response)
 			// Update Table data for viewing
 			await Custom_Queries.getVariations(JSON.parse(appsmith.store.modalValues).id)
-			showAlert("Succesfully Updated", "success")
+			showAlert("Succesfully Updated Variation Price", "success")
 			return response;
 		} catch (err) {
 			console.log("API error:", err);
