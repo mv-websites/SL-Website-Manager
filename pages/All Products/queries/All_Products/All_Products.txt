@@ -4,7 +4,7 @@ SELECT
     ap.product_type, 
     ap.sku, 
     ap.name, 
-    ap.price, 
+    pm_price.meta_value AS price,
     ap.main_image_url, 
     ap.product_url, 
     ap.all_categories, 
@@ -19,4 +19,7 @@ LEFT JOIN product_suppliers ps
     ON ap.product_id = ps.product_id
 LEFT JOIN suppliers s 
     ON ps.supplier_id = s.id
+LEFT JOIN WrARJWM7_postmeta pm_price 
+    ON ap.product_id = pm_price.post_id 
+    AND pm_price.meta_key = '_price'
 WHERE ap.parent_id = 0;

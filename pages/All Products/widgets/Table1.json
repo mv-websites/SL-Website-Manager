@@ -62,7 +62,7 @@
     "product_markup": 123,
     "product_type": 98,
     "product_url": 127,
-    "sku": 94,
+    "sku": 108,
     "supplier": 144,
     "supplier_discount": 176
   },
@@ -220,6 +220,9 @@
     },
     {
       "key": "primaryColumns.supplier.onOptionChange"
+    },
+    {
+      "key": "primaryColumns.sku.onSubmit"
     }
   ],
   "enableClientSideSearch": true,
@@ -672,7 +675,7 @@
       "alias": "sku",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#f6fafe",
+      "cellBackground": "#fff",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"sku\"])) : sku })()}}",
       "currencyCode": "USD",
@@ -682,16 +685,17 @@
       "horizontalAlignment": "LEFT",
       "id": "sku",
       "index": 2,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "SKU",
       "notation": "standard",
+      "onSubmit": "{{Table1_Update_SKU.run({\n  \"sku\": Table1.updatedRow.sku\n}).then(() => {\n  showAlert('Succesfully updated SKU', 'success');\n}).catch(() => {\n  showAlert('Failed to update SKU', 'error');\n});}}",
       "originalId": "sku",
       "sticky": "",
       "textSize": "0.875rem",
