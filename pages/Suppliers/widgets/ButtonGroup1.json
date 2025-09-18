@@ -18,14 +18,14 @@
     },
     {
       "key": "groupButtons.groupButton2.buttonColor"
-    },
-    {
-      "key": "groupButtons.groupButton3.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
     }
   ],
   "groupButtons": {
@@ -48,65 +48,14 @@
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
       "buttonType": "SIMPLE",
       "disabledWhenInvalid": false,
-      "iconName": "add",
+      "iconName": "home",
       "id": "groupButton2",
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Add",
+      "label": "Home",
       "menuItems": {},
-      "placement": "CENTER",
-      "widgetId": ""
-    },
-    "groupButton3": {
-      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-      "buttonType": "MENU",
-      "disabledWhenInvalid": false,
-      "iconName": "more",
-      "id": "groupButton3",
-      "index": 2,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "More",
-      "menuItems": {
-        "menuItem1": {
-          "backgroundColor": "#FFFFFF",
-          "disabledWhenInvalid": false,
-          "id": "menuItem1",
-          "index": 0,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "First Option",
-          "onClick": "",
-          "widgetId": ""
-        },
-        "menuItem2": {
-          "backgroundColor": "#FFFFFF",
-          "disabledWhenInvalid": false,
-          "id": "menuItem2",
-          "index": 1,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Second Option",
-          "onClick": "",
-          "widgetId": ""
-        },
-        "menuItem3": {
-          "backgroundColor": "#DD4B34",
-          "disabledWhenInvalid": false,
-          "iconAlign": "right",
-          "iconColor": "#FFFFFF",
-          "iconName": "trash",
-          "id": "menuItem3",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Delete",
-          "onClick": "",
-          "textColor": "#FFFFFF",
-          "widgetId": ""
-        }
-      },
+      "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW');}}",
       "placement": "CENTER",
       "widgetId": ""
     }
@@ -115,7 +64,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k6v3whnmq7",
-  "leftColumn": 37,
+  "leftColumn": 46,
   "minWidth": 450,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 40,

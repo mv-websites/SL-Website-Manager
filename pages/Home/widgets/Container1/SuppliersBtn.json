@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "th-derived",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "glncv8fcya",
+  "leftColumn": 14,
+  "minWidth": 50,
+  "mobileBottomRow": 25,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 21,
+  "needsErrorInfo": false,
+  "onClick": "{{navigateTo('Suppliers', {}, 'SAME_WINDOW');}}",
+  "parentColumnSpace": 25.90625,
+  "parentId": "x3qfxoartw",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 18,
+  "topRow": 6,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "84pf2ci2kw",
+  "widgetName": "SuppliersBtn"
+}

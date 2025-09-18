@@ -28,15 +28,15 @@
   "pages": [
     {
       "id": "All Products",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Suppliers",
       "isDefault": false
     },
     {
-      "id": "Page1",
-      "isDefault": false
+      "id": "Home",
+      "isDefault": true
     }
   ],
   "unpublishedAppLayout": {

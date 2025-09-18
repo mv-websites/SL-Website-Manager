@@ -1,1 +1,0 @@
-UPDATE suppliers SET name= '{{Table1.updatedRow.name}}', date_adjusted= '{{Table1.updatedRow.date_adjusted}}', discount= '{{Table1.updatedRow.discount}}' WHERE id= '{{Table1.updatedRow.id}}';
