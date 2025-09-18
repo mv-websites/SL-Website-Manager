@@ -27,7 +27,7 @@ export default{
 				}
 			});
 			// Update table data
-			await All_Products.run();
+			// await All_Products.run();
 			showAlert("Succesfully Updated", "success")
 			return response;
 		} catch (err) {
