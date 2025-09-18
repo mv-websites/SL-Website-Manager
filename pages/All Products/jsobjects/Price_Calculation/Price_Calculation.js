@@ -3,7 +3,8 @@ export default{
 		supplierDiscount = supplierDiscount/100;
 		markup = markup/100;
 		const priceAfterSupplierDiscount = (listPrice * (1-supplierDiscount)) || 1;
-		return `${priceAfterSupplierDiscount * (1+markup)}`
+		const price = priceAfterSupplierDiscount === 1 ? null : (priceAfterSupplierDiscount * (1+markup)).toFixed(2)
+		return `${price}`
 	},
 	/**
 	* UPDATE PRICE FOR SIMPLE PRODUCTS

@@ -2,10 +2,10 @@ SELECT
     ap.product_id, 
     ap.parent_id, 
     ap.product_type, 
-    ap.sku, 
-    ap.name, 
+		pm_sku.meta_value AS sku,
+    wp_posts.post_title AS name, 
     pm_price.meta_value AS price,
-    ap.main_image_url, 
+    replace(img_posts.guid, 'https://dev.service-line.co.uk/', 'https://www.service-line.co.uk/') AS main_image_url,
     ap.product_url, 
     ap.all_categories, 
     ap.hasVariants, 
@@ -22,4 +22,15 @@ LEFT JOIN suppliers s
 LEFT JOIN WrARJWM7_postmeta pm_price 
     ON ap.product_id = pm_price.post_id 
     AND pm_price.meta_key = '_price'
-WHERE ap.parent_id = 0;
+LEFT JOIN WrARJWM7_postmeta pm_sku 
+    ON ap.product_id = pm_sku.post_id 
+    AND pm_sku.meta_key = '_sku'
+LEFT JOIN WrARJWM7_postmeta pm_thumb 
+    ON ap.product_id = pm_thumb.post_id 
+    AND pm_thumb.meta_key = '_thumbnail_id'
+LEFT JOIN WrARJWM7_posts img_posts 
+    ON pm_thumb.meta_value = img_posts.ID
+LEFT JOIN WrARJWM7_posts wp_posts 
+    ON ap.product_id = wp_posts.ID
+WHERE ap.parent_id = 0
+GROUP BY ap.product_id, ap.parent_id, ap.product_type;

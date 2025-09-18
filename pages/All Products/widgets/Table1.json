@@ -35,8 +35,8 @@
   },
   "columnOrder": [
     "sku",
-    "hasVariants",
     "main_image_url",
+    "hasVariants",
     "name",
     "aq_list_price",
     "supplier_discount",
@@ -50,7 +50,7 @@
     "parent_id",
     "product_supplier_id"
   ],
-  "columnUpdatedAt": 1757949944492,
+  "columnUpdatedAt": 1758098601012,
   "columnWidthMap": {
     "all_categories": 225,
     "aq_list_price": 133,
@@ -62,7 +62,7 @@
     "product_markup": 123,
     "product_type": 98,
     "product_url": 127,
-    "sku": 108,
+    "sku": 139,
     "supplier": 144,
     "supplier_discount": 176
   },

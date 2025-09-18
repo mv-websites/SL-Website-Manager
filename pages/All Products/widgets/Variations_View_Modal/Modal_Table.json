@@ -33,12 +33,13 @@
     }
   },
   "columnOrder": [
-    "product_id",
-    "parent_id",
-    "product_type",
     "sku",
     "name",
     "aq_list_price",
+    "price",
+    "product_id",
+    "parent_id",
+    "product_type",
     "main_image_url",
     "product_url",
     "all_categories",
@@ -46,13 +47,12 @@
     "supplier",
     "supplier_discount",
     "product_markup",
-    "product_supplier_id",
-    "price"
+    "product_supplier_id"
   ],
-  "columnUpdatedAt": 1758007505200,
+  "columnUpdatedAt": 1758113618592,
   "columnWidthMap": {
     "aq_list_price": 264,
-    "name": 391
+    "name": 464
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -116,9 +116,6 @@
     },
     {
       "key": "primaryColumns.product_supplier_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.aq_list_price.isCellEditable"
     }
   ],
   "dynamicPropertyPathList": [
@@ -202,7 +199,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Modal_Table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (JSON.parse(appsmith.store.modalValues).supplier_discount ? currentRow[\"aq_list_price\"] : \"Select a supplier on parent product first\")) : JSON.parse(appsmith.store.modalValues).supplier_discount ? currentRow[\"aq_list_price\"] : \"Select a supplier on parent product first\" })()}}",
+      "computedValue": "{{(() => { const tableData = Modal_Table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"aq_list_price\"])) : currentRow[\"aq_list_price\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -210,7 +207,7 @@
       "horizontalAlignment": "LEFT",
       "id": "aq_list_price",
       "index": 13,
-      "isCellEditable": "{{(() => { const tableData = Modal_Table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (JSON.parse(appsmith.store.modalValues).supplier_discount ? true : false)) : JSON.parse(appsmith.store.modalValues).supplier_discount ? true : false })()}}",
+      "isCellEditable": "true",
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,

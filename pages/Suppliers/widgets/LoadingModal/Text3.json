@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 47,
+  "bottomRow": 15,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -23,33 +20,33 @@
   "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "le3ml119tv",
-  "leftColumn": 7,
+  "key": "bdic4wtczw",
+  "leftColumn": 11,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 36,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 12,
-  "mobileTopRow": 32,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 14,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "originalBottomRow": 50,
-  "originalTopRow": 46,
+  "originalBottomRow": 15,
+  "originalTopRow": 10,
   "overflow": "NONE",
-  "parentColumnSpace": 28.5,
-  "parentId": "xjcj5t2pur",
+  "parentColumnSpace": 6.9375,
+  "parentId": "d46z2fzenc",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 12,
+  "rightColumn": 54,
   "shouldTruncate": false,
-  "text": "{{JSON.parse(appsmith.store.modalValues).markup}}%",
-  "textAlign": "RIGHT",
+  "text": "We're updating product prices across the site. Thanks for your patience!",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 43,
+  "topRow": 10,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "31qk8ikjfe",
-  "widgetName": "Val_Markup"
+  "widgetId": "dfsodpr4d1",
+  "widgetName": "Text3"
 }

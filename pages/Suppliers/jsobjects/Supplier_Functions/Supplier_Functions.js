@@ -3,13 +3,17 @@ export default {
 		supplierDiscount = supplierDiscount/100;
 		markup = markup/100;
 		const priceAfterSupplierDiscount = (listPrice * (1-supplierDiscount)) || 1;
-		return `${priceAfterSupplierDiscount * (1+markup)}`
+		const price = (priceAfterSupplierDiscount === 1 ? null : (priceAfterSupplierDiscount * (1+markup)).toFixed(2))
+		return `${price}`
 	},
 	async updateProductPricing () {
+		storeValue("loadingStatus", 0);
+		showModal(LoadingModal.name)
 		const count = await Supplier_Product_Count.run({"id": Table1.updatedRow.id})
 		const loopCount = Math.ceil((count[0]?.row_count || 1)/100);		
 		
 		// Update parent products
+		storeValue("loadingStatus", 10);
 		for (let i = 0; i < loopCount; i++) {
 			const products = await Get_Supplier_Products.run({ offsetVar: 0 * 100 });
 			const mappedProducts = products.map((val) => {
@@ -34,34 +38,35 @@ export default {
 			const parentIDs = await Get_Parent_IDs.run({parent_id: Table1.updatedRow.id});
 			
 			// Update each variation under parent ID
-			for (const id of parentIDs) {
-				const variations = await Get_Supplier_Variations.run({"parent_id": id.parent_product_id});
-				
-				const childVariations = variations.map((variation) => {
-					const newPrice = Supplier_Functions.calculatePrice(variation.aq_list_price, variation.supplier_discount, variation.product_markup)
-					return {
-						"id": variation.product_id,
-						"regular_price": newPrice
-					}
-				})
+			try {
+				for (const [index, id] of parentIDs.entries()) {
+					const variations = await Get_Supplier_Variations.run({"parent_id": id.parent_product_id});
 
-				const response = await Update_Variations.run({
-					"parent_id": id.parent_product_id,
-					"update": childVariations
-				})
-				console.log("Update response: ", response)
+					const childVariations = variations.map((variation) => {
+						const newPrice = Supplier_Functions.calculatePrice(variation.aq_list_price, variation.supplier_discount, variation.product_markup)
+						return {
+							"id": variation.product_id,
+							"regular_price": newPrice
+						}
+					})
+
+					const response = await Update_Variations.run({
+						"parent_id": id.parent_product_id,
+						"update": childVariations
+					})
+					console.log("Update response: ", response)
+					const completed = (i * parentIDs.length) + (index + 1); 
+					const total = loopCount * parentIDs.length;
+					const progress = 10 + Math.floor((completed / total) * 90); 
+					storeValue("loadingStatus", progress);
+				}
+				showAlert("Succesfully updated child products", "success")
+			} catch (error) {
+				console.log(error)
+				showAlert("Failed to update child products", "error")
 			}
-
-		
 		}
-		// console.log(testVar)
-		// Get all products where the supplier ID = 123
-		// LOOP1: for each 100 products
-			// map products to { id: 123, regular_price: 123 }
-			// Post to website the mapped products
-		
-			// LOOP2: for each product that has a variation
-				// map variations to { id: 123, regular_price: 123 }
-				// Post to website the mapped variations
+		closeModal(LoadingModal.name)
+
 	}
 }
