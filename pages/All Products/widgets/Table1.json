@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 91,
+  "bottomRow": 103,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -167,9 +167,6 @@
       "key": "primaryColumns.aq_list_price.isCellEditable"
     },
     {
-      "key": "primaryColumns.aq_list_price.cellBackground"
-    },
-    {
       "key": "primaryColumns.price.cellBackground"
     },
     {
@@ -177,6 +174,12 @@
     },
     {
       "key": "primaryColumns.product_markup.isCellEditable"
+    },
+    {
+      "key": "primaryColumns.aq_list_price.cellBackground"
+    },
+    {
+      "key": "primaryColumns.product_markup.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -200,6 +203,9 @@
     },
     {
       "key": "primaryColumns.product_markup.isCellEditable"
+    },
+    {
+      "key": "primaryColumns.product_markup.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -247,8 +253,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "originalBottomRow": 93,
-  "originalTopRow": 23,
+  "originalBottomRow": 103,
+  "originalTopRow": 33,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -292,7 +298,7 @@
       "alias": "aq_list_price",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.hasVariants ? \"#71717a\" : \"white\")) : currentRow.hasVariants ? \"#71717a\" : \"white\" })()}}",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.hasVariants\n  ? \"#71717a\"\n  : (currentRow.aq_list_price === \"\" || currentRow.aq_list_price == null)\n    ? \"#fef9c3\"\n    : \"white\"\n)) : currentRow.hasVariants\n  ? \"#71717a\"\n  : (currentRow.aq_list_price === \"\" || currentRow.aq_list_price == null)\n    ? \"#fef9c3\"\n    : \"white\"\n })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"product_supplier_id\"] ? currentRow[\"aq_list_price\"] : \"Select a Supplier\")) : currentRow[\"product_supplier_id\"] ? currentRow[\"aq_list_price\"] : \"Select a Supplier\" })()}}",
       "currencyCode": "USD",
@@ -532,7 +538,7 @@
       "alias": "product_markup",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "\"#fff\" ",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ((currentRow.product_markup === \"\" || currentRow.product_markup == null) ? \"#fef9c3\" : \"white\")) : (currentRow.product_markup === \"\" || currentRow.product_markup == null) ? \"#fef9c3\" : \"white\" })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"product_supplier_id\"] ? currentRow[\"product_markup\"] : \"Select a Supplier\")) : currentRow[\"product_supplier_id\"] ? currentRow[\"product_markup\"] : \"Select a Supplier\" })()}}",
       "currencyCode": "USD",
@@ -783,7 +789,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{All_Products.data}}",
   "textSize": "0.875rem",
-  "topRow": 21,
+  "topRow": 33,
   "totalRecordsCount": "{{Total_record_WrARJWM7_easywpsmtp_emails_log1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

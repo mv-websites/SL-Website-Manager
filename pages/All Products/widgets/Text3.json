@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 33,
+  "bottomRow": 22,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,23 +30,23 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "originalBottomRow": 36,
-  "originalTopRow": 32,
+  "originalBottomRow": 23,
+  "originalTopRow": 18,
   "overflow": "NONE",
-  "parentColumnSpace": 28.984375,
+  "parentColumnSpace": 35.328125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 38,
+  "rightColumn": 45,
   "shouldTruncate": false,
-  "text": "*Refresh table data to see updated pricing and discounts after making changes.",
+  "text": "All changes will be applied to the website immediately. Refreshing the table will then pull in the latest information from the live site.",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 29,
+  "topRow": 18,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "jsxczyngv1",
-  "widgetName": "Text1"
+  "widgetId": "ax6wv0f1rt",
+  "widgetName": "Text3"
 }

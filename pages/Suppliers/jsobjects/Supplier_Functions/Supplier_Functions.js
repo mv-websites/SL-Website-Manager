@@ -15,7 +15,7 @@ export default {
 		// Update parent products
 		storeValue("loadingStatus", 10);
 		for (let i = 0; i < loopCount; i++) {
-			const products = await Get_Supplier_Products.run({ offsetVar: 0 * 100 });
+			const products = await Get_Supplier_Products.run({ offsetVar: i * 100 });
 			const mappedProducts = products.map((val) => {
 				const newPrice = Supplier_Functions.calculatePrice(val.aq_list_price, val.supplier_discount, val.product_markup)
 				return {
