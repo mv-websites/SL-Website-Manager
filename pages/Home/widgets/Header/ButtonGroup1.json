@@ -15,7 +15,14 @@
     }
   ],
   "dynamicPropertyPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemuxuiiid5c2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItem615dlz0g13.onClick"
+    }
+  ],
   "groupButtons": {
     "groupButtonlmv0ekh7j4": {
       "buttonColor": "#f6fafe",
@@ -36,6 +43,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Suppliers & Supplier Discounts",
+          "onClick": "{{navigateTo('Suppliers', {}, 'SAME_WINDOW');}}",
           "widgetId": "i93wgc70ur"
         },
         "menuItemuxuiiid5c2": {
@@ -45,6 +53,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "All Products, List Pricing & Markups",
+          "onClick": "{{navigateTo('All Products', {}, 'SAME_WINDOW');}}",
           "widgetId": "iuwczzucbs"
         }
       },
