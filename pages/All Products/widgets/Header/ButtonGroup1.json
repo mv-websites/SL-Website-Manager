@@ -12,12 +12,6 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "groupButtons.groupButton1.buttonColor"
-    },
-    {
-      "key": "groupButtons.groupButton2.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -31,7 +25,7 @@
   ],
   "groupButtons": {
     "groupButton1": {
-      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonColor": "#f6fafe",
       "buttonType": "SIMPLE",
       "disabledWhenInvalid": false,
       "iconName": "th-list",
@@ -55,7 +49,7 @@
       "widgetId": ""
     },
     "groupButton2": {
-      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonColor": "#f6fafe",
       "buttonType": "SIMPLE",
       "disabledWhenInvalid": false,
       "iconName": "home",
@@ -74,7 +68,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "0fo3rf7oq2",
-  "leftColumn": 46,
+  "leftColumn": 49,
   "minWidth": 450,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 8,
@@ -83,11 +77,11 @@
   "needsErrorInfo": false,
   "orientation": "horizontal",
   "parentColumnSpace": 19.8125,
-  "parentId": "0",
+  "parentId": "24xylt98r8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 64,
   "topRow": 0,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,

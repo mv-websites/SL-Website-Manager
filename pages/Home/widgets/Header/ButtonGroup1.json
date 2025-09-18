@@ -1,0 +1,79 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "groupButtons": {
+    "groupButtonlmv0ekh7j4": {
+      "buttonColor": "#f6fafe",
+      "buttonType": "MENU",
+      "iconName": "menu",
+      "id": "groupButtonlmv0ekh7j4",
+      "index": 0,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Pricing",
+      "menuItems": {
+        "menuItem615dlz0g13": {
+          "iconName": "th-derived",
+          "id": "menuItem615dlz0g13",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Suppliers & Supplier Discounts",
+          "widgetId": "i93wgc70ur"
+        },
+        "menuItemuxuiiid5c2": {
+          "iconName": "list-detail-view",
+          "id": "menuItemuxuiiid5c2",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All Products, List Pricing & Markups",
+          "widgetId": "iuwczzucbs"
+        }
+      },
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "um0q22ujnj"
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0fo3rf7oq2",
+  "leftColumn": 58,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 19.8125,
+  "parentId": "9fgiiq69ae",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "wqk3qjkq9d",
+  "widgetName": "ButtonGroup1"
+}
