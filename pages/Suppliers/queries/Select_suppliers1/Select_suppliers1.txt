@@ -3,4 +3,4 @@ SELECT
 FROM
   suppliers
 ORDER BY
-  {{Table1.sortOrder.column || 'id'}} {{Table1.sortOrder.order !== "desc" ? "" : "DESC"}};
+  {{ Table1.sortOrder.column || 'name' }} {{ Table1.sortOrder.order !== "desc" ? "" : "DESC" }};

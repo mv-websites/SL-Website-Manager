@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  name as label, id as value\nFROM\n  suppliers;",
+      "body": "SELECT\n  name as label, id as value\nFROM\n  suppliers\nORDER BY\n  name ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
