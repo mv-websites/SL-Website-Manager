@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "0aliy540sl",
+      "parentId": "p8w0uisx39",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "zluz6lnc8c",
-      "widgetName": "Canvas4"
+      "widgetId": "cx19as3ae8",
+      "widgetName": "Canvas4Copy"
     }
   ],
   "containerStyle": "card",
@@ -63,7 +63,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "hugoah2801",
-  "leftColumn": 49,
+  "leftColumn": 37,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
   "minWidth": 450,
@@ -77,11 +77,11 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 49,
   "shouldScrollContents": true,
   "topRow": 12,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "0aliy540sl",
-  "widgetName": "Table_Key"
+  "widgetId": "p8w0uisx39",
+  "widgetName": "Table_KeyCopy"
 }
