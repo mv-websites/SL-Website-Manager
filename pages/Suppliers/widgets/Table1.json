@@ -383,7 +383,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 55,
   "searchKey": "",
-  "serverSidePaginationEnabled": true,
+  "serverSidePaginationEnabled": false,
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{Select_suppliers1.data}}",
   "textColor": "#231f20",
