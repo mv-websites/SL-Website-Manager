@@ -37,6 +37,10 @@
     {
       "id": "Home",
       "isDefault": true
+    },
+    {
+      "id": "Customers",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
