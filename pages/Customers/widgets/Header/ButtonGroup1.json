@@ -16,35 +16,17 @@
   ],
   "dynamicTriggerPathList": [
     {
-      "key": "groupButtons.groupButton1.onClick"
-    },
-    {
       "key": "groupButtons.groupButton2.onClick"
     }
   ],
   "groupButtons": {
-    "groupButton1": {
-      "buttonColor": "#f6fafe",
-      "buttonType": "SIMPLE",
-      "disabledWhenInvalid": false,
-      "iconName": "list-detail-view",
-      "id": "groupButton1",
-      "index": 0,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "All Products",
-      "menuItems": {},
-      "onClick": "{{navigateTo('All Products', {}, 'SAME_WINDOW');}}",
-      "placement": "CENTER",
-      "widgetId": ""
-    },
     "groupButton2": {
       "buttonColor": "#f6fafe",
       "buttonType": "SIMPLE",
       "disabledWhenInvalid": false,
       "iconName": "home",
       "id": "groupButton2",
-      "index": 1,
+      "index": 0,
       "isDisabled": false,
       "isVisible": true,
       "label": "Home",
@@ -58,7 +40,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k6v3whnmq7",
-  "leftColumn": 50,
+  "leftColumn": 58,
   "minWidth": 450,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 40,

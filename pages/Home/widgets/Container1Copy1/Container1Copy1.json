@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "1.5rem",
   "borderWidth": "1",
-  "bottomRow": 46,
+  "bottomRow": 77,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "children": [
     {
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "uc7zg5nhv2",
+      "parentId": "ybd7ioetvx",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "x3qfxoartw",
-      "widgetName": "Canvas1"
+      "widgetId": "6r1zvpnjwb",
+      "widgetName": "Canvas1Copy1"
     }
   ],
   "containerStyle": "card",
@@ -68,8 +68,8 @@
   "mobileRightColumn": 32,
   "mobileTopRow": 38,
   "needsErrorInfo": false,
-  "originalBottomRow": 46,
-  "originalTopRow": 20,
+  "originalBottomRow": 77,
+  "originalTopRow": 51,
   "parentColumnSpace": 25.90625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -77,9 +77,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldScrollContents": true,
-  "topRow": 20,
+  "topRow": 51,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "uc7zg5nhv2",
-  "widgetName": "Container1"
+  "widgetId": "ybd7ioetvx",
+  "widgetName": "Container1Copy1"
 }

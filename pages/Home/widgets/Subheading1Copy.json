@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 51,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 91,
   "needsErrorInfo": false,
-  "originalBottomRow": 20,
-  "originalTopRow": 16,
+  "originalBottomRow": 51,
+  "originalTopRow": 47,
   "overflow": "NONE",
   "parentColumnSpace": 24.859375,
   "parentId": "0",
@@ -40,13 +40,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 20,
   "shouldTruncate": false,
-  "text": "Pricing Tools",
+  "text": "Customer Management",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 16,
+  "topRow": 47,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "1cxt565hjh",
-  "widgetName": "Subheading1"
+  "widgetId": "jqc74fi9x0",
+  "widgetName": "Subheading1Copy"
 }

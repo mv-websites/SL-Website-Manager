@@ -21,15 +21,35 @@
     },
     {
       "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItem615dlz0g13.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton5g46dfrmbs.onClick"
     }
   ],
   "groupButtons": {
+    "groupButton5g46dfrmbs": {
+      "buttonColor": "#f6fafe",
+      "buttonType": "SIMPLE",
+      "iconName": "user",
+      "id": "groupButton5g46dfrmbs",
+      "index": 0,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Customers",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "3qhzmdxiqi"
+    },
     "groupButtonlmv0ekh7j4": {
       "buttonColor": "#f6fafe",
       "buttonType": "MENU",
       "iconName": "menu",
       "id": "groupButtonlmv0ekh7j4",
-      "index": 0,
+      "index": 1,
       "isDisabled": false,
       "isSeparator": false,
       "isVisible": true,
@@ -66,7 +86,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "0fo3rf7oq2",
-  "leftColumn": 58,
+  "leftColumn": 52,
   "minWidth": 450,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 8,
