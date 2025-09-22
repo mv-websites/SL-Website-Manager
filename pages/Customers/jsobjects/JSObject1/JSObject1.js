@@ -4,7 +4,7 @@ export default {
     return item ? item : { "key": "reactive_jobs", "value": "" };
 	},
 	async formattedCustomerData () {
-		const rawData = Get_Customers.data;
+		const rawData = await Get_Customers.run({"search": Table1.searchText, "page": Table1.pageNo});
 		
 		const formattedData = rawData.map((customer) => {
 			return {
@@ -16,7 +16,7 @@ export default {
 				powerBIObject: JSObject1.formatPowerBIFromMeta(customer.meta_data)
 			}
 		})
-		console.log(formattedData)
+
 		return formattedData;
 	}
 }

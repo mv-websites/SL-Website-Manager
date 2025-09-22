@@ -1,10 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": true,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 66,
+  "bottomRow": 64,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -39,16 +40,17 @@
     "powerBI",
     "powerBIObject"
   ],
-  "columnUpdatedAt": 1758535487525,
+  "columnUpdatedAt": 1758543015340,
   "columnWidthMap": {
     "email": 290,
-    "name": 248,
+    "name": 366,
     "powerBI": 763,
     "username": 222
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
+  "defaultSearchText": "",
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
     0
@@ -63,9 +65,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "primaryColumns.id.computedValue"
@@ -84,22 +83,38 @@
     },
     {
       "key": "primaryColumns.powerBIObject.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "totalRecordsCount"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "onSearchTextChanged"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.powerBI.onSubmit"
+    },
+    {
+      "key": "onSearchTextChanged"
+    },
+    {
+      "key": "onPageChange"
     }
   ],
-  "enableClientSideSearch": true,
+  "enableClientSideSearch": false,
   "endOfData": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
+  "infiniteScrollEnabled": false,
   "inlineEditingSaveOption": "CUSTOM",
   "isLoading": false,
   "isSortable": true,
@@ -117,11 +132,14 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "originalBottomRow": 66,
-  "originalTopRow": 16,
+  "onPageChange": "{{JSObject1.formattedCustomerData();}}",
+  "onSearchTextChanged": "{{JSObject1.formattedCustomerData()}}",
+  "originalBottomRow": 64,
+  "originalTopRow": 15,
   "parentColumnSpace": 30.578125,
   "parentId": "0",
   "parentRowSpace": 10,
+  "primaryColumnId": "id",
   "primaryColumns": {
     "email": {
       "alias": "email",
@@ -167,12 +185,12 @@
       "horizontalAlignment": "LEFT",
       "id": "id",
       "index": 0,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": false,
       "label": "id",
@@ -261,12 +279,12 @@
       "horizontalAlignment": "LEFT",
       "id": "powerBIObject",
       "index": 5,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": false,
       "label": "powerBIObject",
@@ -315,11 +333,12 @@
   "responsiveBehavior": "fill",
   "rightColumn": 61,
   "searchKey": "",
+  "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{JSObject1.formattedCustomerData.data}}",
   "textSize": "0.875rem",
-  "topRow": 16,
-  "totalRecordsCount": 0,
+  "topRow": 15,
+  "totalRecordsCount": "{{parseInt(Get_Customers.responseMeta.headers[\"X-WP-Total\"])}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
