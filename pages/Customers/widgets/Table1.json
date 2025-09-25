@@ -33,18 +33,21 @@
     }
   },
   "columnOrder": [
+    "ClientRef",
     "id",
     "name",
     "username",
     "email",
     "powerBI",
-    "powerBIObject"
+    "powerBIObject",
+    "ClientRefObject"
   ],
-  "columnUpdatedAt": 1758543015340,
+  "columnUpdatedAt": 1758802890766,
   "columnWidthMap": {
+    "ClientRef": 183,
     "email": 290,
     "name": 366,
-    "powerBI": 763,
+    "powerBI": 497,
     "username": 222
   },
   "customIsLoading": false,
@@ -89,6 +92,12 @@
     },
     {
       "key": "totalRecordsCount"
+    },
+    {
+      "key": "primaryColumns.ClientRef.computedValue"
+    },
+    {
+      "key": "primaryColumns.ClientRefObject.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -108,6 +117,9 @@
     },
     {
       "key": "onPageChange"
+    },
+    {
+      "key": "primaryColumns.ClientRef.onSubmit"
     }
   ],
   "enableClientSideSearch": false,
@@ -141,6 +153,75 @@
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
+    "ClientRef": {
+      "alias": "ClientRef",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientRef\"])) : ClientRef })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "ClientRef",
+      "index": 6,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Siclops Client Ref",
+      "notation": "standard",
+      "onSubmit": "{{Update_Customer_ClientRef.run().then(() => {\n  showAlert('Updated Client Ref Succesfully', 'success');\n}).catch(() => {\n  showAlert('Failed to upddate Client Ref', 'error');\n});}}",
+      "originalId": "ClientRef",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "ClientRefObject": {
+      "alias": "ClientRefObject",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientRefObject\"])) : ClientRefObject })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "ClientRefObject",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ClientRefObject",
+      "notation": "standard",
+      "originalId": "ClientRefObject",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "email": {
       "alias": "email",
       "allowCellWrapping": false,
