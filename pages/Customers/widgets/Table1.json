@@ -33,6 +33,7 @@
     }
   },
   "columnOrder": [
+    "customColumn1",
     "ClientGroup",
     "id",
     "name",
@@ -42,9 +43,10 @@
     "powerBIObject",
     "ClientGroupObject"
   ],
-  "columnUpdatedAt": 1758807989005,
+  "columnUpdatedAt": 1758808150259,
   "columnWidthMap": {
     "ClientRef": 193,
+    "customColumn1": 176,
     "email": 290,
     "name": 366,
     "powerBI": 497,
@@ -101,6 +103,15 @@
     },
     {
       "key": "primaryColumns.ClientGroup.selectOptions"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -123,6 +134,9 @@
     },
     {
       "key": "primaryColumns.ClientGroup.onOptionChange"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": false,
@@ -179,7 +193,7 @@
       "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "ClientGroup",
+      "label": "Client Group",
       "notation": "standard",
       "onOptionChange": "{{Update_Customer_ClientGroup.run().then(() => {\n  showAlert('Updated Client Group Succesfully!', 'success');\n}).catch(() => {\n  showAlert('Failed to update Client Group', 'error');\n});}}",
       "originalId": "ClientGroup",
@@ -220,6 +234,46 @@
       "originalId": "ClientGroupObject",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Attached Locations",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "Link Locations",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "PRIMARY",
+      "columnType": "button",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "customColumn1",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Attached Locations",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{showModal(Link_Locations.name);}}",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
