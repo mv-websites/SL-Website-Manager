@@ -44,7 +44,7 @@
   ],
   "columnUpdatedAt": 1758802890766,
   "columnWidthMap": {
-    "ClientRef": 183,
+    "ClientRef": 193,
     "email": 290,
     "name": 366,
     "powerBI": 497,
@@ -98,6 +98,9 @@
     },
     {
       "key": "primaryColumns.ClientRefObject.computedValue"
+    },
+    {
+      "key": "primaryColumns.ClientRef.selectOptions"
     }
   ],
   "dynamicPropertyPathList": [
@@ -146,8 +149,8 @@
   "needsErrorInfo": false,
   "onPageChange": "{{JSObject1.formattedCustomerData();}}",
   "onSearchTextChanged": "{{JSObject1.formattedCustomerData()}}",
-  "originalBottomRow": 64,
-  "originalTopRow": 15,
+  "originalBottomRow": 63,
+  "originalTopRow": 14,
   "parentColumnSpace": 30.578125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -158,8 +161,8 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientRef\"])) : ClientRef })()}}",
+      "columnType": "select",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientGroup\"])) : currentRow[\"ClientGroup\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -180,6 +183,7 @@
       "notation": "standard",
       "onSubmit": "{{Update_Customer_ClientRef.run().then(() => {\n  showAlert('Updated Client Ref Succesfully', 'success');\n}).catch(() => {\n  showAlert('Failed to upddate Client Ref', 'error');\n});}}",
       "originalId": "ClientRef",
+      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Query1.data)) : Query1.data })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -194,7 +198,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientRefObject\"])) : ClientRefObject })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientGroupObject\"])) : currentRow[\"ClientGroupObject\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -211,7 +215,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "ClientRefObject",
+      "label": "ClientGroupObject",
       "notation": "standard",
       "originalId": "ClientRefObject",
       "sticky": "",

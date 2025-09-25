@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68c1972c92810156b121ec4e_33163bf4-e37d-4d34-9676-2a5194f6b768",
-  "id": "Customers_JSObject1.formatClientRefFromMeta",
+  "id": "Customers_JSObject1.formatClientGroupFromMeta",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -26,8 +26,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSObject1.formatClientRefFromMeta",
-    "name": "formatClientRefFromMeta",
+    "fullyQualifiedName": "JSObject1.formatClientGroupFromMeta",
+    "name": "formatClientGroupFromMeta",
     "pageId": "Customers",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
