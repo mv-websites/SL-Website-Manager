@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68c1972c92810156b121ec4e_caa30ae4-cfc6-4e76-b2ca-f27fbb7aaecc",
-  "id": "Customers_Update_Customer_ClientRef",
+  "id": "Customers_Update_Customer_ClientGroup",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "\n{{(() => {\n  // Look for reactive_jobs in meta_data\n  const existing = Table1.updatedRow.clientRefObject;\n\n  return {\n    meta_data: existing ? [\n          {\n            id: existing.id, \n            key: \"client_ref\",\n            value: Table1.updatedRow.ClientRef\n          }\n        ]\n      : [\n          {\n            key: \"client_ref\",\n            value: Table1.updatedRow.ClientRef\n          }\n        ]\n  };\n})()}}\n\n",
+      "body": "\n{{(() => {\n  // Look for reactive_jobs in meta_data\n  const existing = Table1.updatedRow.ClientGroupObject;\n\n  return {\n    meta_data: existing ? [\n          {\n            id: existing.id, \n            key: \"client_group\",\n            value: Table1.updatedRow.ClientGroup\n          }\n        ]\n      : [\n          {\n            key: \"client_group\",\n            value: Table1.updatedRow.ClientGroup\n          }\n        ]\n  };\n})()}}\n\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -45,7 +45,7 @@
         "key": "body"
       }
     ],
-    "name": "Update_Customer_ClientRef",
+    "name": "Update_Customer_ClientGroup",
     "pageId": "Customers",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

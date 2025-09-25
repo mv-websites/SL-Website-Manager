@@ -33,16 +33,16 @@
     }
   },
   "columnOrder": [
-    "ClientRef",
+    "ClientGroup",
     "id",
     "name",
     "username",
     "email",
     "powerBI",
     "powerBIObject",
-    "ClientRefObject"
+    "ClientGroupObject"
   ],
-  "columnUpdatedAt": 1758802890766,
+  "columnUpdatedAt": 1758807989005,
   "columnWidthMap": {
     "ClientRef": 193,
     "email": 290,
@@ -94,13 +94,13 @@
       "key": "totalRecordsCount"
     },
     {
-      "key": "primaryColumns.ClientRef.computedValue"
+      "key": "primaryColumns.ClientGroup.computedValue"
     },
     {
-      "key": "primaryColumns.ClientRefObject.computedValue"
+      "key": "primaryColumns.ClientGroupObject.computedValue"
     },
     {
-      "key": "primaryColumns.ClientRef.selectOptions"
+      "key": "primaryColumns.ClientGroup.selectOptions"
     }
   ],
   "dynamicPropertyPathList": [
@@ -122,7 +122,7 @@
       "key": "onPageChange"
     },
     {
-      "key": "primaryColumns.ClientRef.onSubmit"
+      "key": "primaryColumns.ClientGroup.onOptionChange"
     }
   ],
   "enableClientSideSearch": false,
@@ -149,27 +149,27 @@
   "needsErrorInfo": false,
   "onPageChange": "{{JSObject1.formattedCustomerData();}}",
   "onSearchTextChanged": "{{JSObject1.formattedCustomerData()}}",
-  "originalBottomRow": 63,
-  "originalTopRow": 14,
+  "originalBottomRow": 64,
+  "originalTopRow": 15,
   "parentColumnSpace": 30.578125,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
-    "ClientRef": {
-      "alias": "ClientRef",
+    "ClientGroup": {
+      "alias": "ClientGroup",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "select",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientGroup\"])) : currentRow[\"ClientGroup\"] })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientGroup\"])) : ClientGroup })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "ClientRef",
+      "id": "ClientGroup",
       "index": 6,
       "isCellEditable": true,
       "isCellVisible": true,
@@ -179,10 +179,10 @@
       "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Siclops Client Ref",
+      "label": "ClientGroup",
       "notation": "standard",
-      "onSubmit": "{{Update_Customer_ClientRef.run().then(() => {\n  showAlert('Updated Client Ref Succesfully', 'success');\n}).catch(() => {\n  showAlert('Failed to upddate Client Ref', 'error');\n});}}",
-      "originalId": "ClientRef",
+      "onOptionChange": "{{Update_Customer_ClientGroup.run().then(() => {\n  showAlert('Updated Client Group Succesfully!', 'success');\n}).catch(() => {\n  showAlert('Failed to update Client Group', 'error');\n});}}",
+      "originalId": "ClientGroup",
       "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Query1.data)) : Query1.data })()}}",
       "sticky": "",
       "textColor": "",
@@ -192,20 +192,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "ClientRefObject": {
-      "alias": "ClientRefObject",
+    "ClientGroupObject": {
+      "alias": "ClientGroupObject",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientGroupObject\"])) : currentRow[\"ClientGroupObject\"] })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ClientGroupObject\"])) : ClientGroupObject })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "ClientRefObject",
+      "id": "ClientGroupObject",
       "index": 7,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -217,7 +217,7 @@
       "isVisible": false,
       "label": "ClientGroupObject",
       "notation": "standard",
-      "originalId": "ClientRefObject",
+      "originalId": "ClientGroupObject",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
