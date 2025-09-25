@@ -1,1 +1,0 @@
-SELECT UNIQUE Customer as label, Client_Group as value FROM tempdev_.LiveEquipment_SL;

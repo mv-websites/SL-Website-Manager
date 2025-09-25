@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_102f001e-9c78-4da9-ba26-a111c8fd31d4",
-  "id": "Customers_Query1",
+  "gitSyncId": "68c1972c92810156b121ec4e_7cf94108-d13d-42df-a0f8-0295388afa0f",
+  "id": "Customers_Get_List_Client_Locations",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT UNIQUE Customer as label, Client_Group as value FROM tempdev_.LiveEquipment_SL;",
+      "body": "SELECT UNIQUE Client_Ref, Co_Name FROM tempdev_.LiveEquipment_SL WHERE Client_Group  = {{Table1.triggeredRow.ClientGroup}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,12 @@
       "name": "SL Website - Live",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Query1",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "Get_List_Client_Locations",
     "pageId": "Customers",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

@@ -33,24 +33,25 @@
     }
   },
   "columnOrder": [
-    "customColumn1",
-    "ClientGroup",
-    "id",
     "name",
+    "ClientGroup",
+    "customColumn1",
     "username",
     "email",
     "powerBI",
     "powerBIObject",
-    "ClientGroupObject"
+    "ClientGroupObject",
+    "id"
   ],
-  "columnUpdatedAt": 1758808150259,
+  "columnUpdatedAt": 1758808994502,
   "columnWidthMap": {
+    "ClientGroup": 254,
     "ClientRef": 193,
     "customColumn1": 176,
-    "email": 290,
-    "name": 366,
+    "email": 250,
+    "name": 351,
     "powerBI": 497,
-    "username": 222
+    "username": 163
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -197,7 +198,7 @@
       "notation": "standard",
       "onOptionChange": "{{Update_Customer_ClientGroup.run().then(() => {\n  showAlert('Updated Client Group Succesfully!', 'success');\n}).catch(() => {\n  showAlert('Failed to update Client Group', 'error');\n});}}",
       "originalId": "ClientGroup",
-      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Query1.data)) : Query1.data })()}}",
+      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Get_List_Clients.data)) : Get_List_Clients.data })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -344,7 +345,7 @@
     },
     "name": {
       "alias": "name",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"name\"])) : name })()}}",

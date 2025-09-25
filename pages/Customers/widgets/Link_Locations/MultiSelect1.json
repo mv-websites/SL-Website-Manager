@@ -4,19 +4,25 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": [
-    "GREEN",
-    "RED"
-  ],
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -37,8 +43,8 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "optionLabel": "Co_Name",
+  "optionValue": "Client_Ref",
   "originalBottomRow": 23,
   "originalTopRow": 16,
   "parentColumnSpace": 6.9375,
@@ -49,20 +55,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": [
-    {
-      "code": "BLUE",
-      "name": "Blue"
-    },
-    {
-      "code": "GREEN",
-      "name": "Green"
-    },
-    {
-      "code": "RED",
-      "name": "Red"
-    }
-  ],
+  "sourceData": "{{Get_List_Client_Locations.data}}",
   "topRow": 16,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,

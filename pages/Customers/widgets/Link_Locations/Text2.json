@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{Table1.selectedRow.name}}",
+  "text": "{{Table1.triggeredRow.name}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 5,
