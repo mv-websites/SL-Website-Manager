@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Table1.triggeredRow.ClientRefObject.value))(MultiSelect1.options, MultiSelect1.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,6 +14,9 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -22,7 +25,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -43,6 +50,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
+  "onOptionChange": "{{Update_Customer_Locations.run().then(() => {\n  showAlert('Succesfully updated Locations', 'success');\n}).catch(() => {\n  showAlert('Failed to update locations', 'error');\n});}}",
   "optionLabel": "Co_Name",
   "optionValue": "Client_Ref",
   "originalBottomRow": 23,

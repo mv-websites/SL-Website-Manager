@@ -1,0 +1,22 @@
+
+{{(() => {
+  // Look for reactive_jobs in meta_data
+  const existing = Table1.triggeredRow.ClientRefObject;
+
+  return {
+    meta_data: existing ? [
+          {
+            id: existing.id, 
+            key: "client_ref",
+            value: MultiSelect1.selectedOptionValues
+          }
+        ]
+      : [
+          {
+            key: "client_ref",
+            value: MultiSelect1.selectedOptionValues
+          }
+        ]
+  };
+})()}}
+

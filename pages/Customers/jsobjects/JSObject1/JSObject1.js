@@ -7,6 +7,10 @@ export default {
     const item = meta_data.find(d => d.key === "client_group");
     return item ? item : { "key": "client_group", "value": "" };
 	},
+	formatClientRefFromMeta (meta_data) {
+    const item = meta_data.find(d => d.key === "client_ref");
+    return item ? item : { "key": "client_ref", "value": "" };
+	},
 	async formattedCustomerData () {
 		const rawData = await Get_Customers.run({"search": Table1.searchText, "page": Table1.pageNo});
 		
@@ -19,7 +23,8 @@ export default {
 				powerBI: JSObject1.formatPowerBIFromMeta(customer.meta_data).value,
 				powerBIObject: JSObject1.formatPowerBIFromMeta(customer.meta_data),
 				ClientGroup: JSObject1.formatClientGroupFromMeta(customer.meta_data).value,
-				ClientGroupObject: JSObject1.formatClientGroupFromMeta(customer.meta_data)
+				ClientGroupObject: JSObject1.formatClientGroupFromMeta(customer.meta_data),
+				ClientRefObject: JSObject1.formatClientRefFromMeta(customer.meta_data)
 			}
 		})
 
