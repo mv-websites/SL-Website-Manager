@@ -1,0 +1,22 @@
+
+{{(() => {
+  // Look for reactive_jobs in meta_data
+  const existing = Table1.updatedRow.powerBIObject;
+
+  return {
+    meta_data: existing ? [
+          {
+            id: existing.id, 
+            key: "reactive_jobs",
+            value: Table1.updatedRow.powerBI
+          }
+        ]
+      : [
+          {
+            key: "reactive_jobs",
+            value: Table1.updatedRow.powerBI
+          }
+        ]
+  };
+})()}}
+

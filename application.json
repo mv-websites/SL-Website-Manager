@@ -41,6 +41,10 @@
     {
       "id": "Customers",
       "isDefault": false
+    },
+    {
+      "id": "BER Assets",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
