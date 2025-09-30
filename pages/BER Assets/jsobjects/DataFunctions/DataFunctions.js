@@ -7,8 +7,11 @@ export default {
 				orderby,
 				search: (search ? search : "")
 			})
+			const assignedTiers = await Asset_Repl_Stat.run({"eq_code": appsmith.store.eq_code})
 
 			const sanitisedData = rawData.map((product) => {
+				const tier = assignedTiers.find(tier => tier.post_id === product.id);
+				console.log("TIER: ", tier)
 				return {
 					id: product.id,
 					name: product.name,
@@ -16,7 +19,7 @@ export default {
 					price: product.price,
 					permalink: product.permalink,
 					images: product.images[0]?.src || "https://www.service-line.co.uk/wp-content/uploads/woocommerce-placeholder.png",
-					assigned_option: ""
+					assigned_option: (tier? tier.status_level : "" )
 				}
 			})
 			return sanitisedData;

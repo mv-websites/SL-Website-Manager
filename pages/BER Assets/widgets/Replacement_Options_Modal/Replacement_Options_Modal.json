@@ -58,7 +58,11 @@
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 840,
   "isCanvas": true,
   "isLoading": false,
@@ -72,6 +76,7 @@
   "mobileRightColumn": 45,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
+  "onClose": "{{storeValue('products', '[]');\nremoveValue('eq_code');}}",
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,

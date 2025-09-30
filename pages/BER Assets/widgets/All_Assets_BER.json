@@ -45,12 +45,12 @@
     "serial_number",
     "eq_code"
   ],
-  "columnUpdatedAt": 1759223501643,
+  "columnUpdatedAt": 1759242603153,
   "columnWidthMap": {
     "Customer": 321,
     "asset_number": 122,
     "customColumn1": 194,
-    "description": 217,
+    "description": 365,
     "make_model": 292,
     "serviceable": 85
   },
@@ -282,7 +282,7 @@
       "label": "Replacement Options",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{showModal(Replacement_Options_Modal.name);}}",
+      "onClick": "{{showModal(Replacement_Options_Modal.name);\nstoreValue('eq_code', All_Assets_BER.triggeredRow.eq_code);\nDataFunctions.setTable1Data();}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -344,7 +344,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "eq_code",
       "notation": "standard",
       "originalId": "eq_code",

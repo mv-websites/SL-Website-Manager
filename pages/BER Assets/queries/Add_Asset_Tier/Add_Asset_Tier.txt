@@ -1,0 +1,1 @@
+INSERT INTO tempdev_.asset_replacement (eq_code, status_level, post_id) VALUES ({{this.params.eq_code}}, {{this.params.status_level}}, {{this.params.post_id}});
