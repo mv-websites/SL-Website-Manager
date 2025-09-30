@@ -42,9 +42,10 @@
     "site",
     "postcode",
     "Client_Group",
-    "serial_number"
+    "serial_number",
+    "eq_code"
   ],
-  "columnUpdatedAt": 1759158974890,
+  "columnUpdatedAt": 1759223501643,
   "columnWidthMap": {
     "Customer": 321,
     "asset_number": 122,
@@ -112,6 +113,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.eq_code.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -312,6 +316,40 @@
       "notation": "standard",
       "originalId": "description",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "eq_code": {
+      "alias": "eq_code",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"eq_code\"])) : eq_code })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "eq_code",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "eq_code",
+      "notation": "standard",
+      "originalId": "eq_code",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

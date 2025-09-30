@@ -1,23 +1,31 @@
 export default {
 	async getProductsQuery (page = 1, search = "", order = "desc", orderby = "date") {
-		const rawData = await Get_Products.run({
-			page,
-			order,
-			orderby,
-			search: (search ? search : "")
-		})
-		
-		const sanitisedData = rawData.map((product) => {
-			return {
-				id: product.id,
-				name: product.name,
-				brand: product.brands?.[0]?.name || "",
-				price: product.price,
-				permalink: product.permalink,
-				images: product.images[0]?.src || "https://www.service-line.co.uk/wp-content/uploads/woocommerce-placeholder.png"
-			}
-		})
-		return sanitisedData;
+		try {
+			const rawData = await Get_Products.run({
+				page,
+				order,
+				orderby,
+				search: (search ? search : "")
+			})
+
+			const sanitisedData = rawData.map((product) => {
+				return {
+					id: product.id,
+					name: product.name,
+					brand: product.brands?.[0]?.name || "",
+					price: product.price,
+					permalink: product.permalink,
+					images: product.images[0]?.src || "https://www.service-line.co.uk/wp-content/uploads/woocommerce-placeholder.png",
+					assigned_option: ""
+				}
+			})
+			return sanitisedData;
+		} catch (err) {
+			showAlert(`Could not get product list: ${err.message}`, "ERROR")
+		}
+	},
+	async getReplacementOption () {
+		// Get database entries where eq_code = ?
 	},
 	async setTable1Data (page, search) {
 		storeValue("isTableLoading", true); 

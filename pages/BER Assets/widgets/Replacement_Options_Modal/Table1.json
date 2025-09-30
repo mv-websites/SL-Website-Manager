@@ -38,13 +38,18 @@
     "id",
     "name",
     "brand",
-    "price"
+    "price",
+    "assigned_option"
   ],
-  "columnUpdatedAt": 1759158974898,
+  "columnUpdatedAt": 1759241207184,
   "columnWidthMap": {
+    "assigned_option": 125.875,
+    "brand": 116,
+    "id": 60,
     "images": 92,
-    "name": 607,
-    "permalink": 104
+    "name": 567,
+    "permalink": 104,
+    "price": 110
   },
   "compactMode": "TALL",
   "customIsLoading": true,
@@ -101,11 +106,23 @@
     },
     {
       "key": "customIsLoadingValue"
+    },
+    {
+      "key": "primaryColumns.assigned_option.computedValue"
+    },
+    {
+      "key": "primaryColumns.assigned_option.selectOptions"
+    },
+    {
+      "key": "primaryColumns.assigned_option.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.assigned_option.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -120,6 +137,9 @@
     },
     {
       "key": "onSearchTextChanged"
+    },
+    {
+      "key": "primaryColumns.name.onSubmit"
     }
   ],
   "enableClientSideSearch": true,
@@ -127,7 +147,7 @@
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "infiniteScrollEnabled": false,
-  "inlineEditingSaveOption": "ROW_LEVEL",
+  "inlineEditingSaveOption": "CUSTOM",
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
@@ -143,6 +163,7 @@
   "mobileLeftColumn": 13,
   "mobileRightColumn": 47,
   "mobileTopRow": 17,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
   "onPageChange": "{{DataFunctions.setTable1Data(Table1.pageNo);}}",
   "onPageSizeChange": "",
@@ -154,6 +175,41 @@
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
+    "assigned_option": {
+      "alias": "assigned_option",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.assigned_option === 1 ? \"#D4AF37\": currentRow.assigned_option === 2? \"#C0C0C0\" : currentRow.assigned_option === 3? \"#CD7F32\" : \"\")) : currentRow.assigned_option === 1 ? \"#D4AF37\": currentRow.assigned_option === 2? \"#C0C0C0\" : currentRow.assigned_option === 3? \"#CD7F32\" : \"\" })()}}",
+      "columnType": "select",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.assigned_option)) :  currentRow.assigned_option })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "assigned_option",
+      "index": 6,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Choose Product & Tier",
+      "notation": "standard",
+      "originalId": "assigned_option",
+      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Status_Levels.data)) : Status_Levels.data })()}}",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "brand": {
       "alias": "brand",
       "allowCellWrapping": false,
@@ -282,6 +338,7 @@
       "isVisible": true,
       "label": "name",
       "notation": "standard",
+      "onSubmit": "",
       "originalId": "name",
       "sticky": "",
       "textColor": "",
@@ -371,6 +428,7 @@
   "rightColumn": 61,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
+  "showInlineEditingOptionDropdown": true,
   "tableData": "{{ appsmith.store.products }}",
   "textSize": "0.875rem",
   "topRow": 13,

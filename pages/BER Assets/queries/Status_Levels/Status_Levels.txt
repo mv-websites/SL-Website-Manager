@@ -1,0 +1,1 @@
+SELECT id as value, name as label FROM tempdev_.product_status_level;
