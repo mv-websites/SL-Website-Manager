@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,42 +11,45 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "ral9i65yqt",
-  "leftColumn": 3,
+  "key": "3dwhxljyvh",
+  "leftColumn": 11,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 20,
-  "mobileLeftColumn": 3,
-  "mobileRightColumn": 19,
-  "mobileTopRow": 16,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 32,
-  "originalTopRow": 28,
+  "originalBottomRow": 16,
+  "originalTopRow": 5,
   "overflow": "NONE",
-  "parentColumnSpace": 30.5625,
-  "parentId": "0",
+  "parentColumnSpace": 20.14404296875,
+  "parentId": "cl4puvwddo",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 39,
   "shouldTruncate": false,
-  "text": "All Assets - BER",
+  "text": "{{appsmith.store.selectedReplacementProducts.bronzeProduct.short_description}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 28,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "8bv2trs3rb",
-  "widgetName": "AllAssetsBER"
+  "widgetId": "9de2mehr3z",
+  "widgetName": "GoldDescriptionCopy"
 }

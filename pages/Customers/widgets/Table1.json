@@ -310,7 +310,7 @@
       "label": "Attached Locations",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{showModal(Link_Locations.name);\nstoreValue('clientGroup', Table1.triggeredRow.ClientGroup).then(() => {\n  Get_List_Client_Locations.run();\n});}}",
+      "onClick": "{{showModal(Link_Locations.name);\nstoreValue('clientGroup', Table1.triggeredRow.ClientGroup).then(() => {\n  Get_List_Client_Locations.run();\n});\nClear_Customer_Locations.run()}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

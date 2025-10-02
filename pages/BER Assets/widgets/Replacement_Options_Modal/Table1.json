@@ -204,7 +204,7 @@
       "isVisible": true,
       "label": "Choose Product & Tier",
       "notation": "standard",
-      "onOptionChange": "{{Add_Asset_Tier.run({\n  \"eq_code\": appsmith.store.eq_code,\n  \"status_level\": Table1.updatedRow.assigned_option,\n  \"post_id\": Table1.updatedRow.id\n}).then(() => {\n  showAlert('Succesfully updated product tier', 'success');\n}).catch(() => {\n  showAlert('Failed to update tier', 'error');\n});}}",
+      "onOptionChange": "{{Add_Asset_Tier.run({\n  \"eq_code\": appsmith.store.eq_code,\n  \"status_level\": Table1.updatedRow.assigned_option,\n  \"post_id\": Table1.updatedRow.id\n}).then(() => {\n  showAlert('Succesfully updated product tier', 'success');\n  DataFunctions.setTable1Data();\n}).catch(() => {\n  showAlert('Failed to update tier', 'error');\n});}}",
       "originalId": "assigned_option",
       "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Status_Levels.data)) : Status_Levels.data })()}}",
       "sortBy": "value",

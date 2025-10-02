@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 11,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,37 +11,45 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "mn0tamkzwe",
-  "leftColumn": 1,
+  "key": "3dwhxljyvh",
+  "leftColumn": 39,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 5,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 1,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
   "overflow": "NONE",
-  "parentId": "fdsesxha6k",
+  "parentColumnSpace": 20.14404296875,
+  "parentId": "cl4puvwddo",
+  "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 52,
   "shouldTruncate": false,
-  "text": "Modal Title",
-  "textAlign": "LEFT",
+  "text": "£{{appsmith.store.selectedReplacementProducts.bronzeProduct?.price || 0}} (Exl. VAT)",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 1,
+  "topRow": 7,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "p20xyx5dvn",
-  "widgetName": "Text4"
+  "widgetId": "c1zz9ghl4j",
+  "widgetName": "GoldPriceCopy"
 }
