@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "defaultImage": "https://www.service-line.co.uk/wp-content/uploads/2024/10/placeholder.png",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"

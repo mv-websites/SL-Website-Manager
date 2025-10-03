@@ -5,10 +5,11 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 82,
+  "bottomRow": 87,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
+  "cellBackground": "",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -35,13 +36,13 @@
   "columnOrder": [
     "images",
     "permalink",
-    "id",
-    "name",
     "brand",
     "price",
-    "assigned_option"
+    "name",
+    "assigned_option",
+    "id"
   ],
-  "columnUpdatedAt": 1759241207184,
+  "columnUpdatedAt": 1759479975603,
   "columnWidthMap": {
     "assigned_option": 125.875,
     "brand": 116,
@@ -56,7 +57,7 @@
   "customIsLoadingValue": "{{ appsmith.store.isTableLoading }}\n",
   "defaultPageSize": 0,
   "defaultSearchText": "",
-  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndex": "{{appsmith.store.replacement}}",
   "defaultSelectedRowIndices": [
     0
   ],
@@ -114,7 +115,7 @@
       "key": "primaryColumns.assigned_option.selectOptions"
     },
     {
-      "key": "primaryColumns.assigned_option.cellBackground"
+      "key": "defaultSelectedRowIndex"
     }
   ],
   "dynamicPropertyPathList": [
@@ -123,6 +124,9 @@
     },
     {
       "key": "primaryColumns.assigned_option.cellBackground"
+    },
+    {
+      "key": "cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -171,8 +175,8 @@
   "onPageChange": "{{DataFunctions.setTable1Data(Table1.pageNo);}}",
   "onPageSizeChange": "",
   "onSearchTextChanged": "{{DataFunctions.setTable1Data(Table1.pageNo, Table1.searchText);}}",
-  "originalBottomRow": 79,
-  "originalTopRow": 21,
+  "originalBottomRow": 87,
+  "originalTopRow": 18,
   "parentColumnSpace": 18.90625,
   "parentId": "5b0n9ywflq",
   "parentRowSpace": 10,
@@ -182,7 +186,7 @@
       "alias": "assigned_option",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.assigned_option === \"GOLD\" ? \"#D4AF37\": currentRow.assigned_option === \"SILVER\"? \"#C0C0C0\" : currentRow.assigned_option === \"BRONZE\"? \"#CD7F32\" : \"\")) : currentRow.assigned_option === \"GOLD\" ? \"#D4AF37\": currentRow.assigned_option === \"SILVER\"? \"#C0C0C0\" : currentRow.assigned_option === \"BRONZE\"? \"#CD7F32\" : \"\" })()}}",
+      "cellBackground": "",
       "columnType": "select",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.assigned_option)) : currentRow.assigned_option })()}}",
       "currencyCode": "USD",
@@ -201,7 +205,7 @@
       "isEditable": true,
       "isFilterable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Choose Product & Tier",
       "notation": "standard",
       "onOptionChange": "{{Add_Asset_Tier.run({\n  \"eq_code\": appsmith.store.eq_code,\n  \"status_level\": Table1.updatedRow.assigned_option,\n  \"post_id\": Table1.updatedRow.id\n}).then(() => {\n  showAlert('Succesfully updated product tier', 'success');\n  DataFunctions.setTable1Data();\n}).catch(() => {\n  showAlert('Failed to update tier', 'error');\n});}}",
@@ -437,7 +441,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{ appsmith.store.products }}",
   "textSize": "0.875rem",
-  "topRow": 13,
+  "topRow": 18,
   "totalRecordsCount": "{{parseInt(Get_Products.responseMeta.headers[\"X-WP-Total\"])}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

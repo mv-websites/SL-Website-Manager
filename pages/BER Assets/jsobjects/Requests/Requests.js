@@ -1,5 +1,7 @@
 export default {
 	async getProducts () {
+	removeValue("selectedReplacementProducts");
+	showModal(LoadingModal.name)
 	const sqlData = await Asset_Repl_Stat.run({ eq_code: appsmith.store.eq_code });
 
 		// Build the full products object
@@ -22,6 +24,7 @@ export default {
 
 		// Store the entire object **once**, outside the loop
 		storeValue("selectedReplacementProducts", selectedProducts);
+		closeModal(LoadingModal.name)
 
 		return sqlData;
 	},

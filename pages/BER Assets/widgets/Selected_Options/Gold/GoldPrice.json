@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 52,
   "shouldTruncate": false,
-  "text": "£{{appsmith.store.selectedReplacementProducts.goldProduct.price}} (Exl. VAT)",
+  "text": "£{{appsmith.store.selectedReplacementProducts.goldProduct?.price || 0}} (Exl. VAT)",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 7,

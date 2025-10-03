@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 39,
   "shouldTruncate": false,
-  "text": "{{appsmith.store.selectedReplacementProducts.silverProduct.name}}",
+  "text": "{{appsmith.store.selectedReplacementProducts.silverProduct?.name || \"--- Select a Silver Tier Option --->\"}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

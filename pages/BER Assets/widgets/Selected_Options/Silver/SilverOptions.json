@@ -31,7 +31,7 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Replacement_Options_Modal.name);}}",
+  "onClick": "{{showModal(Replacement_Options_Modal.name);\nstoreValue('replacementTier', 'SILVER');\nDataFunctions.setTable1Data();}}",
   "parentColumnSpace": 20.14404296875,
   "parentId": "nh0d6vj0tm",
   "parentRowSpace": 10,

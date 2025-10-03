@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 39,
   "shouldTruncate": false,
-  "text": "{{appsmith.store.selectedReplacementProducts.bronzeProduct?.name || \"--- Select an Option --->\"}}",
+  "text": "{{appsmith.store.selectedReplacementProducts.bronzeProduct?.name || \"--- Select a Bronze Tier Option --->\"}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

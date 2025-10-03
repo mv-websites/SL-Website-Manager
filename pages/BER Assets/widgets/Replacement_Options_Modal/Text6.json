@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 6,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -14,42 +14,50 @@
     },
     {
       "key": "text"
+    },
+    {
+      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "3dwhxljyvh",
-  "leftColumn": 11,
+  "key": "gs3wke3uee",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
+  "originalBottomRow": 6,
   "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 20.14404296875,
-  "parentId": "h16hhmoy5m",
+  "parentColumnSpace": 21.1875,
+  "parentId": "5b0n9ywflq",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39,
+  "rightColumn": 8,
   "shouldTruncate": false,
-  "text": "{{appsmith.store.selectedReplacementProducts.goldProduct?.name || \"--- Select a Gold Tier Option --->\"}}",
-  "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "text": "{{appsmith.store.replacementTier}}",
+  "textAlign": "RIGHT",
+  "textColor": "{{appsmith.store.replacementTier === \"GOLD\" ? \"#D4AF37\": appsmith.store.replacementTier === \"SILVER\"? \"#C0C0C0\" : appsmith.store.replacementTier === \"BRONZE\"? \"#CD7F32\" : \"\"}}",
   "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "inl4kdh7h6",
-  "widgetName": "GoldHeading"
+  "widgetId": "b3u7ha1fl5",
+  "widgetName": "Text6"
 }
