@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "-- 1. Delete any row with the same eq_code and status_level (to avoid primary key conflict)\nDELETE FROM tempdev_.asset_replacement\nWHERE eq_code = {{this.params.eq_code}} \n  AND status_level = {{this.params.status_level}};\n\n-- 2. Insert the new row\nINSERT INTO tempdev_.asset_replacement (eq_code, status_level, post_id)\nVALUES ({{this.params.eq_code}}, {{this.params.status_level}}, {{this.params.post_id}});\n",
+      "body": "-- 1. Delete any row with the same eq_code and status_level (to avoid primary key conflict)\nDELETE FROM asset_replacement\nWHERE eq_code = {{this.params.eq_code}} \n  AND status_level = {{this.params.status_level}};\n\n-- 2. Insert the new row\nINSERT INTO asset_replacement (eq_code, status_level, post_id)\nVALUES ({{this.params.eq_code}}, {{this.params.status_level}}, {{this.params.post_id}});\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

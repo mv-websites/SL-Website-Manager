@@ -12,21 +12,41 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "text"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "backlink",
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{appsmith.store.selectedReplacementProducts.bronzeProduct && appsmith.store.selectedReplacementProducts.silverProduct && appsmith.store.selectedReplacementProducts.goldProduct ? false : true}}",
   "isLoading": false,
   "isVisible": true,
   "key": "rd91csk403",
-  "leftColumn": 46,
+  "leftColumn": 44,
   "minWidth": 120,
   "mobileBottomRow": 76,
   "mobileLeftColumn": 28,
   "mobileRightColumn": 44,
   "mobileTopRow": 72,
   "needsErrorInfo": false,
+  "onClick": "{{Insert_Replacement_Status.run().then(() => {\n  showAlert('Succesfully Updated/Added Customer Link', 'success');\n}).catch(() => {\n  showAlert('Failed to Updated/Add Customer Link', 'error');\n});\nRequests.updateCustomerLinkDetails();}}",
+  "originalBottomRow": 92,
+  "originalTopRow": 88,
   "parentColumnSpace": 22.96875,
   "parentId": "fdsesxha6k",
   "parentRowSpace": 10,
@@ -35,8 +55,8 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 62,
-  "text": "Create Link & Notify Customer",
+  "rightColumn": 60,
+  "text": "{{appsmith.store.replacementStatus? 'Update Customer Link' : 'Create Customer Link'}}",
   "topRow": 71,
   "type": "BUTTON_WIDGET",
   "version": 1,

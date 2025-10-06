@@ -1,12 +1,19 @@
-SELECT Equip_Status_Description as serviceable, 
+SELECT 
+  Equip_Status_Description AS serviceable, 
   Customer,
-	Client_Group,
-	Asset_Number as asset_number, 
-	serial_number, 
-	CONCAT(Make,  ' - ', Model) as make_model, 
-	description, 
-	Location as location, 
-	CONCAT('[', Post_Code, ']', ' - ', Co_Name) as site, 
-	Post_Code as postcode,
-	`EQ_CODE_(DB)` as eq_code
-FROM tempdev_.LiveEquipment_SL WHERE Equip_Status_Description = "BER";
+  Client_Group,
+  Asset_Number AS asset_number, 
+  serial_number, 
+  CONCAT(Make, ' - ', Model) AS make_model, 
+  description, 
+  Location AS location, 
+  CONCAT('[', Post_Code, ']', ' - ', Co_Name) AS site, 
+  Post_Code AS postcode,
+  `EQ_CODE_(DB)` AS eq_code,
+  EXISTS (
+    SELECT 1
+    FROM asset_replacement ar
+    WHERE ar.eq_code = `LiveEquipment_SL`.`EQ_CODE_(DB)`
+  ) AS eq_code_exists
+FROM tempdev_.LiveEquipment_SL
+WHERE Equip_Status_Description = "BER";

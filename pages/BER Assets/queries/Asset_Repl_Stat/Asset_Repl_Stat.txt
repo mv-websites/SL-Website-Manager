@@ -1,1 +1,1 @@
-SELECT * FROM tempdev_.asset_replacement WHERE eq_code = {{this.params.eq_code}};
+SELECT * FROM asset_replacement WHERE eq_code = {{this.params.eq_code}};

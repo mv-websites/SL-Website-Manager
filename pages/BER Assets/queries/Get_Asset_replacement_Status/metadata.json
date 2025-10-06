@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_17db130c-57c7-4e65-bbb2-5c579b56517b",
-  "id": "BER Assets_Asset_Repl_Stat",
+  "gitSyncId": "68c1972c92810156b121ec4e_e282f2e8-0e8e-42dc-a85f-b515880e585e",
+  "id": "BER Assets_Get_Asset_replacement_Status",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM asset_replacement WHERE eq_code = {{this.params.eq_code}};",
+      "body": "SELECT *\nFROM asset_replacement_status WHERE eq_code = {{this.params.eq_code}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Asset_Repl_Stat",
+    "name": "Get_Asset_replacement_Status",
     "pageId": "BER Assets",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

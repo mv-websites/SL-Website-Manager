@@ -1,0 +1,14 @@
+INSERT INTO asset_replacement_status 
+  (eq_code, has_customer_viewed, date_viewed, url, viewed_name) 
+VALUES (
+  {{appsmith.store.eq_code}},
+  0,
+	null,
+  '{{`https://service-line.co.uk/recommended-replacement/?param1=${appsmith.store.selectedReplacementProducts.goldProduct.id}&param2=${appsmith.store.selectedReplacementProducts.silverProduct.id}&param3=${appsmith.store.selectedReplacementProducts.bronzeProduct.id}&eq=${appsmith.store.eq_code}`}}',
+	""
+)
+ON DUPLICATE KEY UPDATE 
+  has_customer_viewed = VALUES(has_customer_viewed),
+	date_viewed = VALUES(date_viewed),
+	viewed_name = VALUES(viewed_name),
+  url = VALUES(url);
