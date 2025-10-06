@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "BER_Assets",
     "pageId": "BER Assets",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

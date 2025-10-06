@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 80,
+  "bottomRow": 72,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -44,9 +44,10 @@
     "Client_Group",
     "serial_number",
     "eq_code",
-    "eq_code_exists"
+    "has_replacement_options",
+    "has_customer_viewed"
   ],
-  "columnUpdatedAt": 1759497920404,
+  "columnUpdatedAt": 1759746264499,
   "columnWidthMap": {
     "Customer": 321,
     "asset_number": 122,
@@ -120,10 +121,37 @@
       "key": "primaryColumns.eq_code.computedValue"
     },
     {
-      "key": "primaryColumns.eq_code_exists.computedValue"
+      "key": "primaryColumns.serviceable.cellBackground"
     },
     {
-      "key": "primaryColumns.serviceable.cellBackground"
+      "key": "primaryColumns.has_replacement_options.computedValue"
+    },
+    {
+      "key": "primaryColumns.has_customer_viewed.computedValue"
+    },
+    {
+      "key": "primaryColumns.Customer.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.asset_number.cellBackground"
+    },
+    {
+      "key": "primaryColumns.description.cellBackground"
+    },
+    {
+      "key": "primaryColumns.make_model.cellBackground"
+    },
+    {
+      "key": "primaryColumns.site.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonVariant"
     }
   ],
   "dynamicPropertyPathList": [
@@ -132,6 +160,27 @@
     },
     {
       "key": "primaryColumns.serviceable.cellBackground"
+    },
+    {
+      "key": "primaryColumns.Customer.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.asset_number.cellBackground"
+    },
+    {
+      "key": "primaryColumns.description.cellBackground"
+    },
+    {
+      "key": "primaryColumns.make_model.cellBackground"
+    },
+    {
+      "key": "primaryColumns.site.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonVariant"
     }
   ],
   "dynamicTriggerPathList": [
@@ -205,6 +254,7 @@
       "alias": "Customer",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Customer\"])) : Customer })()}}",
       "currencyCode": "USD",
@@ -236,6 +286,7 @@
       "alias": "asset_number",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"asset_number\"])) : asset_number })()}}",
       "currencyCode": "USD",
@@ -270,8 +321,10 @@
       "borderRadius": "{{All_Assets_BER.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{All_Assets_BER.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{All_Assets_BER.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "buttonLabel": "Create & Notify",
+      "buttonLabel": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? 'Edit/View Options' : \"Create Options\")) : currentRow[\"has_replacement_options\"] ? 'Edit/View Options' : \"Create Options\" })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? 'SECONDARY' : 'PRIMARY')) : currentRow[\"has_replacement_options\"] ? 'SECONDARY' : 'PRIMARY' })()}}",
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "button",
       "computedValue": "",
       "currencyCode": "USD",
@@ -306,6 +359,7 @@
       "alias": "description",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"description\"])) : description })()}}",
       "currencyCode": "USD",
@@ -367,21 +421,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "eq_code_exists": {
-      "alias": "eq_code_exists",
+    "has_customer_viewed": {
+      "alias": "has_customer_viewed",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"eq_code_exists\"])) : eq_code_exists })()}}",
+      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_customer_viewed\"])) : has_customer_viewed })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "eq_code_exists",
-      "index": 11,
+      "id": "has_customer_viewed",
+      "index": 13,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -390,9 +444,43 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "eq_code_exists",
+      "label": "has_customer_viewed",
       "notation": "standard",
-      "originalId": "eq_code_exists",
+      "originalId": "has_customer_viewed",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "has_replacement_options": {
+      "alias": "has_replacement_options",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"])) : has_replacement_options })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "has_replacement_options",
+      "index": 12,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "has_replacement_options",
+      "notation": "standard",
+      "originalId": "has_replacement_options",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -436,6 +524,7 @@
       "alias": "make_model",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"make_model\"])) : make_model })()}}",
       "currencyCode": "USD",
@@ -562,6 +651,7 @@
       "alias": "site",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"site\"])) : site })()}}",
       "currencyCode": "USD",
@@ -595,9 +685,9 @@
   "rightColumn": 61,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{BER_Assets.data}}",
+  "tableData": "{{BER_Assets_v2.data}}",
   "textSize": "0.875rem",
-  "topRow": 32,
+  "topRow": 24,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

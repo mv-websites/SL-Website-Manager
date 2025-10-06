@@ -74,7 +74,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 15,
   "needsErrorInfo": false,
-  "onClose": "{{removeValue('selectedReplacementProducts');}}",
+  "onClose": "{{removeValue('selectedReplacementProducts');\nBER_Assets_v2.run()}}",
   "parentColumnSpace": 21.1875,
   "parentId": "0",
   "parentRowSpace": 10,
