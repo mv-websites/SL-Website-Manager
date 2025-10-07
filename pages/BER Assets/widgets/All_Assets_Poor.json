@@ -101,9 +101,6 @@
       "key": "primaryColumns.make_model.computedValue"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.eq_code.computedValue"
     }
   ],
@@ -491,7 +488,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 61,
   "searchKey": "",
-  "tableData": "{{SLPOOR_Assets.data}}",
+  "tableData": "",
   "textSize": "0.875rem",
   "topRow": 86,
   "totalRecordsCount": 0,
