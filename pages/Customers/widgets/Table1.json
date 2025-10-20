@@ -286,7 +286,7 @@
       "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "buttonLabel": "Link Locations",
+      "buttonLabel": "Attach Locations",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "PRIMARY",
       "columnType": "button",

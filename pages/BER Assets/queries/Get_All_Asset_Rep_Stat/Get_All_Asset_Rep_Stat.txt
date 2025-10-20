@@ -1,0 +1,4 @@
+SELECT 
+    eq_code,
+    has_customer_viewed
+  FROM asset_replacement_status;

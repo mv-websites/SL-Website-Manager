@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_e282f2e8-0e8e-42dc-a85f-b515880e585e",
-  "id": "BER Assets_Get_Asset_replacement_Status",
+  "gitSyncId": "68c1972c92810156b121ec4e_b37cf261-1f06-4fee-ad88-a976a9428512",
+  "id": "BER Assets_Get_All_Asset_Rep_Stat",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM asset_replacement_status WHERE eq_code = {{this.params.eq_code}};\n",
+      "body": "SELECT \n    eq_code,\n    has_customer_viewed\n  FROM asset_replacement_status;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,12 +22,8 @@
       "name": "SL Website - Live",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "Get_Asset_replacement_Status",
+    "dynamicBindingPathList": [],
+    "name": "Get_All_Asset_Rep_Stat",
     "pageId": "BER Assets",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

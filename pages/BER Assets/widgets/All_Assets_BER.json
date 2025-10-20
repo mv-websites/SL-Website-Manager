@@ -32,22 +32,18 @@
     }
   },
   "columnOrder": [
-    "serviceable",
     "Customer",
     "customColumn1",
-    "asset_number",
     "description",
     "make_model",
-    "location",
     "site",
-    "postcode",
     "Client_Group",
     "serial_number",
     "eq_code",
     "has_replacement_options",
     "has_customer_viewed"
   ],
-  "columnUpdatedAt": 1759746264499,
+  "columnUpdatedAt": 1760359206005,
   "columnWidthMap": {
     "Customer": 321,
     "asset_number": 122,
@@ -79,16 +75,10 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.serviceable.computedValue"
-    },
-    {
       "key": "primaryColumns.Customer.computedValue"
     },
     {
       "key": "primaryColumns.Client_Group.computedValue"
-    },
-    {
-      "key": "primaryColumns.asset_number.computedValue"
     },
     {
       "key": "primaryColumns.serial_number.computedValue"
@@ -97,13 +87,7 @@
       "key": "primaryColumns.description.computedValue"
     },
     {
-      "key": "primaryColumns.location.computedValue"
-    },
-    {
       "key": "primaryColumns.site.computedValue"
-    },
-    {
-      "key": "primaryColumns.postcode.computedValue"
     },
     {
       "key": "primaryColumns.make_model.computedValue"
@@ -121,9 +105,6 @@
       "key": "primaryColumns.eq_code.computedValue"
     },
     {
-      "key": "primaryColumns.serviceable.cellBackground"
-    },
-    {
       "key": "primaryColumns.has_replacement_options.computedValue"
     },
     {
@@ -134,9 +115,6 @@
     },
     {
       "key": "primaryColumns.customColumn1.cellBackground"
-    },
-    {
-      "key": "primaryColumns.asset_number.cellBackground"
     },
     {
       "key": "primaryColumns.description.cellBackground"
@@ -159,16 +137,10 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.serviceable.cellBackground"
-    },
-    {
       "key": "primaryColumns.Customer.cellBackground"
     },
     {
       "key": "primaryColumns.customColumn1.cellBackground"
-    },
-    {
-      "key": "primaryColumns.asset_number.cellBackground"
     },
     {
       "key": "primaryColumns.description.cellBackground"
@@ -275,38 +247,6 @@
       "label": "Customer",
       "notation": "standard",
       "originalId": "Customer",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "asset_number": {
-      "alias": "asset_number",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"asset_number\"])) : asset_number })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "asset_number",
-      "index": 3,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "URN",
-      "notation": "standard",
-      "originalId": "asset_number",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -489,37 +429,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "location": {
-      "alias": "location",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"location\"])) : location })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "location",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "location",
-      "notation": "standard",
-      "originalId": "location",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "make_model": {
       "alias": "make_model",
       "allowCellWrapping": false,
@@ -552,37 +461,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "postcode": {
-      "alias": "postcode",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"postcode\"])) : postcode })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "postcode",
-      "index": 10,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "postcode",
-      "notation": "standard",
-      "originalId": "postcode",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "serial_number": {
       "alias": "serial_number",
       "allowCellWrapping": false,
@@ -608,39 +486,6 @@
       "notation": "standard",
       "originalId": "serial_number",
       "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "serviceable": {
-      "alias": "serviceable",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.eq_code_exists ? \"#fef9c3\" : \"#fee2e2\")) : currentRow.eq_code_exists ? \"#fef9c3\" : \"#fee2e2\" })()}}",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"serviceable\"])) : serviceable })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "serviceable",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "Status",
-      "notation": "standard",
-      "originalId": "serviceable",
-      "sticky": "",
-      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -685,7 +530,7 @@
   "rightColumn": 61,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{BER_Assets_v2.data}}",
+  "tableData": "{{appsmith.store.all_assets_ber // BER_Assets_v2.data}}",
   "textSize": "0.875rem",
   "topRow": 24,
   "totalRecordsCount": 0,
