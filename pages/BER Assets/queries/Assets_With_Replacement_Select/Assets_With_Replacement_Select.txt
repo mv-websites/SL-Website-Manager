@@ -1,0 +1,2 @@
+SELECT eq_code
+FROM asset_replacement;

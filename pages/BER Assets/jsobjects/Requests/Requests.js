@@ -39,7 +39,7 @@ export default {
 	},
 	async getMergedEquipmentData() {
 		try {
-			const liveEquipmentRows = await BER_Assets.run();
+			const liveEquipmentRows = await utils.BER_Assets_v3(); // await BER_Assets.run();
 			const replacementRows = await Get_All_Asset_Rep_Stat.run();
 
 			// Build a lookup map from replacementRows for fast access

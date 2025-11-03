@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "-- Insert/Update for the main product\nINSERT INTO product_suppliers (id, supplier_id, product_id)\nVALUES (\n  {{ Table1.updatedRow.id }},\n  {{ Table1.updatedRow.supplier }},\n  {{ Table1.updatedRow.product_id }}\n)\nON DUPLICATE KEY UPDATE\n  supplier_id = {{Table1.updatedRow.supplier}};\n\t\n-- Insert/Update for all child products of that product\nINSERT INTO product_suppliers (supplier_id, product_id)\nSELECT \n    {{ Table1.updatedRow.supplier }} AS supplier_id,\n    ap.product_id\nFROM all_products ap\nWHERE ap.parent_id = {{ Table1.updatedRow.product_id }}\nON DUPLICATE KEY UPDATE\n  supplier_id = VALUES(supplier_id);\n",
+      "body": "-- Insert/Update for the main product\nINSERT INTO wp_qyxos.product_suppliers (id, supplier_id, product_id)\nVALUES (\n  {{ Table1.updatedRow.id }},\n  {{ Table1.updatedRow.supplier }},\n  {{ Table1.updatedRow.product_id }}\n)\nON DUPLICATE KEY UPDATE\n  supplier_id = {{Table1.updatedRow.supplier}};\n\t\n-- Insert/Update for all child products of that product\nINSERT INTO wp_qyxos.product_suppliers (supplier_id, product_id)\nSELECT \n    {{ Table1.updatedRow.supplier }} AS supplier_id,\n    ap.product_id\nFROM wp_qyxos.all_products ap\nWHERE ap.parent_id = {{ Table1.updatedRow.product_id }}\nON DUPLICATE KEY UPDATE\n  supplier_id = VALUES(supplier_id);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
