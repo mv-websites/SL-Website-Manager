@@ -60,7 +60,7 @@ export default {
 					serviceable: le.Equip_Status_Description,
 					Customer: le.Customer,
 					Client_Group: le.Client_Group,
-					asset_number: le.Asset_Number,
+					asset_number: le.asset_number,
 					serial_number: le.serial_number,
 					make_model: le.make_model,
 					description: le.description,
@@ -77,8 +77,7 @@ export default {
 			return mergedData;
 
 		} catch (error) {
-			console.error("Error merging equipment data:", error);
-			await showAlert("Failed to merge equipment data. Check console.", "ERROR");
+			await showAlert("Failed to merge equipment data. Check console.", "error");
 			return [];
 		}
 	}

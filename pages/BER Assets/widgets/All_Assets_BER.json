@@ -34,6 +34,7 @@
   "columnOrder": [
     "Customer",
     "customColumn1",
+    "asset_number",
     "description",
     "make_model",
     "site",
@@ -43,13 +44,13 @@
     "has_replacement_options",
     "has_customer_viewed"
   ],
-  "columnUpdatedAt": 1762175357562,
+  "columnUpdatedAt": 1762247974329,
   "columnWidthMap": {
-    "Customer": 321,
-    "asset_number": 122,
-    "customColumn1": 194,
-    "description": 365,
-    "make_model": 292,
+    "Customer": 272,
+    "asset_number": 158,
+    "customColumn1": 197,
+    "description": 311,
+    "make_model": 243,
     "serviceable": 85,
     "site": 321
   },
@@ -130,6 +131,12 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonVariant"
+    },
+    {
+      "key": "primaryColumns.asset_number.computedValue"
+    },
+    {
+      "key": "primaryColumns.asset_number.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -153,6 +160,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonVariant"
+    },
+    {
+      "key": "primaryColumns.asset_number.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -248,6 +258,40 @@
       "notation": "standard",
       "originalId": "Customer",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "asset_number": {
+      "alias": "asset_number",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"asset_number\"])) : asset_number })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "asset_number",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Asset Number",
+      "notation": "standard",
+      "originalId": "asset_number",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
