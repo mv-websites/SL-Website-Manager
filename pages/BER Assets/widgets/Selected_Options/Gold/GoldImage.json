@@ -3,13 +3,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultImage": "https://www.service-line.co.uk/wp-content/uploads/2024/10/placeholder.png",
+  "defaultImage": "{{local_data.imageData().placeholderImage}}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
     },
     {
       "key": "image"
+    },
+    {
+      "key": "defaultImage"
     }
   ],
   "dynamicTriggerPathList": [],
