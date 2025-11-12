@@ -45,6 +45,10 @@
     {
       "id": "BER Assets",
       "isDefault": false
+    },
+    {
+      "id": "Page1",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
