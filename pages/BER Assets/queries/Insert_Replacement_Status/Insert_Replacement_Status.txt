@@ -4,7 +4,7 @@ VALUES (
   {{appsmith.store.eq_code}},
   0,
 	null,
-  '{{`https://service-line.co.uk/recommended-replacement/?param1=${appsmith.store.selectedReplacementProducts.goldProduct.id}&param2=${appsmith.store.selectedReplacementProducts.silverProduct.id}&param3=${appsmith.store.selectedReplacementProducts.bronzeProduct.id}&eq=${appsmith.store.eq_code}`}}',
+  '{{`https://service-line.co.uk/recommended-replacement/?param1=${appsmith.store.selectedReplacementProducts.goldProduct.id}&param2=${appsmith.store.selectedReplacementProducts.silverProduct.id}&param3=${appsmith.store.selectedReplacementProducts.bronzeProduct.id}&eq=${appsmith.store.eq_code}&ber=${All_Assets_BER.triggeredRow.ber_report}`}}',
 	""
 )
 ON DUPLICATE KEY UPDATE 
