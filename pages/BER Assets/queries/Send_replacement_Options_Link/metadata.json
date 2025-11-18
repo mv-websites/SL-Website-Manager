@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "690080acd1a018060dd5eb42_1a8e6216-6d37-4816-a12d-3a36ec425e60",
-  "id": "BER Assets_Create_Media_Item",
+  "gitSyncId": "690080acd1a018060dd5eb42_8a799b6d-8e34-497a-b472-07a7a21501dc",
+  "id": "BER Assets_Send_replacement_Options_Link",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,27 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{{{\n\t\"file\": FilePicker.files[0].data\n}}}",
-      "bodyFormData": [
-        {
-          "key": "file",
-          "value": "{{FilePicker.files[0].data}}"
-        }
-      ],
+      "body": "{{\n{\n\t\"customer_email\": Notify_Email.text,\n\t\"customer_name\": Notify_Name.text,\n\t\"product_name\": All_Assets_BER.triggeredRow.make_model,\n\t\"site\": All_Assets_BER.triggeredRow.site,\n\t\"link\": appsmith.store.replacementStatus.url\n}\n}}",
+      "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
-      "headers": [
-        {
-          "key": "Content-Disposition",
-          "value": "attachment; filename={{FilePicker.files[0].name}}"
-        }
-      ],
+      "headers": [],
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/wp-json/wp/v2/media   ",
+      "path": "/wp-json/replacements/v1/send-recommendations-email",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -49,16 +39,10 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "bodyFormData[0].value"
-      },
-      {
-        "key": "headers[0].value"
-      },
-      {
         "key": "body"
       }
     ],
-    "name": "Create_Media_Item",
+    "name": "Send_replacement_Options_Link",
     "pageId": "BER Assets",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

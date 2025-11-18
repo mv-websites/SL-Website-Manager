@@ -11,9 +11,20 @@ export default {
 			...item,
 			eq_code_exists: replacementSet.has(item.eq_code) ? 1 : 0
 		}));
-	}
-	// async uploadBERReport (data) {
-		// 
+	},
+	async uploadBERReport (data) {
+		FilePicker.setVisibility(false) 
+		
+		const constructedData = {
+			"file": FilePicker.files[0].data,
+			"title": FilePicker.files[0].name,
+			"caption": "Tets File 1"
+		}
+		
+		const response = await Create_Media_Item.run({data: constructedData})
+		
+		return response
+		
 		// const formData = new FormData();
 		// const file = FilePicker1.files[0];
       // formData.append("file", file, file.name);
@@ -23,5 +34,5 @@ export default {
 		// } catch (err) {
 			// showAlert(err.message, "error")
 		// }
-	// }
+	}
 }
