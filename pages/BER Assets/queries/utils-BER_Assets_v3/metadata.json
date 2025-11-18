@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "690080acd1a018060dd5eb42_a8b6d895-13cd-4303-a6e3-0d13f7e3bede",
+  "gitSyncId": "690080acd1a018060dd5eb42_c7391dc7-98c9-4b97-b93b-cc1c7f222cae",
   "id": "BER Assets_utils.BER_Assets_v3",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -10,7 +10,6 @@
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "BER Assets_utils",
     "confirmBeforeExecute": false,
     "datasource": {

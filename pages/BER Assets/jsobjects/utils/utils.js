@@ -12,27 +12,24 @@ export default {
 			eq_code_exists: replacementSet.has(item.eq_code) ? 1 : 0
 		}));
 	},
-	async uploadBERReport (data) {
-		FilePicker.setVisibility(false) 
-		
-		const constructedData = {
-			"file": FilePicker.files[0].data,
-			"title": FilePicker.files[0].name,
-			"caption": "Tets File 1"
+	async uploadPDF() {
+		try {
+			const eq_code = parseInt(All_Assets_BER.triggeredRow.eq_code, 10);
+			
+			const response = await Create_Media_Item.run();
+
+			const insertStatus = await Insert_BER.run({eq_code: eq_code, url: response.source_url });
+			
+			showAlert("Uploaded File Succesfully!", "success")
+			
+			await Requests.getMergedEquipmentData()
+			
+			closeModal(Upload_BER_Modal.name)
+			
+			return insertStatus;
+		} catch (err) {
+			showAlert(err.message, "error")
 		}
-		
-		const response = await Create_Media_Item.run({data: constructedData})
-		
-		return response
-		
-		// const formData = new FormData();
-		// const file = FilePicker1.files[0];
-      // formData.append("file", file, file.name);
-		// try {
-			// const response = await Create_Media_Item.run({data: data})
-			// showAlert(response, "success")
-		// } catch (err) {
-			// showAlert(err.message, "error")
-		// }
-	}
+	},
+
 }

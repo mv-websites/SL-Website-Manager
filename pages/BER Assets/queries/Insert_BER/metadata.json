@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_b37cf261-1f06-4fee-ad88-a976a9428512",
-  "id": "BER Assets_Get_All_Asset_Rep_Stat",
+  "gitSyncId": "690080acd1a018060dd5eb42_eaacc3bd-999a-4555-81e5-ba9e96149ac8",
+  "id": "BER Assets_Insert_BER",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    ars.eq_code,\n    ars.has_customer_viewed,\n    ebl.url as ber_report\nFROM \n    asset_replacement_status AS ars\nLEFT JOIN \n    equipment_ber_links AS ebl\nON \n    ars.eq_code = ebl.eq_code;",
+      "body": "INSERT INTO wp_qyxos.equipment_ber_links (eq_code, url)  VALUES ({{this.params.eq_code}}, {{this.params.url}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,12 @@
       "name": "SL Website - Live",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Get_All_Asset_Rep_Stat",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "Insert_BER",
     "pageId": "BER Assets",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

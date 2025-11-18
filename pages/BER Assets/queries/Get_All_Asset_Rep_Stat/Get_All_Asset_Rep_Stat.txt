@@ -1,4 +1,10 @@
 SELECT 
-    eq_code,
-    has_customer_viewed
-  FROM asset_replacement_status;
+    ars.eq_code,
+    ars.has_customer_viewed,
+    ebl.url as ber_report
+FROM 
+    asset_replacement_status AS ars
+LEFT JOIN 
+    equipment_ber_links AS ebl
+ON 
+    ars.eq_code = ebl.eq_code;

@@ -2,7 +2,7 @@
   "allowedFileTypes": [],
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 18,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "dynamicBindingPathList": [
@@ -13,7 +13,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
   "dynamicTyping": true,
   "fileDataType": "Binary",
   "files": [],
@@ -24,23 +28,26 @@
   "isVisible": true,
   "key": "lzgbw69jxp",
   "label": "Select Files",
-  "leftColumn": 13,
+  "leftColumn": 12,
   "maxFileSize": 5,
-  "maxNumFiles": 1,
+  "maxNumFiles": "1",
   "minWidth": 120,
   "mobileBottomRow": 10,
   "mobileLeftColumn": 14,
   "mobileRightColumn": 30,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onFilesSelected": "{{utils.uploadPDF();}}",
+  "originalBottomRow": 16,
+  "originalTopRow": 11,
   "parentColumnSpace": 6.9375,
   "parentId": "icqgnma7xa",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 51,
+  "rightColumn": 50,
   "selectedFiles": [],
-  "topRow": 5,
+  "topRow": 13,
   "type": "FILE_PICKER_WIDGET_V2",
   "version": 1,
   "widgetId": "a5gegiinr9",

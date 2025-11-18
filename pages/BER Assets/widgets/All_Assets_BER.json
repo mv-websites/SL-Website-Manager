@@ -43,9 +43,10 @@
     "serial_number",
     "eq_code",
     "has_replacement_options",
-    "has_customer_viewed"
+    "has_customer_viewed",
+    "ber_report"
   ],
-  "columnUpdatedAt": 1763395759224,
+  "columnUpdatedAt": 1763465130871,
   "columnWidthMap": {
     "Customer": 272,
     "asset_number": 158,
@@ -54,7 +55,7 @@
     "description": 311,
     "make_model": 243,
     "serviceable": 85,
-    "site": 321
+    "site": 519
   },
   "compactMode": "DEFAULT",
   "customIsLoading": false,
@@ -149,6 +150,18 @@
     },
     {
       "key": "primaryColumns.customColumn2.buttonColor"
+    },
+    {
+      "key": "primaryColumns.ber_report.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonVariant"
+    },
+    {
+      "key": "primaryColumns.customColumn2.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -175,6 +188,15 @@
     },
     {
       "key": "primaryColumns.asset_number.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonVariant"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -183,6 +205,9 @@
     },
     {
       "key": "onPageChange"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -310,6 +335,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "ber_report": {
+      "alias": "ber_report",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ber_report\"])) : ber_report })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "ber_report",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ber_report",
+      "notation": "standard",
+      "originalId": "ber_report",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "customColumn1": {
       "alias": "Replacement Options",
       "allowCellWrapping": false,
@@ -358,9 +417,10 @@
       "borderRadius": "{{All_Assets_BER.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{All_Assets_BER.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{All_Assets_BER.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "buttonLabel": "Uplaod",
+      "buttonLabel": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.ber_report? \"View\" : \"Upload\")) : currentRow.ber_report? \"View\" : \"Upload\" })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "SECONDARY",
+      "buttonVariant": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.ber_report? \"SECONDARY\" : \"PRIMARY\")) : currentRow.ber_report? \"SECONDARY\" : \"PRIMARY\" })()}}",
+      "cellBackground": "{{(() => { const tableData = All_Assets_BER.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '')) : currentRow[\"has_replacement_options\"] ? currentRow[\"has_customer_viewed\"] ? '#dcfce7' : \"#fef9c3\": '' })()}}",
       "columnType": "button",
       "computedValue": "",
       "currencyCode": "USD",
@@ -382,6 +442,7 @@
       "label": "BER Report",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{currentRow.ber_report? navigateTo(currentRow.ber_report, 'NEW_WINDOW') : showModal(Upload_BER_Modal.name)}}",
       "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",

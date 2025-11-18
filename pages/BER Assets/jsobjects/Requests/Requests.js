@@ -55,6 +55,7 @@ export default {
 				const eqCode = String(le.eq_code).trim();
 				const hasCustomerViewed = replacementMap.get(eqCode) ?? 0;
 				const hasReplacementOptions = replacementMap.has(eqCode) ? 1 : 0;
+				const ber_report = replacementRows.find(item => item.eq_code == le.eq_code) || "";
 
 				return {
 					serviceable: le.Equip_Status_Description,
@@ -68,6 +69,7 @@ export default {
 					site: le.site,
 					postcode: le.Post_Code,
 					eq_code: le.eq_code,
+					ber_report: ber_report.ber_report,
 					has_replacement_options: hasReplacementOptions,
 					has_customer_viewed: hasCustomerViewed
 				};
