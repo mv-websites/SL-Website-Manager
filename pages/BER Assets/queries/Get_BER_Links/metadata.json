@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68c1972c92810156b121ec4e_b37cf261-1f06-4fee-ad88-a976a9428512",
-  "id": "BER Assets_Get_All_Asset_Rep_Stat",
+  "gitSyncId": "690080acd1a018060dd5eb42_bc976029-70f3-4862-866c-04bf710788ce",
+  "id": "BER Assets_Get_BER_Links",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT eq_code, has_customer_viewed\nFROM wp_qyxos.asset_replacement_status\nWHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return \"'\"+ ref + \"'\" }).join(',')}});",
+      "body": "SELECT eq_code, url\nFROM wp_qyxos.equipment_ber_links\nWHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return \"'\"+ ref + \"'\" }).join(',')}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Get_All_Asset_Rep_Stat",
+    "name": "Get_BER_Links",
     "pageId": "BER Assets",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

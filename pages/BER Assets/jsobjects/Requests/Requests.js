@@ -40,14 +40,25 @@ export default {
 	async getMergedEquipmentData() {
 		try {
 			const liveEquipmentRows = await utils.BER_Assets_v3(); // await BER_Assets.run();
-			const replacementRows = await Get_All_Asset_Rep_Stat.run();
-
+			
+			// Get a list of refs to make more efficient queries and exclude unused data from queries below
+			const allEquipmentRefs = liveEquipmentRows.map(asset => {return asset.eq_code})
+			
+			const replacementRows = await Get_All_Asset_Rep_Stat.run({eq_refs: allEquipmentRefs});
+			const EqBerLinks = await Get_BER_Links.run({eq_refs: allEquipmentRefs})
+			
 			// Build a lookup map from replacementRows for fast access
 			const replacementMap = new Map();
 			replacementRows.forEach(row => {
-				// Normalize eq_code to string and trim whitespace
 				const eqCode = String(row.eq_code).trim();
 				replacementMap.set(eqCode, row.has_customer_viewed);
+			});
+			
+			// Build lookup map from EqBerLink
+			const EqBerMap = new Map();
+			EqBerLinks.forEach(row => {
+				const eqCode = String(row.eq_code).trim();
+				EqBerMap.set(eqCode, row.url);
 			});
 
 			// Merge the data
@@ -55,7 +66,7 @@ export default {
 				const eqCode = String(le.eq_code).trim();
 				const hasCustomerViewed = replacementMap.get(eqCode) ?? 0;
 				const hasReplacementOptions = replacementMap.has(eqCode) ? 1 : 0;
-				const ber_report = replacementRows.find(item => item.eq_code == le.eq_code) || "";
+				const EqBerLink = EqBerMap.get(eqCode) || ""
 
 				return {
 					serviceable: le.Equip_Status_Description,
@@ -69,13 +80,12 @@ export default {
 					site: le.site,
 					postcode: le.Post_Code,
 					eq_code: le.eq_code,
-					ber_report: ber_report.ber_report,
+					ber_report: EqBerLink, 
 					has_replacement_options: hasReplacementOptions,
 					has_customer_viewed: hasCustomerViewed
 				};
 			});
 
-			
 			storeValue("all_assets_ber", mergedData);
 			All_Assets_BER.setData(mergedData);
 			return mergedData;

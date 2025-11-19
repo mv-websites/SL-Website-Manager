@@ -1,2 +1,2 @@
-SELECT eq_code
+SELECT UNIQUE eq_code
 FROM asset_replacement;
