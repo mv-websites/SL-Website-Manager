@@ -75,7 +75,9 @@ export default {
 				};
 			});
 
+			
 			storeValue("all_assets_ber", mergedData);
+			All_Assets_BER.setData(mergedData);
 			return mergedData;
 
 		} catch (error) {
