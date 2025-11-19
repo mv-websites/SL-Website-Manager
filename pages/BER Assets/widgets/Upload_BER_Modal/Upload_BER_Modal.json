@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 284,
+  "bottomRow": 27,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -75,7 +75,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "onClose": "{{resetWidget(\"FilePicker\", true);}}",
+  "onClose": "{{resetWidget(\"FilePicker\", true);\nRequests.getMergedEquipmentData();}}",
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,
