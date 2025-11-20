@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Requests.getMergedEquipmentData",
     "name": "getMergedEquipmentData",
     "pageId": "BER Assets",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

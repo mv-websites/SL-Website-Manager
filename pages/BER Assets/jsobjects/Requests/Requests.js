@@ -91,7 +91,7 @@ export default {
 			return mergedData;
 
 		} catch (error) {
-			await showAlert("Failed to merge equipment data. Check console.", "error");
+			// await showAlert("Failed to merge equipment data. Check console.", "error");
 			return [];
 		}
 	}
