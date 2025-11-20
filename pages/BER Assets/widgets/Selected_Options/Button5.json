@@ -33,7 +33,7 @@
   "iconAlign": "left",
   "iconName": "backlink",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{appsmith.store.selectedReplacementProducts.bronzeProduct && appsmith.store.selectedReplacementProducts.silverProduct && appsmith.store.selectedReplacementProducts.goldProduct ? false : true}}",
+  "isDisabled": "{{appsmith.store.selectedReplacementProducts.bronzeProduct && appsmith.store.selectedReplacementProducts.silverProduct && appsmith.store.selectedReplacementProducts.goldProduct && All_Assets_BER.triggeredRow.ber_report ? false : true}}",
   "isLoading": false,
   "isVisible": true,
   "key": "rd91csk403",

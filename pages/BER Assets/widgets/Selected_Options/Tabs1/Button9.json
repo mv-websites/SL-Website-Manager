@@ -30,7 +30,7 @@
   "iconAlign": "left",
   "iconName": "envelope",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{Notify_Name.text && Notify_Email.isValid && Notify_Email.text? false : true}}",
+  "isDisabled": "{{Notify_Name.text && Notify_Email.isValid && Notify_Email.text && All_Assets_BER.triggeredRow.ber_report? false : true}}",
   "isLoading": false,
   "isVisible": true,
   "key": "w8owz78u3p",

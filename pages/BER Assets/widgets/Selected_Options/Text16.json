@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 75,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,43 +13,48 @@
       "key": "borderRadius"
     },
     {
-      "key": "text"
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
-  "fontStyle": "",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
-  "key": "3dwhxljyvh",
-  "leftColumn": 11,
+  "isVisible": "{{All_Assets_BER.triggeredRow.ber_report? false : true}}",
+  "key": "oavx25xp64",
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
-  "mobileLeftColumn": 9,
-  "mobileRightColumn": 25,
-  "mobileTopRow": 4,
+  "mobileBottomRow": 75,
+  "mobileLeftColumn": 27,
+  "mobileRightColumn": 43,
+  "mobileTopRow": 71,
   "needsErrorInfo": false,
-  "originalBottomRow": 15,
-  "originalTopRow": 5,
+  "originalBottomRow": 76,
+  "originalTopRow": 71,
   "overflow": "NONE",
-  "parentColumnSpace": 20.14404296875,
-  "parentId": "cl4puvwddo",
+  "parentColumnSpace": 22.96875,
+  "parentId": "fdsesxha6k",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39,
+  "rightColumn": 44,
   "shouldTruncate": false,
-  "text": "{{appsmith.store.selectedReplacementProducts.bronzeProduct.short_description}}",
-  "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 5,
+  "text": "*You must attach a BER report before creating a link ",
+  "textAlign": "RIGHT",
+  "textColor": "#ef4444",
+  "topRow": 71,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "9de2mehr3z",
-  "widgetName": "GoldDescriptionCopy"
+  "widgetId": "dkfshgamlx",
+  "widgetName": "Text16"
 }
