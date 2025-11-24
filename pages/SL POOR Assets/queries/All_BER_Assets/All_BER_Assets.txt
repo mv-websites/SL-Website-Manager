@@ -1,0 +1,15 @@
+SELECT 
+    Equip_Status_Description AS serviceable,
+    Customer,
+    Client_Group,
+    Asset_Number AS asset_number,
+    serial_number,
+    Make + ' - ' + Model AS make_model,
+    description,
+    Location AS location,
+    '[' + Post_Code + '] - ' + Co_Name AS site,
+    Post_Code AS postcode,
+    [EQ_CODE_(DB)] AS eq_code
+FROM MV_Customer.dbo.LiveEquipment
+WHERE Equip_Status_Description = 'SL POOR'
+AND isServiceline = 'Yes';

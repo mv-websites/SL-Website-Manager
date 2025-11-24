@@ -1,0 +1,62 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "document-open",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{appsmith.store.replacementStatus? false : true}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "upsu9w60vi",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 79,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 75,
+  "needsErrorInfo": false,
+  "onClick": "{{navigateTo(appsmith.store.replacementStatus.url, {}, 'NEW_WINDOW');}}",
+  "originalBottomRow": 75,
+  "originalTopRow": 71,
+  "parentColumnSpace": 22.96875,
+  "parentId": "lyt0c7qts4",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 13,
+  "text": "View Current Customer Link",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "mvx1oint4z",
+  "widgetName": "Button6"
+}

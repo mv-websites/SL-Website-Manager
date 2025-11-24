@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 91,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "rd91csk403",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 87,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 83,
+  "needsErrorInfo": false,
+  "onClick": "{{Add_Asset_Tier.run({\n  \"eq_code\": appsmith.store.eq_code,\n  \"status_level\": appsmith.store.replacementTier,\n  \"post_id\": Table1.selectedRow.id\n}).then(() => {\n  showAlert('Succesfully assigned product', 'success');\n}).catch(() => {\n  showAlert('Failed to update', 'error');\n});\ncloseModal(Replacement_Options_Modal.name);}}",
+  "originalBottomRow": 91,
+  "originalTopRow": 87,
+  "parentColumnSpace": 21.1875,
+  "parentId": "5b0n9ywflq",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "SAVE",
+  "topRow": 87,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "q2injp8zct",
+  "widgetName": "Button3"
+}

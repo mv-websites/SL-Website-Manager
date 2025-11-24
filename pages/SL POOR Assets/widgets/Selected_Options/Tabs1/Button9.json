@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "envelope",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{Notify_Name.text && Notify_Email.isValid && Notify_Email.text && All_Assets_BER.triggeredRow.ber_report? false : true}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "w8owz78u3p",
+  "leftColumn": 54,
+  "minWidth": 120,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "onClick": "{{Send_replacement_Options_Link.run().then(() => {\n  showAlert('E-mail sent succesfully!', 'success');\n  resetWidget(\"Notify_Name\", true);\n  resetWidget(\"Notify_Email\", true);\n}).catch(() => {\n  showAlert('Failed to send customer e-mail to customer', 'error');\n});}}",
+  "parentColumnSpace": 20.14404296875,
+  "parentId": "lyt0c7qts4",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "text": "Send",
+  "topRow": 14,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "pje6cwos82",
+  "widgetName": "Button9"
+}

@@ -1,0 +1,15 @@
+{{ 
+	{
+		"messages":[
+			{
+				"destinations":[
+					{
+						"to":"+447440167113"
+					}
+				],
+				"from":"ServiceSMS",
+				"text":"Congratulations on sending your first message. Go ahead and check the delivery report in the next step."
+			}
+		]
+	}
+}}

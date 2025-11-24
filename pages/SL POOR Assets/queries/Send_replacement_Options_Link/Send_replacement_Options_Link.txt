@@ -1,0 +1,9 @@
+{{
+{
+	"customer_email": Notify_Email.text,
+	"customer_name": Notify_Name.text,
+	"product_name": All_Assets_BER.triggeredRow.make_model,
+	"site": All_Assets_BER.triggeredRow.site,
+	"link": appsmith.store.replacementStatus.url
+}
+}}

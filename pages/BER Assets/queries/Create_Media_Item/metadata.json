@@ -30,12 +30,16 @@
         {
           "key": "Content-Type",
           "value": "application/pdf"
+        },
+        {
+          "key": "Content-Length",
+          "value": "{{FilePicker.files[0].data.length}}"
         }
       ],
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/wp-json/wp/v2/media   ",
+      "path": "/wp-json/wp/v2/media ",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -60,6 +64,9 @@
       },
       {
         "key": "bodyFormData[0].value"
+      },
+      {
+        "key": "headers[2].value"
       }
     ],
     "name": "Create_Media_Item",
