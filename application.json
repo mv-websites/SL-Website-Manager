@@ -49,6 +49,10 @@
     {
       "id": "SL POOR Assets",
       "isDefault": false
+    },
+    {
+      "id": "Product Extras",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

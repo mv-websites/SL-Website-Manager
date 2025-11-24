@@ -1,0 +1,7 @@
+{{
+	{
+		"label": this.params.label,
+		"amount": this.params.amount,
+		"description": this.params.description
+	}
+}}
