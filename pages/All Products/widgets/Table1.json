@@ -34,6 +34,7 @@
     }
   },
   "columnOrder": [
+    "product_id",
     "sku",
     "main_image_url",
     "hasVariants",
@@ -45,12 +46,11 @@
     "supplier",
     "product_url",
     "all_categories",
-    "product_id",
     "product_type",
     "parent_id",
     "product_supplier_id"
   ],
-  "columnUpdatedAt": 1758098601012,
+  "columnUpdatedAt": 1763976477577,
   "columnWidthMap": {
     "all_categories": 225,
     "aq_list_price": 133,
@@ -58,7 +58,7 @@
     "main_image_url": 91,
     "name": 303,
     "price": 142,
-    "product_id": 78,
+    "product_id": 91,
     "product_markup": 123,
     "product_type": 98,
     "product_url": 127,
@@ -523,7 +523,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "ID",
       "notation": "standard",
       "originalId": "product_id",

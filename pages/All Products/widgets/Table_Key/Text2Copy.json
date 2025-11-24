@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 9,
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
   "overflow": "NONE",
   "parentColumnSpace": 12.935546875,
   "parentId": "zluz6lnc8c",
@@ -43,7 +43,7 @@
   "text": "Missing Data",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
-  "topRow": 8,
+  "topRow": 9,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
