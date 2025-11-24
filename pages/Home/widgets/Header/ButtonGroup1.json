@@ -24,6 +24,9 @@
     },
     {
       "key": "groupButtons.groupButton5g46dfrmbs.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItembz46mb88fv.onClick"
     }
   ],
   "groupButtons": {
@@ -65,6 +68,16 @@
           "label": "Suppliers & Supplier Discounts",
           "onClick": "{{navigateTo('Suppliers', {}, 'SAME_WINDOW');}}",
           "widgetId": "i93wgc70ur"
+        },
+        "menuItembz46mb88fv": {
+          "iconName": "add",
+          "id": "menuItembz46mb88fv",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Product Addons",
+          "onClick": "{{navigateTo('Product Extras', {}, 'SAME_WINDOW');}}",
+          "widgetId": "dsmfz8emt9"
         },
         "menuItemuxuiiid5c2": {
           "iconName": "list-detail-view",

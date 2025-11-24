@@ -1,7 +1,9 @@
 export default {
 	async GetLabels () {
 		try {
+			storeValue("isLoading", true)
 			const data = await Get_Labels.run({page: Table1.pageNo, per_page: Table1.pageSize, search: Table1.searchText})
+			storeValue("isLoading", false)
 			return data;
 		} catch (error) {
 			showAlert(error.message, "error")

@@ -36,17 +36,18 @@
     "label",
     "price",
     "description",
-    "associated_products"
+    "associated_products",
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1763985122858,
+  "columnUpdatedAt": 1763992479576,
   "columnWidthMap": {
     "EditActions1": 154,
-    "description": 690,
+    "description": 564,
     "label": 297,
     "price": 237
   },
-  "customIsLoading": false,
-  "customIsLoadingValue": "",
+  "customIsLoading": true,
+  "customIsLoadingValue": "{{appsmith.store.isLoading}}",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
@@ -95,6 +96,12 @@
     },
     {
       "key": "totalRecordsCount"
+    },
+    {
+      "key": "customIsLoadingValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -223,6 +230,39 @@
       "notation": "standard",
       "originalId": "associated_products",
       "selectOptions": "",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "No. Products",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.associated_products.length)) : currentRow.associated_products.length })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "customColumn1",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "No. Products",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

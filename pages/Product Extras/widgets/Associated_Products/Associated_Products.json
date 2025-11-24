@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 642,
+  "bottomRow": 61,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -64,7 +64,7 @@
   "leftColumn": 19,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 500,
+  "minHeight": 610,
   "mobileBottomRow": 56,
   "mobileLeftColumn": 19,
   "mobileRightColumn": 43,
