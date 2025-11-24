@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 27,
+  "bottomRow": 24,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "originalBottomRow": 26,
-  "originalTopRow": 22,
+  "originalBottomRow": 24,
+  "originalTopRow": 19,
   "overflow": "NONE",
   "parentColumnSpace": 30.5625,
   "parentId": "0",
@@ -43,7 +43,7 @@
   "text": "All Assets - BER",
   "textAlign": "LEFT",
   "textColor": "#0061a6",
-  "topRow": 22,
+  "topRow": 19,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
