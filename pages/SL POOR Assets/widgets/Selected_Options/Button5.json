@@ -15,9 +15,6 @@
     },
     {
       "key": "isDisabled"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicPropertyPathList": [
@@ -33,7 +30,7 @@
   "iconAlign": "left",
   "iconName": "backlink",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{appsmith.store.selectedReplacementProducts.bronzeProduct && appsmith.store.selectedReplacementProducts.silverProduct && appsmith.store.selectedReplacementProducts.goldProduct && All_Assets_BER.triggeredRow.ber_report ? false : true}}",
+  "isDisabled": "{{appsmith.store.selectedReplacementProducts.bronzeProduct && appsmith.store.selectedReplacementProducts.silverProduct && appsmith.store.selectedReplacementProducts.goldProduct ? false : true}}",
   "isLoading": false,
   "isVisible": true,
   "key": "rd91csk403",
@@ -56,7 +53,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 60,
-  "text": "{{appsmith.store.replacementStatus? 'Update Customer Link' : 'Create Customer Link'}}",
+  "text": "Create Customer Link",
   "topRow": 71,
   "type": "BUTTON_WIDGET",
   "version": 1,

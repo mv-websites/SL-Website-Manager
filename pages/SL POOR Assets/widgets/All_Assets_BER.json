@@ -54,7 +54,7 @@
     "description": 311,
     "make_model": 243,
     "serviceable": 85,
-    "site": 519
+    "site": 201.40625
   },
   "compactMode": "DEFAULT",
   "customIsLoading": false,
@@ -74,9 +74,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "primaryColumns.Customer.computedValue"
@@ -143,6 +140,9 @@
     },
     {
       "key": "primaryColumns.ber_report.computedValue"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -598,7 +598,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "site",
+      "label": "Site",
       "notation": "standard",
       "originalId": "site",
       "sticky": "",
@@ -614,7 +614,7 @@
   "rightColumn": 61,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{appsmith.store.all_assets_ber}}",
+  "tableData": "{{appsmith.store.all_assets_poor}}",
   "textSize": "0.875rem",
   "topRow": 25,
   "totalRecordsCount": 0,

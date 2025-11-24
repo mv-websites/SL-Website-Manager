@@ -77,9 +77,6 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.Customer.computedValue"
     },
     {
@@ -162,6 +159,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.cellBackground"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
