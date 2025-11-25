@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconAlign": "left",
   "iconName": "backlink",
   "isDefaultClickDisabled": true,
@@ -29,6 +33,7 @@
   "mobileRightColumn": 55,
   "mobileTopRow": 29,
   "needsErrorInfo": false,
+  "onClick": "{{navigateTo('Product Extras', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 24.5,
   "parentId": "0",
   "parentRowSpace": 10,
