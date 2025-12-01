@@ -23,13 +23,13 @@ SELECT
 FROM all_products ap
 
 -- join parent's supplier info
-LEFT JOIN product_suppliers ps_parent 
+LEFT JOIN WrARJWM7_product_suppliers ps_parent 
     ON ap.parent_id = ps_parent.product_id
-LEFT JOIN suppliers s 
+LEFT JOIN WrARJWM7_suppliers s 
     ON ps_parent.supplier_id = s.id
 
 -- join variant's own supplier info
-LEFT JOIN product_suppliers ps_variant
+LEFT JOIN WrARJWM7_product_suppliers ps_variant
     ON ap.product_id = ps_variant.product_id
 
 WHERE ap.parent_id != 0

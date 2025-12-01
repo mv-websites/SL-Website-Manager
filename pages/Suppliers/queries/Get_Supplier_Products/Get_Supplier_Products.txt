@@ -15,9 +15,9 @@ SELECT
 		ps.aq_list_price,
 		ps.id as product_supplier_id
 FROM all_products ap
-LEFT JOIN product_suppliers ps 
+LEFT JOIN WrARJWM7_product_suppliers ps 
     ON ap.product_id = ps.product_id
-LEFT JOIN suppliers s 
+LEFT JOIN WrARJWM7_suppliers s 
     ON ps.supplier_id = s.id
 WHERE ap.parent_id = 0
 	AND s.id = {{Table1.updatedRow.id}}

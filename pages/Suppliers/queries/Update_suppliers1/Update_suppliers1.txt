@@ -1,4 +1,4 @@
-UPDATE suppliers
+UPDATE WrARJWM7_suppliers
 SET 
     name = '{{ Table1.updatedRow.name }}',
     discount = {{ Table1.updatedRow.discount || 0 }},

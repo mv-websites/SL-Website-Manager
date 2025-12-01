@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DISTINCT ap.parent_id AS parent_product_id\nFROM all_products ap\nJOIN product_suppliers ps \n    ON ap.parent_id = ps.product_id\nJOIN suppliers s \n    ON ps.supplier_id = s.id\nWHERE ap.parent_id != 0\n  AND s.id = {{this.params.parent_id}};\n",
+      "body": "SELECT DISTINCT ap.parent_id AS parent_product_id\nFROM all_products ap\nJOIN WrARJWM7_product_suppliers ps \n    ON ap.parent_id = ps.product_id\nJOIN WrARJWM7_suppliers s \n    ON ps.supplier_id = s.id\nWHERE ap.parent_id != 0\n  AND s.id = {{this.params.parent_id}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

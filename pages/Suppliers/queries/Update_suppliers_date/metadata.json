@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE suppliers\nSET date_adjusted = '{{ moment().format(\"YYYY-MM-DD\") }}'\nWHERE id = {{ Table1.updatedRow.id }};",
+      "body": "UPDATE WrARJWM7_suppliers\nSET date_adjusted = '{{ moment().format(\"YYYY-MM-DD\") }}'\nWHERE id = {{ Table1.updatedRow.id }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

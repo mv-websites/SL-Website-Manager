@@ -1,5 +1,5 @@
 
-INSERT INTO suppliers (name, date_adjusted, discount, discount_confirmed, notes) 
+INSERT INTO WrARJWM7_suppliers (name, date_adjusted, discount, discount_confirmed, notes) 
 VALUES (
   '{{ (Table1.newRow || {}).name }}',
   '{{ moment().format("YYYY-MM-DD") }}',

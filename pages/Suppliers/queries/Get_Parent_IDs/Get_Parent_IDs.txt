@@ -1,8 +1,8 @@
 SELECT DISTINCT ap.parent_id AS parent_product_id
 FROM all_products ap
-JOIN product_suppliers ps 
+JOIN WrARJWM7_product_suppliers ps 
     ON ap.parent_id = ps.product_id
-JOIN suppliers s 
+JOIN WrARJWM7_suppliers s 
     ON ps.supplier_id = s.id
 WHERE ap.parent_id != 0
   AND s.id = {{this.params.parent_id}};

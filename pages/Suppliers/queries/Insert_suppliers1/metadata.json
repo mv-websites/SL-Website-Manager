@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "\nINSERT INTO suppliers (name, date_adjusted, discount, discount_confirmed, notes) \nVALUES (\n  '{{ (Table1.newRow || {}).name }}',\n  '{{ moment().format(\"YYYY-MM-DD\") }}',\n  '{{(Table1.newRow || {}).discount || 0}}',\n  {{ (Table1.newRow || {}).discount_confirmed ? 1 : 0 }},\n  '{{ (Table1.newRow || {}).notes || \"\" }}'\n);\n",
+      "body": "\nINSERT INTO WrARJWM7_suppliers (name, date_adjusted, discount, discount_confirmed, notes) \nVALUES (\n  '{{ (Table1.newRow || {}).name }}',\n  '{{ moment().format(\"YYYY-MM-DD\") }}',\n  '{{(Table1.newRow || {}).discount || 0}}',\n  {{ (Table1.newRow || {}).discount_confirmed ? 1 : 0 }},\n  '{{ (Table1.newRow || {}).notes || \"\" }}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

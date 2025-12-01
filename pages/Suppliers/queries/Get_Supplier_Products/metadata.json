@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    ap.product_id, \n    ap.parent_id, \n    ap.product_type, \n    ap.sku, \n    ap.name, \n    ap.price, \n    ap.main_image_url, \n    ap.product_url, \n    ap.all_categories, \n    ap.hasVariants, \n    s.name AS supplier,\n\t\ts.discount AS supplier_discount,\n\t\tps.markup_percent AS product_markup,\n\t\tps.aq_list_price,\n\t\tps.id as product_supplier_id\nFROM all_products ap\nLEFT JOIN product_suppliers ps \n    ON ap.product_id = ps.product_id\nLEFT JOIN suppliers s \n    ON ps.supplier_id = s.id\nWHERE ap.parent_id = 0\n\tAND s.id = {{Table1.updatedRow.id}}\nLIMIT\n  100\nOFFSET\n  {{ this.params.offsetVar }};\n",
+      "body": "SELECT \n    ap.product_id, \n    ap.parent_id, \n    ap.product_type, \n    ap.sku, \n    ap.name, \n    ap.price, \n    ap.main_image_url, \n    ap.product_url, \n    ap.all_categories, \n    ap.hasVariants, \n    s.name AS supplier,\n\t\ts.discount AS supplier_discount,\n\t\tps.markup_percent AS product_markup,\n\t\tps.aq_list_price,\n\t\tps.id as product_supplier_id\nFROM all_products ap\nLEFT JOIN WrARJWM7_product_suppliers ps \n    ON ap.product_id = ps.product_id\nLEFT JOIN WrARJWM7_suppliers s \n    ON ps.supplier_id = s.id\nWHERE ap.parent_id = 0\n\tAND s.id = {{Table1.updatedRow.id}}\nLIMIT\n  100\nOFFSET\n  {{ this.params.offsetVar }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
