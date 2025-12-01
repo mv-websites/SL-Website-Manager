@@ -42,6 +42,9 @@
     },
     {
       "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemj290t6m7js.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtono42o0y6car.onClick"
     }
   ],
   "groupButtons": {
@@ -51,7 +54,7 @@
       "iconAlign": "left",
       "iconName": "menu",
       "id": "groupButtonlmv0ekh7j4",
-      "index": 0,
+      "index": 1,
       "isDisabled": false,
       "isSeparator": false,
       "isVisible": true,
@@ -174,13 +177,30 @@
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "um0q22ujnj"
+    },
+    "groupButtono42o0y6car": {
+      "buttonColor": "#f6fafe",
+      "buttonType": "SIMPLE",
+      "iconName": "home",
+      "id": "groupButtono42o0y6car",
+      "index": 0,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Home",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "7cz40mq4n1"
     }
   },
   "isCanvas": false,
   "isLoading": false,
   "isVisible": true,
   "key": "0fo3rf7oq2",
-  "leftColumn": 58,
+  "leftColumn": 52,
   "minWidth": 450,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 8,
@@ -189,7 +209,7 @@
   "needsErrorInfo": false,
   "orientation": "horizontal",
   "parentColumnSpace": 19.8125,
-  "parentId": "9fgiiq69ae",
+  "parentId": "bqrropl599",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -197,6 +217,6 @@
   "topRow": 1,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "wqk3qjkq9d",
-  "widgetName": "ButtonGroup1"
+  "widgetId": "rrnt3dyyc9",
+  "widgetName": "ButtonGroup1Copy"
 }
