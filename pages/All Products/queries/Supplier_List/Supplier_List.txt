@@ -1,6 +1,6 @@
 SELECT
   name as label, id as value
 FROM
-  suppliers
+  WrARJWM7_suppliers
 ORDER BY
   name ASC;

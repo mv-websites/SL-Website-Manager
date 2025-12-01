@@ -15,8 +15,8 @@ SELECT
 		ps.aq_list_price,
 		ps.id as product_supplier_id
 FROM wp_qyxos.all_products ap
-LEFT JOIN wp_qyxos.product_suppliers ps ON ap.product_id = ps.product_id
-LEFT JOIN wp_qyxos.suppliers s ON ps.supplier_id = s.id
+LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps ON ap.product_id = ps.product_id
+LEFT JOIN wp_qyxos.WrARJWM7_suppliers s ON ps.supplier_id = s.id
 LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_price ON ap.product_id = pm_price.post_id 
     AND pm_price.meta_key = '_price'
 LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_sku ON ap.product_id = pm_sku.post_id 

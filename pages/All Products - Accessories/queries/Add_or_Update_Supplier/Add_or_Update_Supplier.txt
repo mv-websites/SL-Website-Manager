@@ -1,5 +1,5 @@
 -- Insert/Update for the main product
-INSERT INTO wp_qyxos.product_suppliers (id, supplier_id, product_id)
+INSERT INTO wp_qyxos.WrARJWM7_product_suppliers (id, supplier_id, product_id)
 VALUES (
   {{ Table1.updatedRow.id }},
   {{ Table1.updatedRow.supplier }},
@@ -9,7 +9,7 @@ ON DUPLICATE KEY UPDATE
   supplier_id = {{Table1.updatedRow.supplier}};
 	
 -- Insert/Update for all child products of that product
-INSERT INTO wp_qyxos.product_suppliers (supplier_id, product_id)
+INSERT INTO wp_qyxos.WrARJWM7_product_suppliers (supplier_id, product_id)
 SELECT 
     {{ Table1.updatedRow.supplier }} AS supplier_id,
     ap.product_id
