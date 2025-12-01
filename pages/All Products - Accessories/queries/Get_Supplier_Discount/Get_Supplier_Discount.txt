@@ -1,0 +1,4 @@
+SELECT discount FROM product_suppliers 
+	JOIN suppliers
+		ON suppliers.id = product_suppliers.supplier_id 
+	WHERE product_id = {{this.params.product_id}};

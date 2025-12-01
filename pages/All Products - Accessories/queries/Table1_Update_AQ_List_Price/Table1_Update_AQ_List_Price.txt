@@ -1,0 +1,3 @@
+UPDATE product_suppliers
+SET aq_list_price = {{ Table1.updatedRow.aq_list_price }}
+WHERE id = {{ Table1.updatedRow.product_supplier_id }};

@@ -1,0 +1,3 @@
+{
+	"regular_price": {{this.params.body.regular_price}}
+}

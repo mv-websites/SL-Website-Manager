@@ -26,6 +26,6 @@ LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_thumb ON ap.product_id = pm_thumb.post_i
 LEFT JOIN wp_qyxos.WrARJWM7_posts img_posts ON pm_thumb.meta_value = img_posts.ID
 LEFT JOIN wp_qyxos.WrARJWM7_posts wp_posts ON ap.product_id = wp_posts.ID
 WHERE ap.parent_id = 0
-	AND NOT FIND_IN_SET('Accessories', ap.all_categories)
+	AND FIND_IN_SET('Accessories', ap.all_categories)
 GROUP BY ap.product_id, ap.parent_id, ap.product_type
 ORDER BY pm_sku.meta_value ASC;

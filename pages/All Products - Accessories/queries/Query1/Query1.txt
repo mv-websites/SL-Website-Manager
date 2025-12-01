@@ -1,0 +1,18 @@
+SELECT 
+    ap.product_id, 
+    ap.parent_id, 
+    ap.product_type, 
+    ap.sku, 
+    ap.name, 
+    ap.price, 
+    ap.main_image_url, 
+    ap.product_url, 
+    ap.all_categories, 
+    ap.hasVariants, 
+    s.name AS supplier
+FROM all_products ap
+LEFT JOIN product_suppliers ps 
+    ON ap.product_id = ps.product_id
+LEFT JOIN suppliers s 
+    ON ps.supplier_id = s.id
+WHERE ap.parent_id = 0;

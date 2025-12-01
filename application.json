@@ -53,6 +53,10 @@
     {
       "id": "Product Extras",
       "isDefault": false
+    },
+    {
+      "id": "All Products - Accessories",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

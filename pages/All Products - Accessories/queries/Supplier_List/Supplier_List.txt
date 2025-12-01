@@ -1,0 +1,6 @@
+SELECT
+  name as label, id as value
+FROM
+  suppliers
+ORDER BY
+  name ASC;
