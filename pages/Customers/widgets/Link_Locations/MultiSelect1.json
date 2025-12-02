@@ -28,6 +28,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
     }
   ],
   "isDisabled": false,
@@ -50,6 +53,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
+  "onDropdownOpen": "{{Get_List_Client_Locations_SL.run()}}",
   "onOptionChange": "{{Update_Customer_Locations.run().then(() => {\n  showAlert('Succesfully updated Locations', 'success');\n}).catch(() => {\n  showAlert('Failed to update locations', 'error');\n});}}",
   "optionLabel": "Co_Name",
   "optionValue": "Client_Ref",
