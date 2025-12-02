@@ -1,0 +1,1 @@
+SELECT DISTINCT Client_Ref, Co_Name FROM MV_Customer.dbo.LiveEquipment WHERE Client_Group  = {{appsmith.store.clientGroup}} AND IsServiceline = 'Yes';

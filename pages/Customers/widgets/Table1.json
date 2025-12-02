@@ -203,7 +203,7 @@
       "notation": "standard",
       "onOptionChange": "{{Update_Customer_ClientGroup.run().then(() => {\n  showAlert('Updated Client Group Succesfully!', 'success');\n}).catch(() => {\n  showAlert('Failed to update Client Group', 'error');\n});\nClear_Customer_Locations.run()}}",
       "originalId": "ClientGroup",
-      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Get_List_Clients.data)) : Get_List_Clients.data })()}}",
+      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Get_List_Clients_SL.data)) : Get_List_Clients_SL.data })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

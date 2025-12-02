@@ -1,0 +1,3 @@
+SELECT DISTINCT Customer as label, Client_Group as value FROM MV_Customer.dbo.LiveEquipment 
+WHERE IsServiceline = 'Yes'
+ORDER BY label ASC ;

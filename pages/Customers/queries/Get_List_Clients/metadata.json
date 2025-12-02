@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "Get_List_Clients",
     "pageId": "Customers",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
