@@ -1,3 +1,3 @@
 SELECT eq_code, url
-FROM wp_qyxos.equipment_ber_links
+FROM wp_qyxos.WrARJWM7_equipment_ber_links
 WHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return "'"+ ref + "'" }).join(',')}});

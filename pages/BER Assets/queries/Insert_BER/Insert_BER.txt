@@ -1,1 +1,1 @@
-INSERT INTO wp_qyxos.equipment_ber_links (eq_code, url)  VALUES ({{this.params.eq_code}}, {{this.params.url}});
+INSERT INTO wp_qyxos.WrARJWM7_equipment_ber_links (eq_code, url)  VALUES ({{this.params.eq_code}}, {{this.params.url}});

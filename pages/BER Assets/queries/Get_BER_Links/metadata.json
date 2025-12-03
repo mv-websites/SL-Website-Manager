@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT eq_code, url\nFROM wp_qyxos.equipment_ber_links\nWHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return \"'\"+ ref + \"'\" }).join(',')}});",
+      "body": "SELECT eq_code, url\nFROM wp_qyxos.WrARJWM7_equipment_ber_links\nWHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return \"'\"+ ref + \"'\" }).join(',')}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

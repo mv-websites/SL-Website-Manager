@@ -1,2 +1,2 @@
 SELECT UNIQUE eq_code
-FROM asset_replacement;
+FROM WrARJWM7_asset_replacement;

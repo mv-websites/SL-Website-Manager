@@ -1,2 +1,2 @@
 SELECT *
-FROM asset_replacement_status WHERE eq_code = {{this.params.eq_code}};
+FROM WrARJWM7_asset_replacement_status WHERE eq_code = {{this.params.eq_code}};

@@ -1,4 +1,4 @@
-INSERT INTO asset_replacement_status 
+INSERT INTO WrARJWM7_asset_replacement_status 
   (eq_code, has_customer_viewed, date_viewed, url, viewed_name) 
 VALUES (
   {{appsmith.store.eq_code}},
