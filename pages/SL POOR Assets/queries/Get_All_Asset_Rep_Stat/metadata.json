@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT eq_code, has_customer_viewed\nFROM wp_qyxos.asset_replacement_status\nWHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return \"'\"+ ref + \"'\" }).join(',')}});",
+      "body": "SELECT eq_code, has_customer_viewed\nFROM wp_qyxos.WrARJWM7_asset_replacement_status\nWHERE eq_code IN ({{this.params.eq_refs.map((ref) => { return \"'\"+ ref + \"'\" }).join(',')}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
