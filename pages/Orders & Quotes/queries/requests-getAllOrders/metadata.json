@@ -45,7 +45,7 @@
     "fullyQualifiedName": "requests.getAllOrders",
     "name": "getAllOrders",
     "pageId": "Orders & Quotes",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
