@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 23,
+  "bottomRow": 20,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -54,7 +54,7 @@
   "onOptionChange": "{{requests.getAllOrders(Select1.selectedOptionValue, '', utils.statusSetting.data, '', List1.pageSize, '1');}}",
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 23,
+  "originalBottomRow": 20,
   "originalTopRow": 16,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
