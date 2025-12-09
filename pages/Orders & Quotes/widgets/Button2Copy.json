@@ -1,0 +1,61 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 23,
+  "boxShadow": "{{utils.statusSetting.data === \"completed\"? '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' : 'none'}}",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "{{utils.statusSetting.data === \"completed\"? \"PRIMARY\" : \"SECONDARY\"}}",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "buttonVariant"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "buttonVariant"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "65yuuxfgm3",
+  "leftColumn": 34,
+  "minWidth": 120,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 27,
+  "mobileRightColumn": 43,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "onClick": "{{utils.statusSetting('completed');}}",
+  "parentColumnSpace": 30.5625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 39,
+  "text": "Completed",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5oe3kh9igq",
+  "widgetName": "Button2Copy"
+}

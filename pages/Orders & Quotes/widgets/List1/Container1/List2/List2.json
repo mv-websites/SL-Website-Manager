@@ -10,11 +10,11 @@
   "backgroundColor": "transparent",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 27,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "boxShadow": "none",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 180,
+      "bottomRow": 170,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -79,9 +79,6 @@
       "key": "borderRadius"
     },
     {
-      "key": "boxShadow"
-    },
-    {
       "key": "listData"
     }
   ],
@@ -97,7 +94,7 @@
   "itemBackgroundColor": "#FFFFFF",
   "itemSpacing": 8,
   "key": "naz7wb44hv",
-  "leftColumn": 5,
+  "leftColumn": 0,
   "listData": "{{currentItem.items}}",
   "mainCanvasId": "km6qyjlaf7",
   "mainContainerId": "8xdlgpwsgf",
@@ -115,10 +112,10 @@
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 55,
+  "rightColumn": 35,
   "selectedItemView": "{{{}}}",
   "templateHeight": 160,
-  "topRow": 9,
+  "topRow": 10,
   "triggeredItemView": "{{{}}}",
   "type": "LIST_WIDGET_V2",
   "widgetId": "qrgqmtty5q",
