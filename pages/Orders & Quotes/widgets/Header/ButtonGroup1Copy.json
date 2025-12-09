@@ -1,0 +1,222 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemuxuiiid5c2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItem615dlz0g13.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItembz46mb88fv.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemlafx49vg36.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemy2tuwh6kid.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemn6dhmhlbzz.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemy68yqasjhb.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItem6f8rdmfbjp.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlmv0ekh7j4.menuItems.menuItemj290t6m7js.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtono42o0y6car.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButtonlmv0ekh7j4": {
+      "buttonColor": "#f6fafe",
+      "buttonType": "MENU",
+      "iconAlign": "left",
+      "iconName": "menu",
+      "id": "groupButtonlmv0ekh7j4",
+      "index": 1,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Menu",
+      "menuItems": {
+        "menuItem615dlz0g13": {
+          "backgroundColor": "#0061a6",
+          "iconAlign": "right",
+          "iconColor": "#ffffff",
+          "iconName": "th-derived",
+          "id": "menuItem615dlz0g13",
+          "index": 3,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Suppliers & Supplier Discounts",
+          "onClick": "{{navigateTo('Suppliers', {}, 'SAME_WINDOW');}}",
+          "textColor": "#ffffff",
+          "widgetId": "i93wgc70ur"
+        },
+        "menuItem6f8rdmfbjp": {
+          "backgroundColor": "#dbeafe",
+          "iconAlign": "right",
+          "id": "menuItem6f8rdmfbjp",
+          "index": 5,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "-- All Assets SL POOR",
+          "onClick": "{{navigateTo('SL POOR Assets', {}, 'SAME_WINDOW');}}",
+          "widgetId": "wp5f7nuh1t"
+        },
+        "menuItembz46mb88fv": {
+          "backgroundColor": "#dbeafe",
+          "iconAlign": "right",
+          "id": "menuItembz46mb88fv",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "    -- Product Addons",
+          "onClick": "{{navigateTo('Product Extras', {}, 'SAME_WINDOW');}}",
+          "widgetId": "dsmfz8emt9"
+        },
+        "menuItemj290t6m7js": {
+          "backgroundColor": "#0061a6",
+          "iconAlign": "right",
+          "iconColor": "#ffffff",
+          "iconName": "globe",
+          "id": "menuItemj290t6m7js",
+          "index": 8,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Wordpress Shop",
+          "onClick": "{{navigateTo('https://www.service-line.co.uk/new-equipment-sales/', {}, 'NEW_WINDOW');}}",
+          "textColor": "#ffffff",
+          "widgetId": "xu5rwl241m"
+        },
+        "menuItemlafx49vg36": {
+          "backgroundColor": "#dbeafe",
+          "id": "menuItemlafx49vg36",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "    -- Manage Accessories",
+          "onClick": "{{navigateTo('All Products - Accessories', {}, 'SAME_WINDOW');}}",
+          "widgetId": "o49x4xsnjs"
+        },
+        "menuItemn6dhmhlbzz": {
+          "backgroundColor": "#0061a6",
+          "iconAlign": "right",
+          "iconColor": "#ffffff",
+          "iconName": "swap-horizontal",
+          "id": "menuItemn6dhmhlbzz",
+          "index": 4,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Equipment Replacement Manager",
+          "onClick": "{{navigateTo('BER Assets', {}, 'SAME_WINDOW');}}",
+          "textColor": "#ffffff",
+          "widgetId": "h0nmh7zmlz"
+        },
+        "menuItemuxuiiid5c2": {
+          "backgroundColor": "#0061a6",
+          "iconAlign": "right",
+          "iconColor": "#ffffff",
+          "iconName": "list-detail-view",
+          "id": "menuItemuxuiiid5c2",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All Products, List Pricing & Markups",
+          "onClick": "{{navigateTo('All Products', {}, 'SAME_WINDOW');}}",
+          "textColor": "#ffffff",
+          "widgetId": "iuwczzucbs"
+        },
+        "menuItemy2tuwh6kid": {
+          "backgroundColor": "#0061a6",
+          "iconAlign": "right",
+          "iconColor": "#ffffff",
+          "iconName": "user",
+          "id": "menuItemy2tuwh6kid",
+          "index": 7,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "All Customers & Links to Reports",
+          "onClick": "{{navigateTo('Customers', {}, 'SAME_WINDOW');}}",
+          "textColor": "#ffffff",
+          "widgetId": "wnxtf2vqmw"
+        },
+        "menuItemy68yqasjhb": {
+          "backgroundColor": "#dbeafe",
+          "id": "menuItemy68yqasjhb",
+          "index": 6,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "-- Orders Portal",
+          "onClick": "{{navigateTo('https://www.service-line.co.uk/wp-admin/admin.php?page=wc-orders', {}, 'NEW_WINDOW');}}",
+          "widgetId": "udst6yvui2"
+        }
+      },
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "um0q22ujnj"
+    },
+    "groupButtono42o0y6car": {
+      "buttonColor": "#f6fafe",
+      "buttonType": "SIMPLE",
+      "iconName": "home",
+      "id": "groupButtono42o0y6car",
+      "index": 0,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Home",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "7cz40mq4n1"
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0fo3rf7oq2",
+  "leftColumn": 54,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 19.8125,
+  "parentId": "jig7xcylc7",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 1,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "ynygb23quo",
+  "widgetName": "ButtonGroup1Copy"
+}

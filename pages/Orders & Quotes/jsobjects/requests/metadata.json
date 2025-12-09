@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "690080acd1a018060dd5eb42_8251c59e-3513-42d7-a30c-d906c43a3e1d",
+  "id": "Orders & Quotes_requests",
+  "unpublishedCollection": {
+    "name": "requests",
+    "pageId": "Orders & Quotes",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -57,6 +57,10 @@
     {
       "id": "All Products - Accessories",
       "isDefault": false
+    },
+    {
+      "id": "Orders & Quotes",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
