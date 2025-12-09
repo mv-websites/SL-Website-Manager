@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "{{utils.itemBackgroundColor(currentItem.status)}}",
+  "backgroundColor": "{{utils.statusTypes(currentItem.status).bgColor}}",
   "borderColor": "#E0DEDE",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0.375rem",
   "borderWidth": "1",
   "bottomRow": 29,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -54,9 +54,6 @@
   "disallowCopy": true,
   "dragDisabled": true,
   "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    },
     {
       "key": "boxShadow"
     },

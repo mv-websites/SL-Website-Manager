@@ -2,25 +2,21 @@ export default {
 	customerName (group) {
 		const clientList = Get_List_Clients_SL.data;
 		const item = clientList.find(obj => obj.value === group);
-  	return item ? item.label : null;
+		return item ? item.label : null;
 	},
-	statusSetting (selectedStatus = 'all') {
+	async statusSetting (selectedStatus = 'all') {
+		await requests.getAllOrders(Select1.selectedOptionValue, '', selectedStatus, '', List1.pageSize, 1);
 		return selectedStatus;
 	},
-	itemBackgroundColor (status) {
-		switch (status) {
-			case "processing":
-				return "#fff9c4";
-			case "completed":
-				return "#e0f7fa";
-			case "quote-ready":
-				return "#e3f2fd";
-			case "quote-requested":
-				return "#ffebee";
-			case "on-hold":
-				return "#f3e5f5";
-			default:
-				return "#f5f5f5"
+	statusTypes (statusKey = 'quote-ready') {
+		const types = {
+			'quote-ready': {'name': 'Quote Ready', bgColor: '#e3f2fd', primaryColor: '#1d4ed8'},
+			'quote-requested': {'name': 'Quote Requested', bgColor: '#ffebee', primaryColor: '#ef4444'},
+			'completed': {'name': 'Completed', bgColor: '#dcfce7', primaryColor: '#22c55e'},
+			'on-hold': {'name': 'Order in Progress', bgColor: '#f3e5f5', primaryColor: '#a855f7'},
+			'processing': {'name': 'Delivery Scheduled', bgColor: '#fff9c4', primaryColor: '#eab308'},
+			'no-status': {'name': 'No Status', bgColor: '#f5f5f5', primaryColor: '#71717a'}
 		}
+		return types[statusKey];
 	}
 }

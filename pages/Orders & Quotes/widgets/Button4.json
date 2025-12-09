@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 23,
   "boxShadow": "{{utils.statusSetting.data === \"quote-requested\"? '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' : 'none'}}",
-  "buttonColor": "#ef4444",
+  "buttonColor": "{{utils.statusTypes('quote-requested').primaryColor}}",
   "buttonVariant": "{{utils.statusSetting.data === \"quote-requested\"? \"PRIMARY\" : \"SECONDARY\"}}",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -15,6 +15,9 @@
     },
     {
       "key": "buttonVariant"
+    },
+    {
+      "key": "buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -23,6 +26,9 @@
     },
     {
       "key": "buttonVariant"
+    },
+    {
+      "key": "buttonColor"
     }
   ],
   "dynamicTriggerPathList": [

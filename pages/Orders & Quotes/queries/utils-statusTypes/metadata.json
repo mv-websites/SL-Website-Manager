@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "690080acd1a018060dd5eb42_5d7331d6-dd96-473f-afb9-00bd3c6c240c",
-  "id": "Orders & Quotes_utils.itemBackgroundColor",
+  "gitSyncId": "690080acd1a018060dd5eb42_1b84d37e-4069-479c-ace1-b2acc59124c1",
+  "id": "Orders & Quotes_utils.statusTypes",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,7 +8,8 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "status"
+          "name": "statusKey",
+          "value": "quote-ready"
         }
       ],
       "paginationType": "NONE",
@@ -26,8 +27,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "utils.itemBackgroundColor",
-    "name": "itemBackgroundColor",
+    "fullyQualifiedName": "utils.statusTypes",
+    "name": "statusTypes",
     "pageId": "Orders & Quotes",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
