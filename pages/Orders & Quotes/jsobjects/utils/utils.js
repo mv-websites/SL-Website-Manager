@@ -13,8 +13,8 @@ export default {
 			'quote-ready': {'name': 'Quote Ready', bgColor: '#e3f2fd', primaryColor: '#1d4ed8'},
 			'quote-requested': {'name': 'Quote Requested', bgColor: '#ffebee', primaryColor: '#ef4444'},
 			'completed': {'name': 'Completed', bgColor: '#dcfce7', primaryColor: '#22c55e'},
-			'on-hold': {'name': 'Order in Progress', bgColor: '#f3e5f5', primaryColor: '#a855f7'},
-			'processing': {'name': 'Delivery Scheduled', bgColor: '#fff9c4', primaryColor: '#eab308'},
+			'on-hold': {'name': 'Order in Progress', bgColor: '#fff9c4', primaryColor: '#eab308'},
+			'processing': {'name': 'Delivery Scheduled', bgColor: '#f3e5f5', primaryColor: '#a855f7'},
 			'no-status': {'name': 'No Status', bgColor: '#f5f5f5', primaryColor: '#71717a'}
 		}
 		return types[statusKey];
