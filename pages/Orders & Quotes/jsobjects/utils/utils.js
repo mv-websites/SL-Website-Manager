@@ -10,17 +10,17 @@ export default {
 	itemBackgroundColor (status) {
 		switch (status) {
 			case "processing":
-				return "#fef9c3";
+				return "#fff9c4";
 			case "completed":
-				return "#dcfce7";
+				return "#e0f7fa";
 			case "quote-ready":
-				return "#dbeafe";
+				return "#e3f2fd";
 			case "quote-requested":
-				return "#fee2e2";
+				return "#ffebee";
 			case "on-hold":
-				return "#f3e8ff";
+				return "#f3e5f5";
 			default:
-				return "#f4f4f5"
+				return "#f5f5f5"
 		}
 	}
 }
