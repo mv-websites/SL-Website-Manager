@@ -43,7 +43,7 @@
   "shouldTruncate": false,
   "text": "Order Date: {{new Date(currentItem.date_created).toLocaleDateString('en-GB')}}",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "textColor": "#ffffff",
   "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

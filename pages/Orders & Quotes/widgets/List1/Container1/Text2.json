@@ -45,7 +45,7 @@
   "shouldTruncate": false,
   "text": "Total: £{{currentItem.total}}",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "textColor": "#ffffff",
   "textStyle": "BODY",
   "topRow": 22,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",

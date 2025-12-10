@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "borderColor": "#0061a6",
+  "borderColor": "#dbeafe",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
   "bottomRow": 4,
@@ -42,7 +42,7 @@
   "shouldTruncate": false,
   "text": "{{utils.customerName(currentItem.customer_group)}}",
   "textAlign": "CENTER",
-  "textColor": "#0061a6",
+  "textColor": "#ffffff",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
