@@ -15,6 +15,7 @@ export default {
 			'completed': {'name': 'Completed', bgColor: '#dcfce7', primaryColor: '#22c55e'},
 			'on-hold': {'name': 'Order in Progress', bgColor: '#fff9c4', primaryColor: '#eab308'},
 			'processing': {'name': 'Delivery Scheduled', bgColor: '#f3e5f5', primaryColor: '#a855f7'},
+			'cancelled': {'name': 'Cancelled', bgColor: '#f5f5f5', primaryColor: '#71717a'},
 			'no-status': {'name': 'No Status', bgColor: '#f5f5f5', primaryColor: '#71717a'}
 		}
 		return types[statusKey];

@@ -1,5 +1,6 @@
 {
   "animateLoading": true,
+  "backgroundColor": "{{utils.statusTypes(currentItem.status).bgColor}}",
   "borderColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "",
@@ -19,12 +20,18 @@
     },
     {
       "key": "textColor"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "textColor"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicTriggerPathList": [],
