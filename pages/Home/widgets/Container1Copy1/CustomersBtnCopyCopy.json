@@ -31,7 +31,7 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 21,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Orders & Quotes', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Orders & Quotes v2', {}, 'SAME_WINDOW');}}",
   "originalBottomRow": 17,
   "originalTopRow": 7,
   "parentColumnSpace": 25.90625,
