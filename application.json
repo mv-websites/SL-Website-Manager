@@ -61,6 +61,10 @@
     {
       "id": "Orders & Quotes",
       "isDefault": false
+    },
+    {
+      "id": "Orders & Quotes v2",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
