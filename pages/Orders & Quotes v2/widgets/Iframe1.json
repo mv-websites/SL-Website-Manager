@@ -30,7 +30,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "source": "https://www.service-line.co.uk/wp-admin",
+  "source": "https://www.service-line.co.uk/wp-admin/?wtlwp_token=f80dc4eca1317710367766e71eae798f4e4a364afca9ac32eb51d3c100007351df6ca8d0b06338bf6af92c7233c420c5b5da1f81084246e42edb1cccdbcfb77f&redirect_to=/sm-dashboard/",
   "topRow": 8,
   "type": "IFRAME_WIDGET",
   "version": 1,
