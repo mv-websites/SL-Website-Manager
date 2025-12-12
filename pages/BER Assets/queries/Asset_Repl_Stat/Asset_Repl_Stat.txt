@@ -1,1 +1,1 @@
-SELECT * FROM WrARJWM7_asset_replacement WHERE eq_code = {{this.params.eq_code}};
+SELECT * FROM wp_qyxos.WrARJWM7_asset_replacement WHERE eq_code = {{this.params.eq_code}};

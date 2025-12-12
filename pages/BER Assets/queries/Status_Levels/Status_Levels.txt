@@ -1,1 +1,1 @@
-SELECT name as value, name as label FROM WrARJWM7_product_status_level;
+SELECT name as value, name as label FROM wp_qyxos.WrARJWM7_product_status_level;

@@ -1,2 +1,2 @@
 SELECT UNIQUE eq_code
-FROM WrARJWM7_asset_replacement;
+FROM wp_qyxos.WrARJWM7_asset_replacement;

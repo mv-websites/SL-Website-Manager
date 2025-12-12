@@ -1,8 +1,8 @@
 -- 1. Delete any row with the same eq_code and status_level (to avoid primary key conflict)
-DELETE FROM WrARJWM7_asset_replacement
+DELETE FROM wp_qyxos.WrARJWM7_asset_replacement
 WHERE eq_code = {{this.params.eq_code}} 
   AND status_level = {{this.params.status_level}};
 
 -- 2. Insert the new row
-INSERT INTO WrARJWM7_asset_replacement (eq_code, status_level, post_id)
+INSERT INTO wp_qyxos.WrARJWM7_asset_replacement (eq_code, status_level, post_id)
 VALUES ({{this.params.eq_code}}, {{this.params.status_level}}, {{this.params.post_id}});
