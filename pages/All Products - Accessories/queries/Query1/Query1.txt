@@ -11,8 +11,8 @@ SELECT
     ap.hasVariants, 
     s.name AS supplier
 FROM all_products ap
-LEFT JOIN WrARJWM7_product_suppliers ps 
+LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps 
     ON ap.product_id = ps.product_id
-LEFT JOIN WrARJWM7_suppliers s 
+LEFT JOIN wp_qyxos.WrARJWM7_suppliers s 
     ON ps.supplier_id = s.id
 WHERE ap.parent_id = 0;

@@ -15,21 +15,21 @@ SELECT
 		ps.aq_list_price,
 		ps.id as product_supplier_id
 FROM all_products ap
-LEFT JOIN WrARJWM7_product_suppliers ps 
+LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps 
     ON ap.product_id = ps.product_id
-LEFT JOIN WrARJWM7_suppliers s 
+LEFT JOIN wp_qyxos.WrARJWM7_suppliers s 
     ON ps.supplier_id = s.id
-LEFT JOIN WrARJWM7_postmeta pm_price 
+LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_price 
     ON ap.product_id = pm_price.post_id 
     AND pm_price.meta_key = '_price'
-LEFT JOIN WrARJWM7_postmeta pm_sku 
+LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_sku 
     ON ap.product_id = pm_sku.post_id 
     AND pm_sku.meta_key = '_sku'
-LEFT JOIN WrARJWM7_postmeta pm_thumb 
+LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_thumb 
     ON ap.product_id = pm_thumb.post_id 
     AND pm_thumb.meta_key = '_thumbnail_id'
-LEFT JOIN WrARJWM7_posts img_posts 
+LEFT JOIN wp_qyxos.WrARJWM7_posts img_posts 
     ON pm_thumb.meta_value = img_posts.ID
-LEFT JOIN WrARJWM7_posts wp_posts 
+LEFT JOIN wp_qyxos.WrARJWM7_posts wp_posts 
     ON ap.product_id = wp_posts.ID
 WHERE ap.parent_id = {{this.params.id}};

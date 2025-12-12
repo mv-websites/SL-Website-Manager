@@ -1,4 +1,4 @@
-SELECT discount FROM WrARJWM7_product_suppliers ps
-	JOIN WrARJWM7_suppliers s
+SELECT discount FROM wp_qyxos.WrARJWM7_product_suppliers ps
+	JOIN wp_qyxos.WrARJWM7_suppliers s
 		ON s.id = ps.supplier_id 
 	WHERE product_id = {{this.params.product_id}};

@@ -1,7 +1,7 @@
 SELECT
   *
 FROM
-  WrARJWM7_easywpsmtp_emails_log
+  wp_qyxos.WrARJWM7_easywpsmtp_emails_log
 ORDER BY
   {{Table1.sortOrder.column || 'id'}} {{Table1.sortOrder.order !== "desc" ? "" : "DESC"}}
 LIMIT

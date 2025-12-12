@@ -1,6 +1,6 @@
 SELECT
   name as label, id as value
 FROM
-  WrARJWM7_suppliers
+  wp_qyxos.WrARJWM7_suppliers
 ORDER BY
   name ASC;
