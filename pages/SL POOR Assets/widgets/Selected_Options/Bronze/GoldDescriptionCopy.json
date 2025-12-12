@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 15,
-  "originalTopRow": 7,
+  "originalBottomRow": 20,
+  "originalTopRow": 9,
   "overflow": "NONE",
   "parentColumnSpace": 20.14404296875,
   "parentId": "cl4puvwddo",
@@ -46,7 +46,7 @@
   "text": "{{appsmith.store.selectedReplacementProducts.bronzeProduct.short_description}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 9,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
