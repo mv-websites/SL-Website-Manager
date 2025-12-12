@@ -1,6 +1,6 @@
 SELECT
   *
 FROM
-  WrARJWM7_suppliers
+  wp_qyxos.WrARJWM7_suppliers
 ORDER BY
   {{ Table1.sortOrder.column || 'name' }} {{ Table1.sortOrder.order !== "desc" ? "" : "DESC" }};

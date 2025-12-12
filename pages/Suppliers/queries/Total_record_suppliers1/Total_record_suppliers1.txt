@@ -1,1 +1,1 @@
-SELECT COUNT(*) as count from WrARJWM7_suppliers;
+SELECT COUNT(*) as count from wp_qyxos.WrARJWM7_suppliers;

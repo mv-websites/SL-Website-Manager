@@ -20,16 +20,16 @@ SELECT
     ps_variant.aq_list_price,
     ps_variant.id AS variant_product_supplier_id
 
-FROM all_products ap
+FROM wp_qyxos.all_products ap
 
 -- join parent's supplier info
-LEFT JOIN WrARJWM7_product_suppliers ps_parent 
+LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps_parent 
     ON ap.parent_id = ps_parent.product_id
-LEFT JOIN WrARJWM7_suppliers s 
+LEFT JOIN wp_qyxos.WrARJWM7_suppliers s 
     ON ps_parent.supplier_id = s.id
 
 -- join variant's own supplier info
-LEFT JOIN WrARJWM7_product_suppliers ps_variant
+LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps_variant
     ON ap.product_id = ps_variant.product_id
 
 WHERE ap.parent_id != 0
