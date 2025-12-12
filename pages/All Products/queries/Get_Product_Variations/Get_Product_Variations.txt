@@ -14,7 +14,7 @@ SELECT
 		ps.markup_percent AS product_markup,
 		ps.aq_list_price,
 		ps.id as product_supplier_id
-FROM all_products ap
+FROM wp_qyxos.all_products ap
 LEFT JOIN WrARJWM7_product_suppliers ps 
     ON ap.product_id = ps.product_id
 LEFT JOIN WrARJWM7_suppliers s 
