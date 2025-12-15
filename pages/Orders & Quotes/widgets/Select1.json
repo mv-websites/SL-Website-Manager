@@ -54,7 +54,7 @@
   "onOptionChange": "{{requests.getAllOrders(Select1.selectedOptionValue, '', utils.statusSetting.data, '', List1.pageSize, '1');}}",
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 20,
+  "originalBottomRow": 23,
   "originalTopRow": 16,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
