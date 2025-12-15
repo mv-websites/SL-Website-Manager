@@ -142,6 +142,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.email.onSubmit"
     }
   ],
   "enableClientSideSearch": false,
@@ -333,16 +336,17 @@
       "horizontalAlignment": "LEFT",
       "id": "email",
       "index": 2,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Email",
       "notation": "standard",
+      "onSubmit": "{{Update_User_Email.run().then(() => {\n  showAlert('Succesfully updated email!', 'success');\n}).catch(() => {\n  showAlert('Failed to update email!', 'warning');\n});}}",
       "originalId": "email",
       "sticky": "",
       "textSize": "0.875rem",
