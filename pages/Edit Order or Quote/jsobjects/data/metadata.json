@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "690080acd1a018060dd5eb42_dbbe66a5-db63-49fa-a17c-acfbb68f24d0",
+  "id": "Edit Order or Quote_data",
+  "unpublishedCollection": {
+    "name": "data",
+    "pageId": "Edit Order or Quote",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

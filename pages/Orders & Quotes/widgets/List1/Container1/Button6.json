@@ -31,7 +31,7 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 17,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Edit Order or Quote', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{storeValue('orderId', List1.triggeredItem.id).then(() => {\n  navigateTo('Edit Order or Quote', {}, 'SAME_WINDOW');\n});}}",
   "parentColumnSpace": 27.259765625,
   "parentId": "mqprao4he8",
   "parentRowSpace": 10,
