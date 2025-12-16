@@ -25,7 +25,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -47,6 +51,7 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 17,
   "needsErrorInfo": false,
+  "onDropdownOpen": "{{utils.statusTypesSelect();}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 27.259765625,
