@@ -200,7 +200,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "0fo3rf7oq2",
-  "leftColumn": 54,
+  "leftColumn": 49,
   "minWidth": 450,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 8,
@@ -209,7 +209,7 @@
   "needsErrorInfo": false,
   "orientation": "horizontal",
   "parentColumnSpace": 19.8125,
-  "parentId": "df99rdsyxw",
+  "parentId": "muovw5sq49",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -217,6 +217,6 @@
   "topRow": 1,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "eaj7pfyw6x",
+  "widgetId": "adqj4ic2cs",
   "widgetName": "ButtonGroup1Copy"
 }

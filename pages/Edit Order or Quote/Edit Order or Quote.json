@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "690080acd1a018060dd5eb42_61b4c7be-ef52-4408-80f7-73a44d6d807a",
+  "gitSyncId": "690080acd1a018060dd5eb42_a1a82607-a6ce-4eef-99c0-b38226923753",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1150,
+          "bottomRow": 380,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 1030,
+          "minHeight": 1050,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 101,
+          "snapRows": 103,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Orders & Quotes v2",
-    "slug": "orders-quotes-v2"
+    "name": "Edit Order or Quote",
+    "slug": "edit-order-or-quote"
   }
 }

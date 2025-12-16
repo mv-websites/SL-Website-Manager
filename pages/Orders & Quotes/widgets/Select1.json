@@ -62,7 +62,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 29,
+  "rightColumn": 32,
   "serverSideFiltering": false,
   "sourceData": "{{Get_List_Clients_SL.data}}",
   "topRow": 17,
