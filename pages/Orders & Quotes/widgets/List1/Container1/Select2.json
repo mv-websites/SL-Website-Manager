@@ -28,6 +28,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onDropdownOpen"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
   "isDisabled": false,
@@ -52,6 +55,7 @@
   "mobileTopRow": 17,
   "needsErrorInfo": false,
   "onDropdownOpen": "{{utils.statusTypesSelect();}}",
+  "onOptionChange": "{{Update_an_Order.run({\n  \"status\": Select2.selectedOptionValue,\n  \"id\": List1.triggeredItem.id\n}).then(() => {\n  requests.getAllOrders(Select1.selectedOptionValue, '{{}}', utils.statusSetting.data, 'List1', List1.pageSize, '1');\n  showAlert('Updated status!', 'success');\n}).catch(() => {\n  showAlert('Failed to update status!', 'error');\n});}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 27.259765625,
