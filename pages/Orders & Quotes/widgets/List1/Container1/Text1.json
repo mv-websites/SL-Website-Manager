@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
+  "backgroundColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 15,
   "boxShadow": "none",
   "dynamicBindingPathList": [
     {
@@ -21,6 +22,7 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
@@ -41,9 +43,9 @@
   "parentId": "mqprao4he8",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 15,
   "shouldTruncate": false,
-  "text": "User: {{currentItem.customer_name}}",
+  "text": "--- USER DETAILS ---\n{{currentItem.customer_name}}\n{{currentItem.customer_email}}",
   "textAlign": "LEFT",
   "textColor": "#ffffff",
   "textStyle": "HEADING",

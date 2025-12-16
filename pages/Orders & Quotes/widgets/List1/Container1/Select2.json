@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 23,
+  "bottomRow": 24,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( currentItem.status))(Select2.options, Select2.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,6 +14,9 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -22,52 +25,42 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onDropdownOpen"
-    },
-    {
-      "key": "onOptionChange"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "9l7kboyr9l",
+  "key": "iwdgljx3w1",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Orders by Customer",
+  "labelText": "Change Status",
+  "labelTextColor": "#ffffff",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 3,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 23,
-  "mobileLeftColumn": 3,
-  "mobileRightColumn": 23,
-  "mobileTopRow": 16,
+  "mobileBottomRow": 24,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 17,
   "needsErrorInfo": false,
-  "onDropdownOpen": "",
-  "onOptionChange": "{{requests.getAllOrders(Select1.selectedOptionValue, '', utils.statusSetting.data, '', List1.pageSize, '1');}}",
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 23,
-  "originalTopRow": 16,
-  "parentColumnSpace": 30.5625,
-  "parentId": "0",
+  "parentColumnSpace": 27.259765625,
+  "parentId": "mqprao4he8",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 14,
   "serverSideFiltering": false,
-  "sourceData": "{{Get_List_Clients_SL.data}}",
-  "topRow": 16,
+  "sourceData": "{{utils.statusTypesSelect()}}",
+  "topRow": 17,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "qiqccl5m9v",
-  "widgetName": "Select1"
+  "widgetId": "lbkldzufl1",
+  "widgetName": "Select2"
 }

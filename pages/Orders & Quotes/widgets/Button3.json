@@ -54,7 +54,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 54,
+  "rightColumn": 55,
   "text": "Quote Ready",
   "topRow": 18,
   "type": "BUTTON_WIDGET",
