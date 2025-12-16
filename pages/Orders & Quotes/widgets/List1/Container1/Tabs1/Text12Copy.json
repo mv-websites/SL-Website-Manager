@@ -1,6 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
   "bottomRow": 16,
   "dynamicBindingPathList": [
     {
@@ -24,7 +25,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "omew42msby",
-  "leftColumn": 0,
+  "leftColumn": 22,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -39,15 +40,15 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 41,
   "shouldTruncate": false,
-  "text": "Name: {{currentItem.billing.first_name}} {{currentItem.billing.last_name}}\nEmail: {{currentItem.billing.email}}\nPhone: {{currentItem.billing.phone}}\nAddress Line 1: {{currentItem.billing.address_1}}\nAddress Line 2: {{currentItem.billing.address_2}}\nCity: {{currentItem.billing.city}}\nState/Region: {{currentItem.billing.state}}\nCountry: {{currentItem.billing.country}}",
+  "text": "Name: {{currentItem.shipping.first_name}} {{currentItem.shipping.last_name}}\nEmail: {{currentItem.shipping.email}}\nPhone: {{currentItem.shipping.phone}}\nAddress Line 1: {{currentItem.shipping.address_1}}\nAddress Line 2: {{currentItem.shipping.address_2}}\nCity: {{currentItem.shipping.city}}\nState/Region: {{currentItem.shipping.state}}\nCountry: {{currentItem.shipping.country}}",
   "textAlign": "LEFT",
   "textColor": "#ffffff",
   "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mr8endyns9",
-  "widgetName": "Text12"
+  "widgetId": "5rbsp8t4a6",
+  "widgetName": "Text12Copy"
 }

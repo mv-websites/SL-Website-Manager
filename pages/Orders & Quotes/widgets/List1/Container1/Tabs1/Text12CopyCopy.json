@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -24,7 +21,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "omew42msby",
-  "leftColumn": 0,
+  "leftColumn": 45,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,21 +30,21 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "overflow": "SCROLL",
+  "overflow": "NONE",
   "parentColumnSpace": 20.13232421875,
   "parentId": "k1qxkgs9zi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "Name: {{currentItem.billing.first_name}} {{currentItem.billing.last_name}}\nEmail: {{currentItem.billing.email}}\nPhone: {{currentItem.billing.phone}}\nAddress Line 1: {{currentItem.billing.address_1}}\nAddress Line 2: {{currentItem.billing.address_2}}\nCity: {{currentItem.billing.city}}\nState/Region: {{currentItem.billing.state}}\nCountry: {{currentItem.billing.country}}",
+  "text": "",
   "textAlign": "LEFT",
   "textColor": "#ffffff",
   "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mr8endyns9",
-  "widgetName": "Text12"
+  "widgetId": "tnl31drfhq",
+  "widgetName": "Text12CopyCopy"
 }

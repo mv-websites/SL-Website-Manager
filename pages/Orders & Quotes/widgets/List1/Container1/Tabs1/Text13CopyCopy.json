@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,20 +11,17 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
-  "fontStyle": "",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "omew42msby",
-  "leftColumn": 0,
+  "key": "cj2lbugj1u",
+  "leftColumn": 45,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,21 +30,21 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "overflow": "SCROLL",
+  "overflow": "NONE",
   "parentColumnSpace": 20.13232421875,
   "parentId": "k1qxkgs9zi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 61,
   "shouldTruncate": false,
-  "text": "Name: {{currentItem.billing.first_name}} {{currentItem.billing.last_name}}\nEmail: {{currentItem.billing.email}}\nPhone: {{currentItem.billing.phone}}\nAddress Line 1: {{currentItem.billing.address_1}}\nAddress Line 2: {{currentItem.billing.address_2}}\nCity: {{currentItem.billing.city}}\nState/Region: {{currentItem.billing.state}}\nCountry: {{currentItem.billing.country}}",
+  "text": "Order Notes",
   "textAlign": "LEFT",
   "textColor": "#ffffff",
-  "topRow": 4,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mr8endyns9",
-  "widgetName": "Text12"
+  "widgetId": "o7sl6yaj92",
+  "widgetName": "Text13CopyCopy"
 }

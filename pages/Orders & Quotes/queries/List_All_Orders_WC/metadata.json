@@ -35,7 +35,7 @@
     "dynamicBindingPathList": [],
     "name": "List_All_Orders_WC",
     "pageId": "Orders & Quotes",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
