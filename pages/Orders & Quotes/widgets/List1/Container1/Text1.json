@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 17,
   "boxShadow": "none",
   "dynamicBindingPathList": [
     {
@@ -39,7 +39,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "overflow": "NONE",
+  "overflow": "SCROLL",
   "parentId": "mqprao4he8",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
