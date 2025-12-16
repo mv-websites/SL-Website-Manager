@@ -39,7 +39,7 @@
     "fullyQualifiedName": "JSObject1.saveNewUser",
     "name": "saveNewUser",
     "pageId": "Customers",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
