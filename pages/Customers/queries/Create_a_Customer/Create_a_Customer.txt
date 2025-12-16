@@ -1,0 +1,9 @@
+{{
+	{
+		"email": this.params.email,
+		"first_name": this.params.first_name,
+		"last_name": this.params.last_name,
+		"username": this.params.username,
+		"password": this.params.password
+	}
+}}

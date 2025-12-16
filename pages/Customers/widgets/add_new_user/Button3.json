@@ -1,0 +1,62 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "duplicate",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{JSObject1.saveNewUser.data.id? true: false}}",
+  "key": "qvlch4hbag",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 36,
+  "needsErrorInfo": false,
+  "onClick": "{{copyToClipboard(JSObject1.saveNewUser.data.password).then(() => {\n  showAlert('Password Copied!', 'success');\n}).catch(() => {\n  showAlert('Failed to copy password!', 'error');\n});}}",
+  "originalBottomRow": 40,
+  "originalTopRow": 36,
+  "parentColumnSpace": 30.25,
+  "parentId": "lcpsrh8gu3",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 20,
+  "text": "Copy Password",
+  "topRow": 38,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "btp4r2c3ue",
+  "widgetName": "Button3"
+}
