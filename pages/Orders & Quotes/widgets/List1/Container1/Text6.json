@@ -39,7 +39,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 8,
+  "rightColumn": 15,
   "shouldTruncate": false,
   "text": "Order No.{{currentItem.id}}",
   "textAlign": "LEFT",
