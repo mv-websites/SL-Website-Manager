@@ -42,7 +42,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 51,
+  "rightColumn": 53,
   "text": "See Product Addons",
   "topRow": 29,
   "type": "BUTTON_WIDGET",
