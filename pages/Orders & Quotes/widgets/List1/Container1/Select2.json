@@ -62,7 +62,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 14,
   "serverSideFiltering": false,
-  "sourceData": "{{utils.statusTypesSelect()}}",
+  "sourceData": "{{utils.statusTypesSelect.data}}",
   "topRow": 17,
   "type": "SELECT_WIDGET",
   "version": 1,

@@ -25,7 +25,7 @@
     "fullyQualifiedName": "utils.statusTypesSelect",
     "name": "statusTypesSelect",
     "pageId": "Orders & Quotes",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
