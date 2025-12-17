@@ -30,7 +30,8 @@ export default {
 		return essentialOrderInfo
 
 	},
-	retrieveAnOrderLineItems(order = Retrieve_an_order.data) {
+	retrieveAnOrderLineItems() {
+		const order = Retrieve_an_order.data;
 		if (!order?.line_items?.length) return [];
 
 		return order.line_items.map((item) => {

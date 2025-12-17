@@ -97,7 +97,7 @@
   "itemSpacing": 8,
   "key": "51yb4a9lr2",
   "leftColumn": 0,
-  "listData": "{{data.retrieveAnOrderLineItems()}}",
+  "listData": "{{data.retrieveAnOrderLineItems.data}}",
   "mainCanvasId": "t7n84rsftj",
   "mainContainerId": "0o08d7oymm",
   "minWidth": 450,

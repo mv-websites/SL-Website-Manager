@@ -6,12 +6,7 @@
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [
-        {
-          "name": "order",
-          "value": "{{Retrieve_an_order.data}}"
-        }
-      ],
+      "jsArguments": [],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -30,7 +25,7 @@
     "fullyQualifiedName": "data.retrieveAnOrderLineItems",
     "name": "retrieveAnOrderLineItems",
     "pageId": "Edit Order or Quote",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }
