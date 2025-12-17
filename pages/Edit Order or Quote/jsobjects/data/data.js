@@ -29,5 +29,12 @@ export default {
 
 		return essentialOrderInfo
 
-	}
+	},
+	async testUpdate() {
+		return Retrieve_an_order.run()
+	},
+  fetchOrderData: async () => {
+    const response = await Retrieve_an_order.run(); // your API
+    return response; // Custom Component property binding will use this
+  }
 }

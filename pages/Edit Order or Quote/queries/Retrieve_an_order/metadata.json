@@ -16,7 +16,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/wp-json/wc/v3/orders/{{appsmith.store.orderId}}",
+      "path": "/wp-json/wc/v3/orders/13831",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -32,11 +32,7 @@
       "name": "Wordpress APIs",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "path"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "Retrieve_an_order",
     "pageId": "Edit Order or Quote",
     "runBehaviour": "AUTOMATIC",
