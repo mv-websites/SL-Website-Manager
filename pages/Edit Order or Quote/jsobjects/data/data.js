@@ -30,11 +30,55 @@ export default {
 		return essentialOrderInfo
 
 	},
-	async testUpdate() {
-		return Retrieve_an_order.run()
-	},
-  fetchOrderData: async () => {
-    const response = await Retrieve_an_order.run(); // your API
-    return response; // Custom Component property binding will use this
-  }
+	retrieveAnOrderLineItems(order = Retrieve_an_order.data) {
+		if (!order?.line_items?.length) return [];
+
+		return order.line_items.map((item) => {
+			// Product URL
+			const productUrl = item.product_id
+			? `https://service-line.co.uk/?p=${item.product_id}`
+			: null;
+
+			// Meta data processing
+			const meta = (item.meta_data || [])
+			.filter((m) => !m.key.startsWith("_"))
+			.map((m) => {
+				let value = m.display_value;
+
+				// Ignore if not a string or empty
+				if (typeof value !== "string" || !value.trim()) return null;
+
+				// Ignore JSON objects/arrays
+				try {
+					const parsed = JSON.parse(value);
+					if (typeof parsed === "object") return null;
+				} catch (e) {
+					// Not JSON, fine
+				}
+
+				// Handle objects safely
+				if (typeof value === "object") {
+					if (Array.isArray(value)) value = value.join(", ");
+					else value = JSON.stringify(value);
+				}
+
+				return {
+					key: m.display_key,
+					value: value,
+				};
+			})
+			.filter(Boolean); // Remove nulls
+
+			return {
+				id: item.id,
+				name: item.name,
+				sku: item.sku || null,
+				image: item.image?.src || null,
+				quantity: item.quantity,
+				total: Number(item.total).toFixed(2),
+				productUrl,
+				meta,
+			};
+		});
+	}
 }

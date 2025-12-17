@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 49,
   "shouldTruncate": false,
-  "text": "Edit Order No. {{appsmith.store.orderId}}",
+  "text": "Order No. {{appsmith.store.orderId}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 8,
