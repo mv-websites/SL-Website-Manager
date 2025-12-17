@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 11,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 59,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
-  "originalTopRow": 4,
+  "originalBottomRow": 11,
+  "originalTopRow": 6,
   "overflow": "NONE",
   "parentColumnSpace": 30.25,
   "parentId": "op43a4znbo",
@@ -46,7 +46,7 @@
   "text": "Order Number:          {{Retrieve_an_order.data.id}}\nOrder Date:               {{new Date(Retrieve_an_order.data.date_created).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 4,
+  "topRow": 6,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

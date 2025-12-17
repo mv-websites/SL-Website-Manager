@@ -26,7 +26,7 @@
     "fullyQualifiedName": "data.myFun2",
     "name": "myFun2",
     "pageId": "Edit Order or Quote",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

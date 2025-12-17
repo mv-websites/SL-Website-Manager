@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 21,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 4,
+  "originalBottomRow": 21,
+  "originalTopRow": 6,
   "overflow": "NONE",
   "parentColumnSpace": 18.7890625,
   "parentId": "op43a4znbo",
@@ -47,7 +47,7 @@
   "text": "{{Retrieve_an_order.data.shipping.first_name}} {{Retrieve_an_order.data.shipping.last_name}}\n{{Retrieve_an_order.data.shipping.company}}\n{{Retrieve_an_order.data.shipping.address_1}}\n{{Retrieve_an_order.data.shipping.address_2}}\n{{Retrieve_an_order.data.shipping.city}}\n{{Retrieve_an_order.data.shipping.state}}\n{{Retrieve_an_order.data.shipping.postcode}}\n{{Retrieve_an_order.data.shipping.phone}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 4,
+  "topRow": 6,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

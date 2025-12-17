@@ -3,7 +3,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 100,
+  "bottomRow": 89,
   "boxShadow": "none",
   "defaultModel": "{{Retrieve_an_order.data}}",
   "dynamicBindingPathList": [
@@ -18,6 +18,7 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onResetClick"
@@ -40,8 +41,8 @@
   "mobileTopRow": 45,
   "needsErrorInfo": false,
   "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
-  "originalBottomRow": 75,
-  "originalTopRow": 39,
+  "originalBottomRow": 89,
+  "originalTopRow": 41,
   "parentColumnSpace": 30.25,
   "parentId": "op43a4znbo",
   "parentRowSpace": 10,
@@ -53,7 +54,7 @@
     "js": "import React from \"https://esm.sh/react@18.2.0\";\nimport ReactDOM from \"https://esm.sh/react-dom@18.2.0\";\nfunction OrderLineItems({\n  order\n}) {\n  if (!order?.line_items?.length) return null;\n  return /*#__PURE__*/React.createElement(\"div\", {\n    style: styles.container\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    style: styles.header\n  }, /*#__PURE__*/React.createElement(\"div\", null, \"Product\"), /*#__PURE__*/React.createElement(\"div\", {\n    style: {\n      textAlign: \"center\"\n    }\n  }, \"Quantity\"), /*#__PURE__*/React.createElement(\"div\", {\n    style: {\n      textAlign: \"right\"\n    }\n  }, \"Price\")), order.line_items.map(item => {\n    const productUrl = item.product_id ? `https://service-line.co.uk/?p=${item.product_id}` : null;\n    return /*#__PURE__*/React.createElement(\"div\", {\n      key: item.id,\n      style: styles.row\n    }, /*#__PURE__*/React.createElement(\"div\", {\n      style: styles.productCol\n    }, item.image?.src && /*#__PURE__*/React.createElement(\"img\", {\n      src: item.image.src,\n      alt: item.name,\n      style: styles.image\n    }), /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"div\", {\n      style: styles.productName\n    }, item.name), productUrl && /*#__PURE__*/React.createElement(\"a\", {\n      href: productUrl,\n      target: \"_blank\",\n      rel: \"noreferrer\",\n      style: styles.link\n    }, \"View on Website\"), /*#__PURE__*/React.createElement(\"div\", {\n      style: styles.meta\n    }, item.sku && /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"strong\", null, \"SKU:\"), \" \", item.sku), item.meta_data?.filter(meta => !meta.key.startsWith(\"_\")).map(meta => {\n      let value = meta.display_value;\n\n      // Ignore if not a string\n      if (typeof value !== \"string\" || !value.trim()) return null;\n\n      // Ignore JSON strings\n      try {\n        const parsed = JSON.parse(value);\n        // If parsing succeeds and result is object/array, ignore it\n        if (typeof parsed === \"object\") return null;\n      } catch {\n        // If parsing fails, it's a plain string → OK\n      }\n\n      // Handle objects safely\n      if (typeof value === \"object\") {\n        // If it's an array, join it\n        if (Array.isArray(value)) {\n          value = value.join(\", \");\n        } else {\n          // Otherwise stringify object\n          value = JSON.stringify(value);\n        }\n      }\n      if (!value) return null;\n      return /*#__PURE__*/React.createElement(\"div\", {\n        key: meta.id\n      }, /*#__PURE__*/React.createElement(\"strong\", null, meta.display_key, \":\"), \" \", value);\n    })))), /*#__PURE__*/React.createElement(\"div\", {\n      style: styles.qtyCol\n    }, item.quantity), /*#__PURE__*/React.createElement(\"div\", {\n      style: styles.priceCol\n    }, \"\\xA3\", Number(item.total).toFixed(2)));\n  }));\n}\nconst styles = {\n  container: {\n    fontFamily: \"Arial, sans-serif\",\n    fontSize: \"14px\",\n    color: \"#000\"\n  },\n  header: {\n    display: \"grid\",\n    gridTemplateColumns: \"1fr 120px 150px\",\n    background: \"#000\",\n    color: \"#fff\",\n    padding: \"10px 16px\",\n    fontWeight: \"bold\"\n  },\n  row: {\n    display: \"grid\",\n    gridTemplateColumns: \"1fr 120px 150px\",\n    padding: \"16px\",\n    borderBottom: \"1px solid #e5e5e5\",\n    alignItems: \"flex-start\"\n  },\n  productCol: {\n    display: \"flex\",\n    gap: \"16px\"\n  },\n  image: {\n    width: \"80px\",\n    height: \"auto\",\n    objectFit: \"contain\"\n  },\n  productName: {\n    fontWeight: \"bold\",\n    marginBottom: \"6px\"\n  },\n  link: {\n    color: \"#1a73e8\",\n    textDecoration: \"none\",\n    display: \"inline-block\",\n    marginBottom: \"10px\"\n  },\n  meta: {\n    fontSize: \"13px\",\n    lineHeight: \"1.6\"\n  },\n  qtyCol: {\n    textAlign: \"center\",\n    fontSize: \"15px\"\n  },\n  priceCol: {\n    textAlign: \"right\",\n    fontWeight: \"bold\",\n    fontSize: \"15px\"\n  }\n};\nfunction App() {\n  return /*#__PURE__*/React.createElement(OrderLineItems, {\n    order: appsmith.model\n  });\n}\nappsmith.onReady(() => {\n  ReactDOM.render(/*#__PURE__*/React.createElement(App, null), document.getElementById(\"root\"));\n});"
   },
   "theme": "{{appsmith.theme}}",
-  "topRow": 39,
+  "topRow": 41,
   "type": "CUSTOM_WIDGET",
   "uncompiledSrcDoc": {
     "css": ".app {\n  height: calc(var(--appsmith-ui-height) * 1px);\n  width: calc(var(--appsmith-ui-width) * 1px);\n  justify-content: center;\n  border-radius: var(--appsmith-theme-borderRadius);\n  box-shadow: var(--appsmith-theme-boxShadow);\n  padding: 29px 25px;\n  box-sizing: border-box;\n  font-family: system-ui;\n  background: #fff;\n}\n\n.tip-container {\n  margin-bottom: 20px;\n  font-size: 14px;\n  line-height: 1.571429;\n}\n\n.tip-container h2 {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 700;\n}\n\n.tip-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  margin-bottom: 9px;\n}\n\n.tip-header div {\n  color: #999;\n}\n\n.content {\n  white-space: pre-wrap;\n  word-break: break-word;\n  font-size: 14px;\n  line-height: 1.571429;\n}\n\n.button-container {\n  text-align: right;\n  padding-top: 4px;\n}\n\n.button-container button {\n  margin: 0 10px;\n  cursor: pointer;\n  border-radius: var(--appsmith-theme-borderRadius);\n  padding: 6px 16px;\n  background: none;\n  height: auto;\n  transition: all 0.3s ease;\n}\n\n.button-container button.primary {\n  background: var(--appsmith-theme-primaryColor) !important;\n  color: #fff;\n  border: 1px solid var(--appsmith-theme-primaryColor) !important;\n}\n\n.button-container button.reset {\n  border: 1px solid #999;\n  color: #999;\n  outline: none;\n  box-shadow: none;\n}\n\n.button-container button.reset:hover:not(:disabled) {\n  color: var(--appsmith-theme-primaryColor);\n  border-color: var(--appsmith-theme-primaryColor);\n}\n\n.button-container button.reset:disabled {\n  cursor: default;\n}",
