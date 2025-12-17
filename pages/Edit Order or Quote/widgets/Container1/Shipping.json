@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "rgfrh4gkla",
+  "leftColumn": 21,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 26,
+  "mobileRightColumn": 42,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "originalBottomRow": 19,
+  "originalTopRow": 4,
+  "overflow": "NONE",
+  "parentColumnSpace": 18.7890625,
+  "parentId": "op43a4znbo",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 43,
+  "shouldScrollContents": true,
+  "shouldTruncate": false,
+  "text": "{{Retrieve_an_order.data.shipping.first_name}} {{Retrieve_an_order.data.shipping.last_name}}\n{{Retrieve_an_order.data.shipping.company}}\n{{Retrieve_an_order.data.shipping.address_1}}\n{{Retrieve_an_order.data.shipping.address_2}}\n{{Retrieve_an_order.data.shipping.city}}\n{{Retrieve_an_order.data.shipping.state}}\n{{Retrieve_an_order.data.shipping.postcode}}\n{{Retrieve_an_order.data.shipping.phone}}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 4,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "mzk24alfls",
+  "widgetName": "Shipping"
+}
