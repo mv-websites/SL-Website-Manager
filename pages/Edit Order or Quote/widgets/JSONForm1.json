@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 235,
+  "bottomRow": 362,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -174,7 +174,19 @@
       "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.cellBorderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.children.__array_item__.accentColor"
+      "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.children.__array_item__.children.display_key.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.children.__array_item__.children.display_key.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.children.__array_item__.children.display_value.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.children.__array_item__.children.display_value.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.line_items.children.__array_item__.children.meta_data.children.__array_item__.cellBorderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -199,8 +211,8 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 26,
   "needsErrorInfo": false,
-  "originalBottomRow": 235,
-  "originalTopRow": 155,
+  "originalBottomRow": 362,
+  "originalTopRow": 242,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -270,24 +282,70 @@
                   "cellBoxShadow": "none",
                   "children": {
                     "__array_item__": {
-                      "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                       "accessor": "__array_item__",
                       "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                       "boxShadow": "none",
-                      "children": {},
-                      "dataType": "undefined",
-                      "fieldType": "Text Input",
-                      "iconAlign": "left",
+                      "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                      "cellBoxShadow": "none",
+                      "children": {
+                        "display_key": {
+                          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "accessor": "display_key",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "boxShadow": "none",
+                          "children": {},
+                          "dataType": "string",
+                          "fieldType": "Text Input",
+                          "iconAlign": "left",
+                          "identifier": "display_key",
+                          "isCustomField": false,
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "label": "Display Key",
+                          "labelTextSize": "0.875rem",
+                          "originalIdentifier": "display_key",
+                          "position": 0,
+                          "sourceData": "Power Source"
+                        },
+                        "display_value": {
+                          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "accessor": "display_value",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "boxShadow": "none",
+                          "children": {},
+                          "dataType": "string",
+                          "fieldType": "Text Input",
+                          "iconAlign": "left",
+                          "identifier": "display_value",
+                          "isCustomField": false,
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "label": "Display Value",
+                          "labelTextSize": "0.875rem",
+                          "originalIdentifier": "display_value",
+                          "position": 1,
+                          "sourceData": "Natural Gas"
+                        }
+                      },
+                      "dataType": "object",
+                      "fieldType": "Object",
                       "identifier": "__array_item__",
                       "isCustomField": false,
                       "isDisabled": false,
                       "isRequired": false,
-                      "isSpellCheck": false,
                       "isVisible": true,
                       "label": "Array Item",
                       "labelTextSize": "0.875rem",
                       "originalIdentifier": "__array_item__",
-                      "position": -1
+                      "position": -1,
+                      "sourceData": {
+                        "display_key": "Power Source",
+                        "display_value": "Natural Gas"
+                      }
                     }
                   },
                   "dataType": "array",
@@ -451,7 +509,7 @@
     "buttonVariant": "PRIMARY"
   },
   "title": "Form",
-  "topRow": 155,
+  "topRow": 242,
   "type": "JSON_FORM_WIDGET",
   "useSourceData": false,
   "version": 1,
