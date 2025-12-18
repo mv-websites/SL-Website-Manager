@@ -1,0 +1,648 @@
+{
+  "animateLoading": true,
+  "autoGenerateForm": true,
+  "backgroundColor": "#f1f5f9",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "",
+  "bottomRow": 130,
+  "boxShadow": "none",
+  "childStylesheet": {
+    "ARRAY": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "CHECKBOX": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+    },
+    "CURRENCY_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "DATEPICKER": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "EMAIL_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTILINE_TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "MULTISELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "OBJECT": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "cellBoxShadow": "none"
+    },
+    "PASSWORD_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "PHONE_NUMBER_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "RADIO_GROUP": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "SELECT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    },
+    "SWITCH": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "boxShadow": "none"
+    },
+    "TEXT_INPUT": {
+      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none"
+    }
+  },
+  "disabledWhenInvalid": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "submitButtonStyles.borderRadius"
+    },
+    {
+      "key": "resetButtonStyles.borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "schema.__root_schema__.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.cellBorderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.id.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.id.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.name.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.name.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.sku.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.sku.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.image.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.image.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.quantity.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.quantity.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.total.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.total.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.productUrl.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.productUrl.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.key.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.key.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.value.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.value.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.cellBorderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.cellBorderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.children.__array_item__.cellBorderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.data.cellBorderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fieldLimitExceeded": false,
+  "fixedFooter": true,
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "tm8jhwav0n",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 46,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 26,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "originalBottomRow": 172,
+  "originalTopRow": 6,
+  "parentColumnSpace": 29.025,
+  "parentId": "kin7enh1pd",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetButtonLabel": "Reset",
+  "resetButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "#0061a6",
+    "buttonVariant": "SECONDARY",
+    "iconAlign": "left",
+    "placement": "CENTER"
+  },
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "schema": {
+    "__root_schema__": {
+      "accessor": "__root_schema__",
+      "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+      "boxShadow": "none",
+      "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+      "cellBoxShadow": "none",
+      "children": {
+        "data": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+          "accessor": "data",
+          "backgroundColor": "#f4f4f5",
+          "borderRadius": "0px",
+          "borderWidth": "0",
+          "boxShadow": "none",
+          "cellBackgroundColor": "#0061a6",
+          "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+          "cellBorderWidth": "",
+          "cellBoxShadow": "none",
+          "children": {
+            "__array_item__": {
+              "accessor": "__array_item__",
+              "backgroundColor": "#dbeafe",
+              "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+              "boxShadow": "none",
+              "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+              "cellBoxShadow": "none",
+              "children": {
+                "id": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "id",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "number",
+                  "fieldType": "Number Input",
+                  "iconAlign": "left",
+                  "identifier": "id",
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": false,
+                  "label": "Id",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "id",
+                  "position": 0,
+                  "sourceData": 1438
+                },
+                "image": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "image",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "string",
+                  "fieldType": "Text Input",
+                  "iconAlign": "left",
+                  "identifier": "image",
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": false,
+                  "label": "Image",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "image",
+                  "position": 3,
+                  "sourceData": "https://www.service-line.co.uk/wp-content/uploads/2025/09/CTDT107E-01.jpg"
+                },
+                "meta": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "meta",
+                  "backgroundColor": "#93c5fd",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "cellBoxShadow": "none",
+                  "children": {
+                    "__array_item__": {
+                      "accessor": "__array_item__",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                      "boxShadow": "none",
+                      "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                      "cellBoxShadow": "none",
+                      "children": {
+                        "key": {
+                          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "accessor": "key",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "boxShadow": "none",
+                          "children": {},
+                          "dataType": "string",
+                          "fieldType": "Text Input",
+                          "iconAlign": "left",
+                          "identifier": "key",
+                          "isCustomField": false,
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "label": "Key",
+                          "labelTextSize": "0.875rem",
+                          "originalIdentifier": "key",
+                          "position": 0,
+                          "sourceData": "Test Label 2"
+                        },
+                        "value": {
+                          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "accessor": "value",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                          "boxShadow": "none",
+                          "children": {},
+                          "dataType": "string",
+                          "fieldType": "Text Input",
+                          "iconAlign": "left",
+                          "identifier": "value",
+                          "isCustomField": false,
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "label": "Value",
+                          "labelTextSize": "0.875rem",
+                          "originalIdentifier": "value",
+                          "position": 1,
+                          "sourceData": "Custom Value 2"
+                        }
+                      },
+                      "dataType": "object",
+                      "fieldType": "Object",
+                      "identifier": "__array_item__",
+                      "isCustomField": false,
+                      "isDisabled": false,
+                      "isRequired": false,
+                      "isVisible": true,
+                      "label": "Array Item",
+                      "labelTextSize": "0.875rem",
+                      "originalIdentifier": "__array_item__",
+                      "position": -1,
+                      "sourceData": {
+                        "key": "Test Label 2",
+                        "value": "Custom Value 2"
+                      }
+                    }
+                  },
+                  "dataType": "array",
+                  "fieldType": "Array",
+                  "identifier": "meta",
+                  "isCollapsible": false,
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isVisible": true,
+                  "label": "Product Meta",
+                  "labelTextColor": "#231f20",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "meta",
+                  "position": 7,
+                  "sourceData": [
+                    {
+                      "key": "Meta Name",
+                      "value": "Meta Value"
+                    },
+                    {
+                      "key": "Test Label 2",
+                      "value": "Custom Value 2"
+                    }
+                  ]
+                },
+                "name": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "name",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "string",
+                  "fieldType": "Text Input",
+                  "iconAlign": "left",
+                  "identifier": "name",
+                  "isCustomField": false,
+                  "isDisabled": true,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": true,
+                  "label": "Name",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "name",
+                  "position": 1,
+                  "sourceData": "Blizzard - 7 x GN1/1 Compact Combi Oven"
+                },
+                "productUrl": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "productUrl",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "string",
+                  "fieldType": "Text Input",
+                  "iconAlign": "left",
+                  "identifier": "productUrl",
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": false,
+                  "label": "Product Url",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "productUrl",
+                  "position": 6,
+                  "sourceData": "https://service-line.co.uk/?p=12609"
+                },
+                "quantity": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "quantity",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "number",
+                  "fieldType": "Number Input",
+                  "iconAlign": "left",
+                  "identifier": "quantity",
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": true,
+                  "label": "Quantity",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "quantity",
+                  "position": 4,
+                  "sourceData": 1
+                },
+                "sku": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "sku",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "string",
+                  "fieldType": "Text Input",
+                  "iconAlign": "left",
+                  "identifier": "sku",
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": false,
+                  "label": "SKU",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "sku",
+                  "position": 2,
+                  "sourceData": "CTDT107E"
+                },
+                "total": {
+                  "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "accessor": "total",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "boxShadow": "none",
+                  "children": {},
+                  "dataType": "string",
+                  "fieldType": "Text Input",
+                  "iconAlign": "left",
+                  "identifier": "total",
+                  "isCustomField": false,
+                  "isDisabled": false,
+                  "isRequired": false,
+                  "isSpellCheck": false,
+                  "isVisible": true,
+                  "label": "Total",
+                  "labelTextSize": "0.875rem",
+                  "originalIdentifier": "total",
+                  "position": 5,
+                  "sourceData": "4247.29"
+                }
+              },
+              "dataType": "object",
+              "fieldType": "Object",
+              "identifier": "__array_item__",
+              "isCustomField": false,
+              "isDisabled": false,
+              "isRequired": false,
+              "isVisible": true,
+              "label": "Array Item",
+              "labelTextColor": "#ffffff",
+              "labelTextSize": "0.875rem",
+              "originalIdentifier": "__array_item__",
+              "position": -1,
+              "sourceData": {
+                "id": 1438,
+                "image": "https://www.service-line.co.uk/wp-content/uploads/2025/09/CTDT107E-01.jpg",
+                "meta": [
+                  {
+                    "key": "Meta Name",
+                    "value": "Meta Value"
+                  },
+                  {
+                    "key": "Test Label 2",
+                    "value": "Custom Value 2"
+                  }
+                ],
+                "name": "Blizzard - 7 x GN1/1 Compact Combi Oven",
+                "productUrl": "https://service-line.co.uk/?p=12609",
+                "quantity": 1,
+                "sku": "CTDT107E",
+                "total": "4247.29"
+              }
+            }
+          },
+          "dataType": "array",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.data))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+          "fieldType": "Array",
+          "identifier": "data",
+          "isCollapsible": true,
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "",
+          "labelStyle": "",
+          "labelTextColor": "white",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "data",
+          "position": 0,
+          "sourceData": [
+            {
+              "id": 1429,
+              "image": "https://www.service-line.co.uk/wp-content/uploads/2025/11/FriFri-TL412H31G0.webp",
+              "meta": [
+                {
+                  "key": "Meta Name",
+                  "value": "Meta Value"
+                },
+                {
+                  "key": "Test Label 2",
+                  "value": "Custom Value 2"
+                }
+              ],
+              "name": "FriFri Touch 412 Electric Free-standing Single Tank Fryer – 2 Baskets, 22 kW (TL412H31G0)",
+              "productUrl": "https://service-line.co.uk/?p=13347",
+              "quantity": 1,
+              "sku": "TL412H31G0",
+              "total": "4000.00"
+            },
+            {
+              "id": 1435,
+              "meta": [],
+              "name": "Custom Product Addon",
+              "productUrl": "https://service-line.co.uk/?p=13835",
+              "quantity": 1,
+              "total": "100.00"
+            },
+            {
+              "id": 1437,
+              "image": "https://www.service-line.co.uk/wp-content/uploads/2025/05/6-10_maxx_pro_easydial_72dpi_2.jpg",
+              "meta": [],
+              "name": "Convotherm maxx pro easyDial 6.10",
+              "productUrl": "https://service-line.co.uk/?p=8202",
+              "quantity": 1,
+              "sku": "MAXXPROED6.10",
+              "total": "0.00"
+            },
+            {
+              "id": 1438,
+              "image": "https://www.service-line.co.uk/wp-content/uploads/2025/09/CTDT107E-01.jpg",
+              "meta": [],
+              "name": "Blizzard - 7 x GN1/1 Compact Combi Oven",
+              "productUrl": "https://service-line.co.uk/?p=12609",
+              "quantity": 1,
+              "sku": "CTDT107E",
+              "total": "4247.29"
+            }
+          ]
+        }
+      },
+      "dataType": "object",
+      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+      "fieldType": "Object",
+      "identifier": "__root_schema__",
+      "isCustomField": false,
+      "isDisabled": false,
+      "isRequired": false,
+      "isVisible": true,
+      "label": "",
+      "labelTextSize": "0.875rem",
+      "originalIdentifier": "__root_schema__",
+      "position": -1,
+      "sourceData": {
+        "ENTITY_TYPE": "JSACTION",
+        "actionId": "69417b28c75d504c36f7ba36",
+        "body": "export default {\n\tasync myFun2 () {\n\t\tconst order = await Retrieve_an_order.data;\n\t\t// const orderObject = order.json\n\t\tresetWidget(\"Custom1\")\n\n\t\tconst essentialOrderInfo = {\n\t\t\tid: order.id,\n\t\t\tdate_created: order.date_created,\n\t\t\teditableData: {\n\t\t\t\tstatus: order.status,\n\t\t\t\tline_items: order.line_items.map((item) => ({\n\t\t\t\t\tid: item.id,\n\t\t\t\t\tname: item.name,\n\t\t\t\t\tquantity: item.quantity,\n\t\t\t\t\tmeta_data: item.meta_data\n\t\t\t\t\t.filter(\n\t\t\t\t\t\tdataItem =>\n\t\t\t\t\t\ttypeof dataItem.value === 'string' &&\n\t\t\t\t\t\ttypeof dataItem.display_value === 'string'\n\t\t\t\t\t)\n\t\t\t\t\t.map(dataItem => ({\n\t\t\t\t\t\tdisplay_key: dataItem.display_key,\n\t\t\t\t\t\tdisplay_value: dataItem.display_value\n\t\t\t\t\t}))\n\t\t\t\t}))\n\t\t\t},\n\t\t}\n\n\t\treturn essentialOrderInfo\n\n\t},\n\tasync retrieveAnOrderLineItems() {\n\t\tconst order = await Retrieve_an_order.run();\n\t\tif (!order?.line_items?.length) return [];\n\n\t\treturn order.line_items.map((item) => {\n\t\t\t// Product URL\n\t\t\tconst productUrl = item.product_id\n\t\t\t? `https://service-line.co.uk/?p=${item.product_id}`\n\t\t\t: null;\n\n\t\t\t// Meta data processing\n\t\t\tconst meta = (item.meta_data || [])\n\t\t\t.filter((m) => !m.key.startsWith(\"_\"))\n\t\t\t.map((m) => {\n\t\t\t\tlet value = m.display_value;\n\n\t\t\t\t// Ignore if not a string or empty\n\t\t\t\tif (typeof value !== \"string\" || !value.trim()) return null;\n\n\t\t\t\t// Ignore JSON objects/arrays\n\t\t\t\ttry {\n\t\t\t\t\tconst parsed = JSON.parse(value);\n\t\t\t\t\tif (typeof parsed === \"object\") return null;\n\t\t\t\t} catch (e) {\n\t\t\t\t\t// Not JSON, fine\n\t\t\t\t}\n\n\t\t\t\t// Handle objects safely\n\t\t\t\tif (typeof value === \"object\") {\n\t\t\t\t\tif (Array.isArray(value)) value = value.join(\", \");\n\t\t\t\t\telse value = JSON.stringify(value);\n\t\t\t\t}\n\n\t\t\t\treturn {\n\t\t\t\t\tkey: m.display_key,\n\t\t\t\t\tvalue: value,\n\t\t\t\t};\n\t\t\t})\n\t\t\t.filter(Boolean); // Remove nulls\n\n\t\t\treturn {\n\t\t\t\tid: item.id,\n\t\t\t\tname: item.name,\n\t\t\t\tsku: item.sku || null,\n\t\t\t\timage: item.image?.src || null,\n\t\t\t\tquantity: item.quantity,\n\t\t\t\ttotal: Number(item.total).toFixed(2),\n\t\t\t\tproductUrl,\n\t\t\t\tmeta,\n\t\t\t};\n\t\t});\n\t}\n}"
+      }
+    }
+  },
+  "scrollContents": true,
+  "showReset": true,
+  "sourceData": "{{{data: data.retrieveAnOrderLineItems.data}}}",
+  "submitButtonLabel": "Submit",
+  "submitButtonStyles": {
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "boxShadow": "none",
+    "buttonColor": "#0061a6",
+    "buttonVariant": "PRIMARY",
+    "iconAlign": "left",
+    "iconName": "floppy-disk",
+    "placement": "CENTER"
+  },
+  "title": "",
+  "topRow": 6,
+  "type": "JSON_FORM_WIDGET",
+  "useSourceData": false,
+  "version": 1,
+  "widgetId": "2tjvkfzwkw",
+  "widgetName": "JSONForm1"
+}

@@ -99,7 +99,7 @@
   "isLoading": false,
   "isVisible": true,
   "itemBackgroundColor": "#FFFFFF",
-  "itemSpacing": 8,
+  "itemSpacing": "20",
   "key": "naz7wb44hv",
   "leftColumn": 0,
   "listData": "{{requests.getAllOrders.data.orders}}",
