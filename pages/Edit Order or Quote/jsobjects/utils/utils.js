@@ -17,8 +17,14 @@ export default {
 			],
 			"calculate_totals": true
 		}
-		
-		await Update_an_order.run({id: order_id, body: body});
+
+		try {
+			await Update_an_order.run({id: order_id, body: body});
+			showAlert("Updated succesfully!", "success")
+		} catch (err) {
+			showAlert("Update failed!", "error")
+		}
 		await data.retrieveAnOrderLineItems();
+
 	}
 }
