@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 125,
+  "bottomRow": 126,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -46,7 +46,7 @@
   "text": "{{Retrieve_an_order.data.shipping_lines[0].method_title}}\n\n£{{Retrieve_an_order.data.shipping_lines[0].total}}",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
-  "topRow": 118,
+  "topRow": 119,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
