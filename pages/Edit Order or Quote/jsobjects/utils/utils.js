@@ -4,5 +4,21 @@ export default {
 	},
 	updateShipping () {
 		return shipping_details.formData
+	},
+	async updateLineItems(order_id, line_item_id, lite_item_qty, line_item_total) {
+		const body = {
+			"id": order_id,
+			"line_items": [
+				{
+					"id": line_item_id,
+					"quantity": lite_item_qty,
+					"total": line_item_total
+				}
+			],
+			"calculate_totals": true
+		}
+		
+		await Update_an_order.run({id: order_id, body: body});
+		await data.retrieveAnOrderLineItems();
 	}
 }

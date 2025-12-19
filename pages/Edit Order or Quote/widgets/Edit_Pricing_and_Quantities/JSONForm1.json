@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "",
-  "bottomRow": 89,
+  "bottomRow": 130,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -183,16 +183,16 @@
       "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.cellBorderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.customField1.accentColor"
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.key.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.customField1.borderRadius"
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.key.borderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.customField2.accentColor"
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.value.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.customField2.borderRadius"
+      "key": "schema.__root_schema__.children.data.children.__array_item__.children.meta.children.__array_item__.children.value.borderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -217,7 +217,7 @@
   "mobileRightColumn": 26,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 130,
+  "originalBottomRow": 89,
   "originalTopRow": 6,
   "parentColumnSpace": 29.025,
   "parentId": "kin7enh1pd",
@@ -320,50 +320,50 @@
                       "cellBorderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                       "cellBoxShadow": "none",
                       "children": {
-                        "customField1": {
+                        "key": {
                           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                          "accessor": "customField1",
+                          "accessor": "key",
                           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                           "boxShadow": "none",
                           "children": {},
                           "dataType": "string",
                           "fieldType": "Text Input",
                           "iconAlign": "left",
-                          "identifier": "customField1",
-                          "isCustomField": true,
+                          "identifier": "key",
+                          "isCustomField": false,
                           "isDisabled": false,
                           "isRequired": false,
                           "isSpellCheck": false,
                           "isVisible": true,
                           "label": "Key",
                           "labelTextSize": "0.875rem",
-                          "originalIdentifier": "customField1",
+                          "originalIdentifier": "key",
                           "position": 0,
-                          "sourceData": ""
+                          "sourceData": "Power Source"
                         },
-                        "customField2": {
+                        "value": {
                           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                          "accessor": "customField2",
+                          "accessor": "value",
                           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                           "boxShadow": "none",
                           "children": {},
                           "dataType": "string",
                           "fieldType": "Text Input",
                           "iconAlign": "left",
-                          "identifier": "customField2",
-                          "isCustomField": true,
+                          "identifier": "value",
+                          "isCustomField": false,
                           "isDisabled": false,
                           "isRequired": false,
                           "isSpellCheck": false,
                           "isVisible": true,
                           "label": "Value",
                           "labelTextSize": "0.875rem",
-                          "originalIdentifier": "customField2",
+                          "originalIdentifier": "value",
                           "position": 1,
-                          "sourceData": ""
+                          "sourceData": "Natural Gas"
                         }
                       },
-                      "dataType": "undefined",
+                      "dataType": "object",
                       "fieldType": "Object",
                       "identifier": "__array_item__",
                       "isCustomField": false,
@@ -373,7 +373,11 @@
                       "label": "Array Item",
                       "labelTextSize": "0.875rem",
                       "originalIdentifier": "__array_item__",
-                      "position": -1
+                      "position": -1,
+                      "sourceData": {
+                        "key": "Power Source",
+                        "value": "Natural Gas"
+                      }
                     }
                   },
                   "dataType": "array",

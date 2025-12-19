@@ -39,7 +39,7 @@
   "parentId": "i73eyczgmj",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 49,
+  "rightColumn": 42,
   "shouldTruncate": false,
   "text": "SKU: {{currentItem.sku}}\n{{currentItem.meta.map((item) => `${item.key}: ${item.value}\\n`)}}",
   "textAlign": "LEFT",

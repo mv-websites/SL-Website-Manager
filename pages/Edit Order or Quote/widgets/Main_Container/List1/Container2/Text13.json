@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -23,31 +20,31 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "rgfrh4gkla",
-  "leftColumn": 56,
+  "key": "wfowhdicyu",
+  "leftColumn": 54,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 5,
-  "mobileLeftColumn": 32,
-  "mobileRightColumn": 48,
-  "mobileTopRow": 1,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 36,
   "needsErrorInfo": false,
   "overflow": "NONE",
-  "parentColumnSpace": 28.8671875,
+  "parentColumnSpace": 30.25,
   "parentId": "i73eyczgmj",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 56,
   "shouldTruncate": false,
-  "text": "£{{currentItem.total}}",
+  "text": "£",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "hhyircqttc",
-  "widgetName": "Text4"
+  "widgetId": "umr6s1aomk",
+  "widgetName": "Text13"
 }
