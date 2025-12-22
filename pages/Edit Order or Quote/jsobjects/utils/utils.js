@@ -20,7 +20,7 @@ export default {
 
 		try {
 			await Update_an_order.run({id: order_id, body: body});
-			showAlert(`Update : ${body}`, "success")
+			showAlert(`Update : ${body.id} ${body.line_items[0].id} ${body.line_items[0].quantity} ${body.line_items[0].total} ${body.calculate_totals}`, "success")
 			//showAlert("Updated succesfully!", "success")
 		} catch (err) {
 			showAlert("Update failed!", "error")
