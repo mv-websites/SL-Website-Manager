@@ -27,7 +27,7 @@
   "fontSize": "0.875rem",
   "fontStyle": "",
   "isLoading": false,
-  "isVisible": "{{Qty.text == \"0\"}}",
+  "isVisible": "{{currentView.Qty.text == \"0\"}}",
   "key": "8a57bwf80h",
   "leftColumn": 50,
   "maxDynamicHeight": 9000,
