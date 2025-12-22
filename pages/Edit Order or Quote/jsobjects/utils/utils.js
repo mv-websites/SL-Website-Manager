@@ -25,6 +25,6 @@ export default {
 			showAlert("Update failed!", "error")
 		}
 		await data.retrieveAnOrderLineItems();
-
+	return body;
 	}
 }
