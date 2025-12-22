@@ -9,15 +9,6 @@
       "jsArguments": [
         {
           "name": "order_id"
-        },
-        {
-          "name": "line_item_id"
-        },
-        {
-          "name": "lite_item_qty"
-        },
-        {
-          "name": "line_item_total"
         }
       ],
       "paginationType": "NONE",
