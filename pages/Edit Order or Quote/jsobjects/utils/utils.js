@@ -11,7 +11,7 @@ export default {
 			"line_items": [
 				{
 					"id": line_item_id,
-					"quantity": Input1.text,// lite_item_qty,
+					"quantity": lite_item_qty,
 					"total": line_item_total
 				}
 			],
