@@ -20,11 +20,12 @@ export default {
 
 		try {
 			await Update_an_order.run({id: order_id, body: body});
-			showAlert("Updated succesfully!", "success")
+			showAlert(body.id, "success")
+			//showAlert("Updated succesfully!", "success")
 		} catch (err) {
 			showAlert("Update failed!", "error")
 		}
 		await data.retrieveAnOrderLineItems();
-	return body;
+		return body;
 	}
 }
