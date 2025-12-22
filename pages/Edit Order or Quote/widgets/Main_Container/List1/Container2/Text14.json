@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 50,
   "shouldTruncate": false,
-  "text": "£{{ (currentView.Input2.text / currentView.Input1.text).toFixed(2) }} ea",
+  "text": "£{{ (currentView.Total.text / currentView.Qty.text).toFixed(2) }} ea ",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

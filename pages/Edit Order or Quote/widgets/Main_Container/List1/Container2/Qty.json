@@ -54,6 +54,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 54,
   "showStepArrows": false,
+  "tooltip": "",
   "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "validation": "",
