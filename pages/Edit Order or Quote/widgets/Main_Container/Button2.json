@@ -11,6 +11,11 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -19,7 +24,7 @@
   "iconAlign": "left",
   "iconName": "floppy-disk",
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "",
   "isLoading": false,
   "isVisible": true,
   "key": "49xqk2piev",

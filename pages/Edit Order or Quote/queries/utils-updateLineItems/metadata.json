@@ -29,7 +29,7 @@
     "fullyQualifiedName": "utils.updateLineItems",
     "name": "updateLineItems",
     "pageId": "Edit Order or Quote",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
