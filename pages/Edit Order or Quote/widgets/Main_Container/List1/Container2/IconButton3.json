@@ -8,9 +8,6 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,7 +22,7 @@
     }
   ],
   "iconName": "floppy-disk",
-  "isDisabled": "{{currentItem.quantity == Input1.text}}",
+  "isDisabled": "",
   "isLoading": false,
   "isVisible": true,
   "key": "4cbpimtxz6",

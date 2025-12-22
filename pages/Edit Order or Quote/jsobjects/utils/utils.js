@@ -1,9 +1,9 @@
 export default {
 	updateBilling () {
-		return billing_details.formData
+		return "billing_details.formData"
 	},
 	updateShipping () {
-		return shipping_details.formData
+		return "shipping_details.formData"
 	},
 	async updateLineItems(order_id, line_item_id, lite_item_qty, line_item_total) {
 		const body = {
