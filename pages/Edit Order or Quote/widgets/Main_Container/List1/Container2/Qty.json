@@ -18,10 +18,15 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": false,
+  "isDisabled": "",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
@@ -51,7 +56,8 @@
   "showStepArrows": false,
   "topRow": 0,
   "type": "INPUT_WIDGET_V2",
+  "validation": "",
   "version": 2,
   "widgetId": "47lt3hmw1i",
-  "widgetName": "Input1"
+  "widgetName": "Qty"
 }
