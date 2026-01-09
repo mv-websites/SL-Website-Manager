@@ -41,7 +41,7 @@ export default {
 	notesValue() {
 		var note; 
 		try {
-			note = Retrieve_an_order.data.meta_data.filter((item) => item.key === "_cms_note")[0].value
+			note = Retrieve_an_order.data.meta_data.filter((item) => item.key === "_wcpdf_invoice_notes")[0].value
 		} catch {
 			note = ''
 		}
@@ -65,5 +65,8 @@ export default {
 		}
 		await data.retrieveAnOrderLineItems();
 		return body;
+	},
+	updatePostagePriceText () {
+		Input1.setValue(Retrieve_shipping_methods.data.filter(item => item.instance_id == Select1.selectedOptionValue)[0].settings.cost.value)
 	}
 }

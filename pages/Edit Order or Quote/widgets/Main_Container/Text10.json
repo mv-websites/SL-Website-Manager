@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 26,
+  "rightColumn": 38,
   "shouldTruncate": false,
   "text": "{{Retrieve_an_order.data.customer_note}}",
   "textAlign": "LEFT",

@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 122,
+  "bottomRow": 119,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Number(Retrieve_an_order.data.shipping_lines[0].instance_id)))(Select1.options, Select1.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -25,7 +25,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": false,
   "isLoading": false,
@@ -46,10 +50,11 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 143,
   "needsErrorInfo": false,
+  "onOptionChange": "{{utils.updatePostagePriceText();}}",
   "optionLabel": "title",
   "optionValue": "instance_id",
-  "originalBottomRow": 147,
-  "originalTopRow": 143,
+  "originalBottomRow": 119,
+  "originalTopRow": 115,
   "parentColumnSpace": 30.25,
   "parentId": "op43a4znbo",
   "parentRowSpace": 10,
@@ -59,7 +64,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{Retrieve_shipping_methods.data.filter(method => method.enabled === true)}}",
-  "topRow": 118,
+  "topRow": 115,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "bz68udbmal",
