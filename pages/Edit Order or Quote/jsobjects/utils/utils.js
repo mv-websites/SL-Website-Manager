@@ -35,6 +35,8 @@ export default {
 		} catch (err) {
 			showAlert("Update failed!", "error")
 		}
+		resetWidget('Input2')
+		Text18.setText("")
 		await data.retrieveAnOrderLineItems();
 		return body;
 	},
@@ -68,5 +70,11 @@ export default {
 	},
 	updatePostagePriceText () {
 		Input1.setValue(Retrieve_shipping_methods.data.filter(item => item.instance_id == Select1.selectedOptionValue)[0].settings.cost.value)
-	}
+	},
+	async findProductSKU() {
+		const productArray = await Retrieve_Product_by_SKU.run()
+		const singleProduct = productArray[0]
+		Text18.setText(singleProduct.name)
+		return singleProduct
+	},
 }
