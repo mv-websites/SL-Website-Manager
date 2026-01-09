@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 110,
+  "bottomRow": 123,
   "boxShadow": "none",
   "buttonColor": "#0061a6",
   "buttonVariant": "PRIMARY",
@@ -9,6 +9,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -21,23 +24,21 @@
       "key": "onClick"
     }
   ],
-  "iconAlign": "left",
-  "iconName": "floppy-disk",
   "isDefaultClickDisabled": true,
-  "isDisabled": "",
+  "isDisabled": "{{utils.notesValue() === Notes.text}}",
   "isLoading": false,
   "isVisible": true,
-  "key": "49xqk2piev",
-  "leftColumn": 51,
+  "key": "9bqqrtn3br",
+  "leftColumn": 1,
   "minWidth": 120,
-  "mobileBottomRow": 149,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 145,
+  "mobileBottomRow": 123,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 38,
+  "mobileTopRow": 119,
   "needsErrorInfo": false,
-  "onClick": "{{utils.updateLineItems(Retrieve_an_order.data.id);}}",
-  "originalBottomRow": 110,
-  "originalTopRow": 106,
+  "onClick": "{{utils.saveNotes(Retrieve_an_order.data.id);}}",
+  "originalBottomRow": 123,
+  "originalTopRow": 119,
   "parentColumnSpace": 30.25,
   "parentId": "op43a4znbo",
   "parentRowSpace": 10,
@@ -46,11 +47,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "text": "Save & Update Price",
-  "topRow": 106,
+  "rightColumn": 9,
+  "text": "Save / Update Notes",
+  "topRow": 119,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "43n9qes191",
-  "widgetName": "Button2"
+  "widgetId": "eys0lkp1ni",
+  "widgetName": "Button3"
 }

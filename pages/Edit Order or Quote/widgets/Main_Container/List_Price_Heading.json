@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 114,
+  "bottomRow": 113,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 45,
   "mobileTopRow": 111,
   "needsErrorInfo": false,
-  "originalBottomRow": 115,
-  "originalTopRow": 111,
+  "originalBottomRow": 114,
+  "originalTopRow": 110,
   "overflow": "NONE",
   "parentColumnSpace": 30.25,
   "parentId": "op43a4znbo",
@@ -43,7 +43,7 @@
   "text": "List Price (Excl. VAT)",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 110,
+  "topRow": 109,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
