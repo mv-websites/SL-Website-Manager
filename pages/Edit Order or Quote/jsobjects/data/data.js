@@ -26,7 +26,7 @@ export default {
 			},
 		}
 		
-		Get_Customer.run({"customer_id": order.customer_id})
+		await Get_Customer.run({"customer_id": order.customer_id})
 
 		return essentialOrderInfo
 
