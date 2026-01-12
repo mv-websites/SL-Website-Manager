@@ -130,5 +130,20 @@ export default {
 		BillingPostcode.setValue(billingDetails.postcode)
 		BillingPhone.setValue(billingDetails.phone)
 		BillingEmail.setValue(billingDetails.email)
-	}
+	},
+	async saveUpdatedCustomer(order_id = Retrieve_an_order.data.id) {
+		const body = {
+			"id": order_id,
+			"customer_id": Number(Select2.selectedOptionValue)
+		}
+		try {
+			await Update_an_order.run({id: order_id, body: body});
+			resetWidget("Select2")
+			showAlert("Updated succesfully!", "success")
+		} catch (err) {
+			showAlert("Update failed!", "error")
+		}
+		await data.retrieveAnOrderLineItems();
+		return body;
+	},
 }

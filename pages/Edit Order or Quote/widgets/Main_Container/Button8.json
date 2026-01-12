@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "buttonColor": "#0061a6",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{Select2.selectedOptionValue? false : true}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "v8yf7adhbp",
+  "leftColumn": 51,
+  "minWidth": 120,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 27,
+  "needsErrorInfo": false,
+  "onClick": "{{utils.saveUpdatedCustomer();}}",
+  "originalBottomRow": 31,
+  "originalTopRow": 27,
+  "parentColumnSpace": 30.25,
+  "parentId": "op43a4znbo",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Update Order Owner",
+  "topRow": 27,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "dryoustjxx",
+  "widgetName": "Button8"
+}
