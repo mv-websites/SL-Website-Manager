@@ -102,6 +102,9 @@ export default {
 	},
 	pullCustomerShippingAddress() {
 		const shippingAddress = Get_Customer.data.shipping;
+		if (!shippingAddress) {
+			showAlert("Error pulling customer information", "error")
+		}
 		ShipToFname.setValue(shippingAddress.first_name)
 		ShipToLname.setValue(shippingAddress.last_name)
 		ShipToCompany.setValue(shippingAddress.company)
@@ -114,6 +117,9 @@ export default {
 	},
 	pullCustomerBillingDetails() {
 		const billingDetails = Get_Customer.data.billing;
+		if (!billingDetails) {
+			showAlert("Error pulling customer information", "error")
+		}
 		BillingFname.setValue(billingDetails.first_name)
 		BillingLname.setValue(billingDetails.last_name)
 		BillingCompany.setValue(billingDetails.company)
