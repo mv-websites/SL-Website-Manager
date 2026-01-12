@@ -100,4 +100,29 @@ export default {
 		Text18.setText(singleProduct.name)
 		return singleProduct
 	},
+	pullCustomerShippingAddress() {
+		const shippingAddress = Get_Customer.data.shipping;
+		ShipToFname.setValue(shippingAddress.first_name)
+		ShipToLname.setValue(shippingAddress.last_name)
+		ShipToCompany.setValue(shippingAddress.company)
+		ShipToAddrLn1.setValue(shippingAddress.address_1)
+		ShipToAddrLn2.setValue(shippingAddress.address_2)
+		ShipToCity.setValue(shippingAddress.city)
+		ShipToState.setValue(shippingAddress.state)
+		ShipToPostcode.setValue(shippingAddress.postcode)
+		ShipToPostcode.setValue(shippingAddress.phone)
+	},
+	pullCustomerBillingDetails() {
+		const billingDetails = Get_Customer.data.billing;
+		BillingFname.setValue(billingDetails.first_name)
+		BillingLname.setValue(billingDetails.last_name)
+		BillingCompany.setValue(billingDetails.company)
+		BillingAddrLn1.setValue(billingDetails.address_1)
+		BillingAddrLn2.setValue(billingDetails.address_2)
+		BillingCity.setValue(billingDetails.city)
+		BillingState.setValue(billingDetails.state)
+		BillingPostcode.setValue(billingDetails.postcode)
+		BillingPhone.setValue(billingDetails.phone)
+		BillingEmail.setValue(billingDetails.email)
+	}
 }

@@ -2,7 +2,6 @@ export default {
 	async myFun2 () {
 		const order = await Retrieve_an_order.data;
 		// const orderObject = order.json
-		resetWidget("Custom1")
 
 		const essentialOrderInfo = {
 			id: order.id,
@@ -26,6 +25,8 @@ export default {
 				}))
 			},
 		}
+		
+		Get_Customer.run({"customer_id": order.customer_id})
 
 		return essentialOrderInfo
 
