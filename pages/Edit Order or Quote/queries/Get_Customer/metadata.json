@@ -39,7 +39,7 @@
     ],
     "name": "Get_Customer",
     "pageId": "Edit Order or Quote",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
