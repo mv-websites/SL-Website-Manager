@@ -27,6 +27,29 @@ export default {
 					"total": Input1.text.toString()
 				}
 			],
+			"shipping": {
+				"first_name": ShipToFname.text,
+				"last_name": ShipToLname.text,
+				"company": ShipToCompany.text,
+				"address_1": ShipToAddrLn1.text,
+				"address_2":ShipToAddrLn2.text,
+				"city": ShipToCity.text,
+				"state": ShipToState.text,
+				"postcode": ShipToPostcode.text,
+				"phone": ShipToPhone.text
+			},
+			"billing": {
+				"first_name": BillingFname.text,
+				"last_name": BillingLname.text,
+				"company": BillingCompany.text,
+				"address_1": BillingAddrLn1.text,
+				"address_2": BillingAddrLn2.text,
+				"city": BillingCity.text,
+				"state": BillingState.text,
+				"postcode": BillingPostcode.text,
+				"email": BillingEmail.text,
+				"phone": BillingPhone.text
+			},
 			"calculate_totals": true
 		}
 		try {
