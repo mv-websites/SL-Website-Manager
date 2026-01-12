@@ -1,32 +1,36 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 173,
+  "bottomRow": 174,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "PRIMARY",
+  "buttonColor": "#0061a6",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "cloud-download",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "v8yf7adhbp",
-  "leftColumn": 11,
+  "leftColumn": 0,
   "minWidth": 120,
   "mobileBottomRow": 172,
   "mobileLeftColumn": 11,
   "mobileRightColumn": 27,
   "mobileTopRow": 168,
   "needsErrorInfo": false,
+  "onClick": "{{navigateTo(`https://service-line.co.uk/wp-admin/admin-ajax.php?action=generate_wpo_wcpdf&document_type=invoice&order_ids=${Retrieve_an_order.data.id}&access_key=${Retrieve_an_order.data.order_key}`, {}, 'NEW_WINDOW');}}",
   "originalBottomRow": 173,
   "originalTopRow": 169,
   "parentColumnSpace": 30.25,
@@ -37,9 +41,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 27,
+  "rightColumn": 7,
   "text": "Download",
-  "topRow": 169,
+  "topRow": 165,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "rbhxcs0iww",
