@@ -49,6 +49,8 @@
   "mobileTopRow": 19,
   "needsErrorInfo": false,
   "onClick": "{{utils.statusSetting('quote-requested');}}",
+  "originalBottomRow": 29,
+  "originalTopRow": 25,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,

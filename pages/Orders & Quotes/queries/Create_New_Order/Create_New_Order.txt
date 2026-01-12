@@ -1,0 +1,35 @@
+{{{
+	"customer_id": 6,
+	"billing": {
+		"first_name": "",
+		"last_name": "",
+		"address_1": "",
+		"address_2": "",
+		"city": "",
+		"state": "",
+		"postcode": "",
+		"country": "GB",
+		"email": "noemail@nomail.com",
+		"phone": ""
+	},
+	"shipping": {
+		"first_name": "",
+		"last_name": "",
+		"address_1": "",
+		"address_2": "",
+		"city": "",
+		"state": "",
+		"postcode": "",
+		"country": "GB"
+	},
+	"status": "checkout-draft",
+	"line_items": [
+	],
+	"shipping_lines": [
+		{
+			"method_id": "local_pickup",
+			"instance_id": "10",
+			"total": "650.00"
+		}
+	]
+}}}
