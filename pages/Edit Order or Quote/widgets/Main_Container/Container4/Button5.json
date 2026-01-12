@@ -38,7 +38,7 @@
   "mobileRightColumn": 58,
   "mobileTopRow": 154,
   "needsErrorInfo": false,
-  "onClick": "{{utils.updateLineItems(Retrieve_an_order.data.id);}}",
+  "onClick": "{{utils.addNewLineItem();}}",
   "parentColumnSpace": 30.25,
   "parentId": "37wvagt0qw",
   "parentRowSpace": 10,

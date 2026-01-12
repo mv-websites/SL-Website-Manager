@@ -34,8 +34,9 @@ export default {
 	async retrieveAnOrderLineItems() {
 		// Retrieve_an_Order Query is set to Manual. This function should be set to autmatic/on page load
 		const order = await Retrieve_an_order.run();
-		if (!order?.line_items?.length) return [];
 		await Get_Customer.run({"customer_id": order.customer_id })
+		if (!order?.line_items?.length) return [];
+		
 
 		return order.line_items.map((item) => {
 			// Product URL

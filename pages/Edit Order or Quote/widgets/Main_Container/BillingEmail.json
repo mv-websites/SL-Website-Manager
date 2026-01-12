@@ -23,7 +23,7 @@
   "inputType": "EMAIL",
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "h2e74sjdxj",
   "label": "",
