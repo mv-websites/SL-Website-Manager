@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 201,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "trash",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "hjtgad2kzm",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 201,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 197,
+  "needsErrorInfo": false,
+  "onClick": "{{Delete_an_order.run({\n  \"order_id\": Retrieve_an_order.data.id\n}).then(() => {\n  navigateTo('Orders & Quotes', {}, 'SAME_WINDOW');\n  showAlert('Succesfully deleted', 'success');\n}).catch(() => {\n  showAlert('Failed to delete order!', 'error');\n});}}",
+  "originalBottomRow": 201,
+  "originalTopRow": 197,
+  "parentColumnSpace": 30.5625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "text": "DELETE ORDER",
+  "tooltip": "WARNING: This will permanantly delete an order and will not be recoverable.",
+  "topRow": 197,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "xkynk9repm",
+  "widgetName": "Button9"
+}
