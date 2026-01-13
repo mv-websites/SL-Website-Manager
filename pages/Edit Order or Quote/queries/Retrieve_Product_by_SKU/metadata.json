@@ -47,7 +47,7 @@
     ],
     "name": "Retrieve_Product_by_SKU",
     "pageId": "Edit Order or Quote",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

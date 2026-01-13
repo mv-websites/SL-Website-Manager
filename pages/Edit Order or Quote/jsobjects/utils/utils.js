@@ -95,7 +95,20 @@ export default {
 		Input1.setValue(Retrieve_shipping_methods.data.filter(item => item.instance_id == Select1.selectedOptionValue)[0].settings.cost.value)
 	},
 	async findProductSKU() {
-		const productArray = await Retrieve_Product_by_SKU.run()
+		var productArray = [];
+		Text18.setText("")
+		
+		try {
+			productArray = await Retrieve_Product_by_SKU.run()
+		} catch (err){
+			showAlert(err.message, "error")
+			return productArray;
+		}
+		
+		if (!productArray.length) {
+			showAlert(`No product found for SKU: ${Input2.text}`, 'warning')
+			return productArray
+		}
 		const singleProduct = productArray[0]
 		Text18.setText(singleProduct.name)
 		return singleProduct

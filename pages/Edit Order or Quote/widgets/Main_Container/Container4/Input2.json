@@ -12,10 +12,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "validation"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
+  "errorMessage": "Product Doesn't exist!",
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": false,
@@ -48,6 +52,7 @@
   "showStepArrows": false,
   "topRow": 5,
   "type": "INPUT_WIDGET_V2",
+  "validation": "{{Retrieve_Product_by_SKU.data.length == 0? false : true}}",
   "version": 2,
   "widgetId": "nyujppaxw2",
   "widgetName": "Input2"
