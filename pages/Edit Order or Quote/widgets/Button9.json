@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 201,
+  "bottomRow": 202,
   "boxShadow": "none",
   "buttonColor": "#ef4444",
   "buttonVariant": "PRIMARY",
@@ -44,7 +44,7 @@
   "rightColumn": 16,
   "text": "DELETE ORDER",
   "tooltip": "WARNING: This will permanantly delete an order and will not be recoverable.",
-  "topRow": 197,
+  "topRow": 198,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "xkynk9repm",

@@ -41,7 +41,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{Create_New_Order.run().then(() => {\n  showAlert('Succesfully Created order!', 'success');\n  utils.statusSetting('all');\n}).catch(() => {\n  showAlert('Failed to create order', 'error');\n});}}",
+  "onClick": "{{Create_New_Order.run().then(() => {\n  showAlert('Succesfully Created order!', 'success');\n  storeValue('orderId', Create_New_Order.data.id);\n  navigateTo('Edit Order or Quote', {}, 'SAME_WINDOW');\n}).catch(() => {\n  showAlert('Failed to create order', 'error');\n});}}",
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,
