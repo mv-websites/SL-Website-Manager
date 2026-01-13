@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "boxShadow": "none",
+  "buttonColor": "#0061a6",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "49xqk2piev",
+  "leftColumn": 22,
+  "minWidth": 120,
+  "mobileBottomRow": 149,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 145,
+  "needsErrorInfo": false,
+  "onClick": "{{utils.updateLineItems(Retrieve_an_order.data.id);}}",
+  "originalBottomRow": 177,
+  "originalTopRow": 173,
+  "parentColumnSpace": 30.25,
+  "parentId": "op43a4znbo",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 34,
+  "text": "Save & Update",
+  "topRow": 46,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "geoq0dtex9",
+  "widgetName": "Button2Copy"
+}
