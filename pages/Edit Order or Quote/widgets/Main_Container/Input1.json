@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 150,
+  "bottomRow": 153,
   "boxShadow": "none",
   "defaultText": "{{Retrieve_an_order.data.shipping_lines[0].total}}",
   "dynamicBindingPathList": [
@@ -15,13 +15,21 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "NUMBER",
-  "isDisabled": false,
+  "isDisabled": "{{List1.listData.length > 0? false : true}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
@@ -53,7 +61,7 @@
   "rightColumn": 63,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 146,
+  "topRow": 149,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "lb6kewl566",

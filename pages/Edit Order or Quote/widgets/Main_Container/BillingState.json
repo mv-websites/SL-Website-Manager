@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 42,
   "boxShadow": "none",
   "defaultText": "{{Retrieve_an_order.data.billing.state}}",
   "dynamicBindingPathList": [
@@ -50,7 +50,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "showStepArrows": false,
-  "topRow": 20,
+  "topRow": 38,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "lpv1gbve1k",

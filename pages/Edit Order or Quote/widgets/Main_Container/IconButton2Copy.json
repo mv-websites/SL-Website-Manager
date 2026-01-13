@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 22,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
@@ -11,6 +11,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -19,7 +27,7 @@
     }
   ],
   "iconName": "following",
-  "isDisabled": false,
+  "isDisabled": "{{List1.listData.length > 0? false : true}}",
   "isLoading": false,
   "isVisible": true,
   "key": "tigg7ow0rc",
@@ -38,7 +46,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 43,
   "tooltip": "Populate with customer default shipping details",
-  "topRow": 0,
+  "topRow": 18,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "oyhzsktc6e",

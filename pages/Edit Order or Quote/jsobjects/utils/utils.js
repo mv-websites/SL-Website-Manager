@@ -158,6 +158,7 @@ export default {
 		try {
 			await Update_an_order.run({id: order_id, body: body});
 			resetWidget("Select2")
+			Text18.setText("")
 			showAlert("Updated succesfully!", "success")
 		} catch (err) {
 			showAlert("Update failed!", "error")

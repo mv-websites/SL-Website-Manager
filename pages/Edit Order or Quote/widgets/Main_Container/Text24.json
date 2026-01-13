@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 62,
+  "bottomRow": 18,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,42 +11,48 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
-  "fontStyle": "",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
-  "key": "rgfrh4gkla",
-  "leftColumn": 5,
+  "isVisible": "{{List1.listData.length > 0? false : true}}",
+  "key": "q0z48gc2ue",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 35,
-  "mobileLeftColumn": 25,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 31,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 59,
-  "originalTopRow": 55,
   "overflow": "NONE",
-  "parentColumnSpace": 30.25,
+  "parentColumnSpace": 30.5625,
   "parentId": "op43a4znbo",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 59,
+  "rightColumn": 45,
   "shouldTruncate": false,
-  "text": "Please ensure specifications are checked to ensure the new unit will fit",
-  "textAlign": "CENTER",
-  "textColor": "#231F20",
-  "topRow": 58,
+  "text": "*Please add an order prior to updating customer details",
+  "textAlign": "LEFT",
+  "textColor": "#ef4444",
+  "topRow": 14,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "f1vfgxo85d",
-  "widgetName": "Specification_Check_Body"
+  "widgetId": "5wolfz4y16",
+  "widgetName": "Text24"
 }

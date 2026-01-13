@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 146,
+  "bottomRow": 149,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Number(Retrieve_an_order.data.shipping_lines[0].instance_id)))(Select1.options, Select1.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -17,12 +17,18 @@
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -30,7 +36,7 @@
       "key": "onOptionChange"
     }
   ],
-  "isDisabled": false,
+  "isDisabled": "{{List1.listData.length > 0? false : true}}",
   "isFilterable": false,
   "isLoading": false,
   "isRequired": true,
@@ -64,7 +70,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{Retrieve_shipping_methods.data.filter(method => method.enabled === true)}}",
-  "topRow": 142,
+  "topRow": 145,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "bz68udbmal",

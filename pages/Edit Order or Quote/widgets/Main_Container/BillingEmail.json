@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 50,
   "boxShadow": "none",
   "defaultText": "{{Retrieve_an_order.data.billing.email}}",
   "dynamicBindingPathList": [
@@ -15,13 +15,21 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "EMAIL",
-  "isDisabled": false,
+  "isDisabled": "{{List1.listData.length > 0? false : true}}",
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
@@ -51,7 +59,7 @@
   "rightColumn": 21,
   "shouldAllowAutofill": true,
   "showStepArrows": false,
-  "topRow": 28,
+  "topRow": 46,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "rfstboihsw",
