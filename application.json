@@ -65,6 +65,10 @@
     {
       "id": "Edit Order or Quote",
       "isDefault": false
+    },
+    {
+      "id": "Siclops Equipment Lookup",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

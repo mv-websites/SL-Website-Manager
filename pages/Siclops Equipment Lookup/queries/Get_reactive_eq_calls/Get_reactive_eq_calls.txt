@@ -1,0 +1,17 @@
+SELECT 
+	ca.Call_Ref, 
+	cl.Co_Name, 
+	ca.Problem, 
+	DATEADD(
+    	SECOND,
+    	DATEDIFF(SECOND, '19000101', ca.Time_Received),
+    	ca.Date_Received
+	) AS DateTime_Received
+FROM SICLOPS_LIVE_MVL.dbo.vw_LAYD_Calls ca
+LEFT JOIN SICLOPS_LIVE_MVL.dbo.vw_LAYD_Clients cl
+	ON ca.Link_to_Client = cl.Client_Ref
+LEFT JOIN SICLOPS_LIVE_MVL.dbo.vw_LAYD_LU_Call_Types ct
+	ON ca.Call_Type = ct.Call_Type_Code 
+WHERE Link_to_Equipment = {{List1.selectedItem.Equipment_Code}}
+AND ct.Call_Type_Code = 'RE'
+ORDER BY Call_Ref DESC;
