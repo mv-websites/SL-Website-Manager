@@ -40,7 +40,7 @@
   "columnUpdatedAt": 1768840699109,
   "columnWidthMap": {
     "Call_Ref": 129,
-    "Co_Name": 165
+    "Co_Name": 202
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -140,7 +140,7 @@
     },
     "Co_Name": {
       "alias": "Co_Name",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Co_Name\"])) : Co_Name })()}}",
