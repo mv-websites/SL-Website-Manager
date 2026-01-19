@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{{\n\t\"customer_id\": 6,\n\t\"billing\": {\n\t\t\"first_name\": \"\",\n\t\t\"last_name\": \"\",\n\t\t\"address_1\": \"\",\n\t\t\"address_2\": \"\",\n\t\t\"city\": \"\",\n\t\t\"state\": \"\",\n\t\t\"postcode\": \"\",\n\t\t\"country\": \"GB\",\n\t\t\"email\": \"noemail@nomail.com\",\n\t\t\"phone\": \"\"\n\t},\n\t\"shipping\": {\n\t\t\"first_name\": \"\",\n\t\t\"last_name\": \"\",\n\t\t\"address_1\": \"\",\n\t\t\"address_2\": \"\",\n\t\t\"city\": \"\",\n\t\t\"state\": \"\",\n\t\t\"postcode\": \"\",\n\t\t\"country\": \"GB\"\n\t},\n\t\"status\": \"checkout-draft\",\n\t\"line_items\": [\n\t],\n\t\"shipping_lines\": [\n\t\t{\n\t\t\t\"method_id\": \"local_pickup\",\n\t\t\t\"instance_id\": \"10\",\n\t\t\t\"total\": \"650.00\"\n\t\t}\n\t]\n}}}",
+      "body": "{{{\n\t\"customer_id\": Select2Copy.selectedOptionValue,\n\t\"billing\": {\n\t\t\"first_name\": \"\",\n\t\t\"last_name\": \"\",\n\t\t\"address_1\": \"\",\n\t\t\"address_2\": \"\",\n\t\t\"city\": \"\",\n\t\t\"state\": \"\",\n\t\t\"postcode\": \"\",\n\t\t\"country\": \"GB\",\n\t\t\"email\": \"noemail@nomail.com\",\n\t\t\"phone\": \"\"\n\t},\n\t\"shipping\": {\n\t\t\"first_name\": \"\",\n\t\t\"last_name\": \"\",\n\t\t\"address_1\": \"\",\n\t\t\"address_2\": \"\",\n\t\t\"city\": \"\",\n\t\t\"state\": \"\",\n\t\t\"postcode\": \"\",\n\t\t\"country\": \"GB\"\n\t},\n\t\"status\": \"checkout-draft\",\n\t\"line_items\": [\n\t],\n\t\"shipping_lines\": [\n\t\t{\n\t\t\t\"method_id\": \"local_pickup\",\n\t\t\t\"instance_id\": \"10\",\n\t\t\t\"total\": \"650.00\"\n\t\t}\n\t]\n}}}",
       "bodyFormData": [],
       "encodeParamsToggle": false,
       "formData": {

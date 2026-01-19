@@ -1,5 +1,5 @@
 {{{
-	"customer_id": 6,
+	"customer_id": Select2Copy.selectedOptionValue,
 	"billing": {
 		"first_name": "",
 		"last_name": "",
