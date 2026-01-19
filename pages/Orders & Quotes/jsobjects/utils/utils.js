@@ -27,5 +27,24 @@ export default {
 		const types = utils.statusTypesDtata()
 		const result = Object.entries(types).map(([key, value]) => ({ label: value.name, value: key }));
 		return result;
+	},
+	getNotesTab () {
+		const selectedTab = Tabs1.selectedTab
+		if (selectedTab === "Notes") {
+			const notesList = List_all_order_notes.run()
+			// NotesText.setText(List_all_order_notes.data)
+			showAlert("Notes tab selected")
+		}
+	},
+	async saveNewNote (order_id, note, customer_note) {
+		try {
+			const responseData = await Create_an_order_note.run({"order_id": order_id, "note": note, "customer_note": customer_note})
+			showAlert("Note saved succesfully!", "success")
+			List_all_order_notes.run({"order_id": order_id})
+			Input1.setValue("")
+			Select3.setSelectedOption(0)
+		} catch (err) {
+			showAlert(err.message, "error")
+		}
 	}
 }

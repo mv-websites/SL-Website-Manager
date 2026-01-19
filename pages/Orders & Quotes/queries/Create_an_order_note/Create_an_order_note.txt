@@ -1,0 +1,4 @@
+{{{
+	"note": this.params.note,
+	"customer_note": this.params.customer_note
+}}}

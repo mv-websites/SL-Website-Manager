@@ -1,0 +1,44 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#ffffff",
+  "buttonVariant": "SECONDARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "comment",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "aydk4f11e7",
+  "leftColumn": 46,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 50,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{List_all_order_notes.run({\n  \"order_id\": List1.triggeredItem.id\n}).then(() => {\n  showModal(Modal1.name);\n});}}",
+  "parentColumnSpace": 30.125,
+  "parentId": "mqprao4he8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "tooltip": "See order notes",
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "awbkohf01i",
+  "widgetName": "IconButton1"
+}
