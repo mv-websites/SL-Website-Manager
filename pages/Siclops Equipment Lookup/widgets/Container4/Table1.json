@@ -37,9 +37,9 @@
     "Co_Name",
     "Problem"
   ],
-  "columnUpdatedAt": 1768899970124,
+  "columnUpdatedAt": 1768900710620,
   "columnWidthMap": {
-    "Call_Ref": 110,
+    "Call_Ref": 99,
     "Co_Name": 180
   },
   "customIsLoading": false,
@@ -165,7 +165,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Customer",
       "notation": "standard",
       "originalId": "Co_Name",
