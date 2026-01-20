@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 22,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "Order Number:         {{Retrieve_an_order.data.id}}\nOrder Date:               {{new Date(Retrieve_an_order.data.date_created).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}}",
+  "text": "Order Date:               {{new Date(Retrieve_an_order.data.date_created).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 18,
