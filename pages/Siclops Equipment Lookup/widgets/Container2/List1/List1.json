@@ -109,7 +109,7 @@
   "needsErrorInfo": false,
   "onItemClick": "{{Get_reactive_eq_calls.run()}}",
   "originalBottomRow": 76,
-  "originalTopRow": 6,
+  "originalTopRow": 5,
   "pageSize": 5,
   "parentColumnSpace": 14.96875,
   "parentId": "eb9rv91m8p",

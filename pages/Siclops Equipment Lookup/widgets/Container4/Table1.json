@@ -40,7 +40,7 @@
   "columnUpdatedAt": 1768840699109,
   "columnWidthMap": {
     "Call_Ref": 129,
-    "Co_Name": 202
+    "Co_Name": 180
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -103,6 +103,8 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "originalBottomRow": 76,
+  "originalTopRow": 5,
   "parentColumnSpace": 14.96875,
   "parentId": "shb7sgwci9",
   "parentRowSpace": 10,
