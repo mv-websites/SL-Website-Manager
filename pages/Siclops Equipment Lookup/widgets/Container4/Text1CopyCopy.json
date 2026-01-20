@@ -42,7 +42,7 @@
   "shouldTruncate": false,
   "text": "Reactive Calls",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "textColor": "#0061a6",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

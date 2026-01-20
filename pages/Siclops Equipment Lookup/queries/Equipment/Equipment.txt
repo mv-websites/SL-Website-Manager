@@ -1,8 +1,12 @@
-SELECT TOP 50 Equipment_Code, Link_to_Client, Serial_Number, Make, Model, Description, Creation_Date, Location, Notes, Asset_Number
-FROM SICLOPS_LIVE_MVL.dbo.vw_LAYD_Equipment
+SELECT TOP 50 e.Equipment_Code, CONCAT(lc.Co_Name, ' - ', c.Co_Name) AS Customer, e.Link_to_Client, e.Serial_Number, e.Make, e.Model, e.Description, e.Creation_Date, e.Location, e.Notes, e.Asset_Number
+FROM SICLOPS_LIVE_MVL.dbo.vw_LAYD_Equipment e
+LEFT JOIN SICLOPS_LIVE_MVL.dbo.vw_LAYD_Clients c
+ON c.Client_Ref = e.Link_to_Client
+LEFT JOIN SICLOPS_LIVE_MVL.dbo.vw_LAYD_Clients lc
+ON c.Client_Group = lc.Client_Ref
 WHERE (
-		{{ Select1.selectedOptionValue ? `Link_to_Client = '${Select1.selectedOptionValue}'` : '1=1' }}
+		{{ Select1.selectedOptionValue ? `e.Link_to_Client = '${Select1.selectedOptionValue}'` : '1=1' }}
 	)
 AND (
-		{{ Input1.text ? `Asset_Number LIKE '%${Input1.text}%'` : '1=1' }}
+		{{ Input1.text ? `e.Asset_Number LIKE '%${Input1.text}%'` : '1=1' }}
 	);

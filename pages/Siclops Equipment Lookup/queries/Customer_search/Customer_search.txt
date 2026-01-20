@@ -1,0 +1,8 @@
+SELECT TOP 10 c.Client_Ref, CONCAT(lc.Co_Name, ' - ', c.Co_Name) AS Customer, c.Add1, c.Add2, c.Add3, c.Add4, c.Post_Code  
+FROM SICLOPS_LIVE_MVL.dbo.vw_LAYD_Clients c
+LEFT JOIN SICLOPS_LIVE_MVL.dbo.vw_LAYD_Clients lc
+ON c.Client_Group = lc.Client_Ref
+CROSS APPLY (
+    SELECT CONCAT(lc.Co_Name, ' - ', c.Co_Name) AS Customer
+) ca
+WHERE ca.Customer LIKE '%{{this.params.search || ''}}%';

@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -19,8 +22,12 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "isDisabled": true,
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilterUpdate"
+    }
+  ],
+  "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
@@ -40,8 +47,9 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "onFilterUpdate": "{{Customer_search.run({\n \"search\": Select1.filterText.toUpperCase(),\n});}}",
+  "optionLabel": "Customer",
+  "optionValue": "Client_Ref",
   "parentColumnSpace": 30.25,
   "parentId": "x5unbdj4d5",
   "parentRowSpace": 10,
@@ -49,8 +57,8 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 42,
-  "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
+  "serverSideFiltering": true,
+  "sourceData": "{{Customer_search.data}}",
   "topRow": 5,
   "type": "SELECT_WIDGET",
   "version": 1,

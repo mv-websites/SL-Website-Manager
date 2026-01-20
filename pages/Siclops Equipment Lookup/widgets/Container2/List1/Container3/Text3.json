@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 13,
   "boxShadow": "none",
   "dynamicBindingPathList": [
     {
@@ -41,9 +41,9 @@
   "parentId": "uau3uuxo7h",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 24,
   "shouldTruncate": false,
-  "text": "{{currentItem.Make}} | {{currentItem.Model}}",
+  "text": "{{currentItem.Customer}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "textStyle": "BODY",
