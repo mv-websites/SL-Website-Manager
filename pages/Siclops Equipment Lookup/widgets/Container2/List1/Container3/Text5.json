@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{currentItem.Notes}}",
+  "text": "NOTES: {{currentItem.Notes? currentItem.Notes : \"\"}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

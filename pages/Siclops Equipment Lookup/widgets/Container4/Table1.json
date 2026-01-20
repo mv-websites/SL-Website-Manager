@@ -32,14 +32,14 @@
     }
   },
   "columnOrder": [
+    "DateTime_Received",
     "Call_Ref",
     "Co_Name",
-    "Problem",
-    "DateTime_Received"
+    "Problem"
   ],
-  "columnUpdatedAt": 1768840699109,
+  "columnUpdatedAt": 1768899970124,
   "columnWidthMap": {
-    "Call_Ref": 129,
+    "Call_Ref": 110,
     "Co_Name": 180
   },
   "customIsLoading": false,
@@ -81,7 +81,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -103,6 +107,7 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onRowSelected": "{{copyToClipboard(Table1.selectedRow.Problem).then(() => {\n  showAlert('Copied Problem description', 'success');\n});}}",
   "originalBottomRow": 76,
   "originalTopRow": 5,
   "parentColumnSpace": 14.96875,
@@ -175,7 +180,7 @@
       "alias": "DateTime_Received",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "number",
+      "columnType": "date",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"DateTime_Received\"])) : DateTime_Received })()}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -191,10 +196,11 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
-      "label": "DateTime_Received",
+      "isVisible": true,
+      "label": "Date",
       "notation": "standard",
       "originalId": "DateTime_Received",
+      "outputFormat": "DD/MM/YYYY HH:mm",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
