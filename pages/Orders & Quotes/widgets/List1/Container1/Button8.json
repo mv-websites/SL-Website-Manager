@@ -15,12 +15,18 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "iconName"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "iconName"
     }
   ],
   "dynamicTriggerPathList": [
@@ -29,7 +35,7 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "document-share",
+  "iconName": "{{currentItem._purchase_order_number? 'document-share' : 'cloud-upload'}}",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -51,8 +57,8 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 14,
-  "text": "PO: {{currentItem._purchase_order_number}}",
+  "rightColumn": 10,
+  "text": "{{currentItem._purchase_order_number? `PO: ${currentItem._purchase_order_number}` : \"Add a PO\"}}",
   "topRow": 28,
   "type": "BUTTON_WIDGET",
   "version": 1,

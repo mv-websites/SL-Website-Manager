@@ -46,5 +46,8 @@ export default {
 		} catch (err) {
 			showAlert(err.message, "error")
 		}
+	},
+	triggerFilePicker() {
+		FilePicker1.trigger()
 	}
 }
