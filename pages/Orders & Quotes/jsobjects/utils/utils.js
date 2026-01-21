@@ -36,9 +36,9 @@ export default {
 			showAlert("Notes tab selected")
 		}
 	},
-	async saveNewNote (order_id, note, customer_note) {
+	async saveNewNote (order_id, note) {
 		try {
-			const responseData = await Create_an_order_note.run({"order_id": order_id, "note": note, "customer_note": customer_note})
+			const responseData = await Create_an_order_note.run({"order_id": order_id, "note": note, "customer_note": Select3.selectedOptionLabel === "Customer Note"? true : false})
 			showAlert("Note saved succesfully!", "success")
 			List_all_order_notes.run({"order_id": order_id})
 			Input1.setValue("")
@@ -47,7 +47,4 @@ export default {
 			showAlert(err.message, "error")
 		}
 	},
-	triggerFilePicker() {
-		FilePicker1.trigger()
-	}
 }

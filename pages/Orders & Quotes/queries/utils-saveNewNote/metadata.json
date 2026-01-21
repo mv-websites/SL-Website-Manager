@@ -12,9 +12,6 @@
         },
         {
           "name": "note"
-        },
-        {
-          "name": "customer_note"
         }
       ],
       "paginationType": "NONE",

@@ -41,7 +41,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{utils.saveNewNote(List1.triggeredItem.id, Input1.text, Select3.selectedOptionValue = 1 ? true : false);}}",
+  "onClick": "{{utils.saveNewNote(List1.triggeredItem.id, Input1.text, Select3.selectedOptionValue = 0 ? false : true);}}",
   "parentColumnSpace": 27.4482421875,
   "parentId": "22zc874uoa",
   "parentRowSpace": 10,
