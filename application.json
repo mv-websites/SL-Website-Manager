@@ -69,6 +69,10 @@
     {
       "id": "Siclops Equipment Lookup",
       "isDefault": false
+    },
+    {
+      "id": "Add New Products",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
