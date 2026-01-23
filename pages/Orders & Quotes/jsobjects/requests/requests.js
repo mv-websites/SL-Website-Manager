@@ -61,7 +61,7 @@ export default {
 		console.log("Upload response:", text);
 		return text;
 	},
-	async uploadPO(order_id = 14175, uploadedFile = FilePicker1.files[0]) {
+	async uploadPO(order_id, uploadedFile) {
 		try {
 			const fileInfo = await requests.uploadMediaBinary(uploadedFile)
 			await Update_order_PO.run({

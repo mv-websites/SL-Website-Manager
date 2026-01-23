@@ -8,12 +8,10 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "order_id",
-          "value": "{{14175}}"
+          "name": "order_id"
         },
         {
-          "name": "uploadedFile",
-          "value": "{{FilePicker1.files[0]}}"
+          "name": "uploadedFile"
         }
       ],
       "paginationType": "NONE",
