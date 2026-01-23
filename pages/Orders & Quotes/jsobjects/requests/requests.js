@@ -67,9 +67,11 @@ export default {
 			await Update_order_PO.run({
 				id: order_id,
 				file_path: fileInfo.guid.raw.replace("https://www.service-line.co.uk/wp-content/uploads", ""),
-				order_number: uploadedFile.name.substring(0, uploadedFile.name.lastIndexOf("."))
+				order_number: Input2.text
 			})
 			resetWidget("FilePicker1")
+			Input2.setValue("")
+			closeModal(Modal2.name)
 			showAlert("Uploaded and saved succesfully!", "success")
 			await utils.statusSetting(utils.statusSetting.data)
 		} catch (err) {
