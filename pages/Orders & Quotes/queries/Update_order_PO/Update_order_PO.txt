@@ -1,0 +1,15 @@
+{{
+{	
+	"id": this.params.id,
+	"meta_data": [
+		{
+			"key": "_purchase_order_file_path",
+			"value": this.params.file_path
+		},
+		{
+			"key": "_purchase_order_number",
+			"value": this.params.order_number
+		}
+	]
+}
+}}

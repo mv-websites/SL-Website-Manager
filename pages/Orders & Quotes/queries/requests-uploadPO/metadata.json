@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "690080acd1a018060dd5eb42_a6933de7-aca9-4768-851b-37d473680094",
-  "id": "Orders & Quotes_requests.uploadMediaBinary",
+  "gitSyncId": "690080acd1a018060dd5eb42_9533a5cc-a1ef-47cd-b9b2-5adce9cde44b",
+  "id": "Orders & Quotes_requests.uploadPO",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,7 +8,12 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "fileObject"
+          "name": "order_id",
+          "value": "{{14175}}"
+        },
+        {
+          "name": "uploadedFile",
+          "value": "{{FilePicker1.files[0]}}"
         }
       ],
       "paginationType": "NONE",
@@ -26,8 +31,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "requests.uploadMediaBinary",
-    "name": "uploadMediaBinary",
+    "fullyQualifiedName": "requests.uploadPO",
+    "name": "uploadPO",
     "pageId": "Orders & Quotes",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

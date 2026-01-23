@@ -25,24 +25,18 @@ export default {
 			total_records: totalCount,
 			orders: transformedOrders
 		};
-
-		// return { 
-		// total_records: totalCount,
-		// orders
-		// };
 	},
 	test () {
 		requests.getAllOrders.data.order
 	},
-
-	async uploadMediaBinary() {
+	async uploadMediaBinary(fileObject) {
 		const myHeaders = {
-			"Content-Disposition": `attachment; filename=${FilePicker2.files[0].name}`,
-			"Content-Type": FilePicker2.files[0].type,
+			"Content-Disposition": `attachment; filename=${fileObject.name}`,
+			"Content-Type": fileObject.type,
 			"Authorization": "Basic c2wtYXBpLXNlcnZpY2U6UnZQUyAzU1ZZIE5zQ2QgVVMzRiBQa0hDIGs5YmE="
 		};
 
-		const file = FilePicker2.files[0].data;
+		const file = fileObject.data;
 		const base64 = file.split(",")[1];
 
 		const binaryString = atob(base64);
@@ -66,5 +60,21 @@ export default {
 		const text = await response.json();  // actual WordPress response
 		console.log("Upload response:", text);
 		return text;
+	},
+	async uploadPO(order_id = 14175, uploadedFile = FilePicker1.files[0]) {
+		try {
+			const fileInfo = await requests.uploadMediaBinary(uploadedFile)
+			await Update_order_PO.run({
+				id: order_id,
+				file_path: fileInfo.guid.raw.replace("https://www.service-line.co.uk/wp-content/uploads", ""),
+				order_number: uploadedFile.name.substring(0, uploadedFile.name.lastIndexOf("."))
+			})
+			resetWidget("FilePicker1")
+			showAlert("Uploaded and saved succesfully!", "success")
+			await utils.statusSetting(utils.statusSetting.data)
+		} catch (err) {
+			console.log(err)
+			showAlert(err.message, "error")
+		}
 	}
 }

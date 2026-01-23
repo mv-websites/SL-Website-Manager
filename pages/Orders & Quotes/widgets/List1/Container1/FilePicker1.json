@@ -8,26 +8,30 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "buttonColor"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
   "dynamicTyping": true,
-  "fileDataType": "Binary",
+  "fileDataType": "Base64",
   "files": [],
   "isDefaultClickDisabled": true,
-  "isDisabled": true,
+  "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{currentItem._purchase_order_number? false : true}}",
+  "isVisible": "true",
   "key": "77djaxo4as",
   "label": "+ PO",
   "leftColumn": 10,
@@ -39,6 +43,7 @@
   "mobileRightColumn": 50,
   "mobileTopRow": 21,
   "needsErrorInfo": false,
+  "onFilesSelected": "{{requests.uploadPO(List1.triggeredItem.id);}}",
   "parentColumnSpace": 30.5625,
   "parentId": "mqprao4he8",
   "parentRowSpace": 10,
