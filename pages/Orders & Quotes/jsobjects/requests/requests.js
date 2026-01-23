@@ -71,6 +71,7 @@ export default {
 			})
 			resetWidget("FilePicker1")
 			utils.clearModal2()
+			closeModal(Modal2.name)
 			showAlert("Uploaded and saved succesfully!", "success")
 			await utils.statusSetting(utils.statusSetting.data)
 		} catch (err) {
