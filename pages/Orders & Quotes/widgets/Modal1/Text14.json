@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "shouldTruncate": false,
-  "text": "Order Notes  |  ID:{{List1.triggeredItem.id}}  |  {{utils.customerName(List1.triggeredItem.customer_group)}}{{Select3.selectedOptionValue}}",
+  "text": "Order Notes  |  ID:{{List1.triggeredItem.id}}  |  {{List1.triggeredItem.customer_group?  utils.customerName(List1.triggeredItem.customer_group) : \"\"}}",
   "textAlign": "LEFT",
   "textColor": "#0061a6",
   "topRow": 1,
