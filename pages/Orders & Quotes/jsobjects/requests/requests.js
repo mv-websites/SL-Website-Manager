@@ -70,8 +70,7 @@ export default {
 				order_number: Input2.text
 			})
 			resetWidget("FilePicker1")
-			Input2.setValue("")
-			closeModal(Modal2.name)
+			utils.clearModal2()
 			showAlert("Uploaded and saved succesfully!", "success")
 			await utils.statusSetting(utils.statusSetting.data)
 		} catch (err) {

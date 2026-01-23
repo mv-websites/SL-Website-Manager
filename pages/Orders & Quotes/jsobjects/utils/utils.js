@@ -47,4 +47,8 @@ export default {
 			showAlert(err.message, "error")
 		}
 	},
+	clearModal2() {
+		resetWidget("FilePicker1")
+		Input2.setValue("")
+	}
 }
