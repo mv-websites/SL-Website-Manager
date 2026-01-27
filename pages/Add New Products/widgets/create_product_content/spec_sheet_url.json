@@ -1,64 +1,56 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
+  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 17,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "sourceData"
-    }
-  ],
   "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
   "isDisabled": false,
-  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "ijgfe956t3",
+  "key": "p2lcq95n0i",
+  "label": "Spec Sheet URL",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
-  "labelText": "Brand",
-  "labelTextColor": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 32,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 22,
-  "mobileLeftColumn": 29,
-  "mobileRightColumn": 49,
-  "mobileTopRow": 15,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "optionLabel": "key",
-  "optionValue": "value",
-  "parentColumnSpace": 30.5625,
-  "parentId": "9iads7nq1a",
+  "originalBottomRow": 18,
+  "originalTopRow": 11,
+  "parentColumnSpace": 30.25,
+  "parentId": "4gl262t40s",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
   "renderMode": "CANVAS",
+  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
-  "serverSideFiltering": false,
-  "sourceData": "{{requests.fullBrandList.data}}",
-  "topRow": 4,
-  "type": "SELECT_WIDGET",
-  "version": 1,
-  "widgetId": "bzwdi8ugq7",
-  "widgetName": "brand"
+  "rightColumn": 64,
+  "showStepArrows": false,
+  "topRow": 10,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "3znxih0f7h",
+  "widgetName": "spec_sheet_url"
 }
