@@ -5,15 +5,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 11,
   "boxShadow": "none",
-  "defaultOptionValue": [
-    "GREEN"
-  ],
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "options"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -39,32 +40,9 @@
   "mobileLeftColumn": 36,
   "mobileRightColumn": 56,
   "mobileTopRow": 24,
-  "mode": "SHOW_ALL",
+  "mode": "SHOW_PARENT",
   "needsErrorInfo": false,
-  "options": [
-    {
-      "children": [
-        {
-          "label": "Dark Blue",
-          "value": "DARK BLUE"
-        },
-        {
-          "label": "Light Blue",
-          "value": "LIGHT BLUE"
-        }
-      ],
-      "label": "Blue",
-      "value": "BLUE"
-    },
-    {
-      "label": "Green",
-      "value": "GREEN"
-    },
-    {
-      "label": "Red",
-      "value": "RED"
-    }
-  ],
+  "options": "{{requests.fullProductCategoryList.data}}",
   "parentColumnSpace": 30.5625,
   "parentId": "9iads7nq1a",
   "parentRowSpace": 10,
