@@ -30,7 +30,7 @@
     "fullyQualifiedName": "requests.uploadMediaBinary",
     "name": "uploadMediaBinary",
     "pageId": "Add New Products",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
