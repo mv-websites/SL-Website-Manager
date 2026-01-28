@@ -31,6 +31,8 @@
   "mobileTopRow": 139,
   "needsErrorInfo": false,
   "onClick": "{{utils.addProduct();}}",
+  "originalBottomRow": 143,
+  "originalTopRow": 139,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,
