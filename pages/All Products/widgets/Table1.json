@@ -70,6 +70,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
+  "defaultSearchText": "{{appsmith.URL.queryParams.sku? appsmith.URL.queryParams.sku : \"\"}}",
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
     0
@@ -180,6 +181,9 @@
     },
     {
       "key": "primaryColumns.product_markup.cellBackground"
+    },
+    {
+      "key": "defaultSearchText"
     }
   ],
   "dynamicPropertyPathList": [
@@ -735,7 +739,7 @@
       "isVisible": true,
       "label": "Supplier",
       "notation": "standard",
-      "onOptionChange": "{{Add_or_Update_Supplier.run().then(() => {\n  Price_Calculation.updatePrice();\n  Price_Calculation.updateMultipleVariations();\n}).catch(() => {\n  showAlert('Failed to Update Supplier', 'error');\n});}}",
+      "onOptionChange": "{{Add_or_Update_Supplier.run().then(() => {\n  Price_Calculation.updatePrice();\n  Price_Calculation.updateMultipleVariations();\n  All_Products.run();\n}).catch(() => {\n  showAlert('Failed to Update Supplier', 'error');\n});}}",
       "originalId": "supplier",
       "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Supplier_List.data)) : Supplier_List.data })()}}",
       "sticky": "",

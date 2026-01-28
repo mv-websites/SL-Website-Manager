@@ -85,7 +85,15 @@ Long Description:`;
 			categoryArray.push({ id: value });
 		}
 		return categoryArray;
+	},
+	async addProduct() {
+		try {
+			const productInfo = await Create_a_product.run()
+			this.clearAll()
+			navigateTo("All Products", {sku: productInfo.sku}, "SAME_WINDOW")
+		} catch(err) {
+			showAlert(Create_a_product.data.message, 'error')
+		}
+		
 	}
-
-
 }
