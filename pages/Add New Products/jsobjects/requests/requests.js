@@ -164,5 +164,115 @@ export default {
 		const text = await response.json();  // actual WordPress response
 		return text;
 	},
-	
-}
+	/**
+   * Upload a media file to WordPress via REST:
+   * - Pass EITHER a `fileObject` (from FilePicker) OR an `imageUrl`.
+   * - Optionally pass `meta` to set alt/caption/title after upload.
+   *
+   * @param {Object} opts
+   * @param {Object} [opts.fileObject] - Appsmith FilePicker file: { name, type, data: 'data:<mime>;base64,...' }
+   * @param {string} [opts.imageUrl] - Remote image URL to fetch and upload
+   * @param {Object} [opts.meta] - { alt_text, caption, title, description }
+   * @returns {Promise<Object>} WordPress media object (JSON)
+   */
+	async uploadMediaBinaryOrUrl(opts = {}) {
+		const { fileObject, imageUrl, meta } = opts;
+		if (!fileObject && !imageUrl) {
+			throw new Error('Provide either fileObject or imageUrl');
+		}
+
+		// ---- 1) Prepare bytes + filename + mime -------------------------------
+		let bytes;            // Uint8Array
+		let filename;         // string
+		let mime;             // string
+
+		if (fileObject) {
+			// From FilePicker: data URL like "data:image/jpeg;base64,...."
+			const { name, type, data } = fileObject;
+			if (!data?.startsWith('data:')) {
+				throw new Error('fileObject.data must be a data URL (base64).');
+			}
+			filename = name || 'upload.bin';
+			mime = type || 'application/octet-stream';
+
+			const base64 = data.split(',')[1] || '';
+			const binaryString = atob(base64);
+			const len = binaryString.length;
+			bytes = new Uint8Array(len);
+			for (let i = 0; i < len; i++) bytes[i] = binaryString.charCodeAt(i);
+
+		} else {
+			// From remote URL: fetch as Blob and turn into bytes
+			const r = await fetch(imageUrl, { mode: 'cors' }); // may require CORS/allowlist on remote host
+			if (!r.ok) throw new Error(`Fetch image failed: ${r.status} ${r.statusText}`);
+			const blob = await r.blob();
+			const ab = await blob.arrayBuffer();
+			bytes = new Uint8Array(ab);
+
+			const urlParts = imageUrl.split('?')[0].split('#')[0].split('/');
+			const urlName = urlParts[urlParts.length - 1] || 'image';
+			const guessedExt = /\.[a-z0-9]+$/i.test(urlName) ? '' : '.jpg';
+			filename = urlName || ('image' + guessedExt);
+			mime = r.headers.get('content-type') || 'image/jpeg';
+		}
+
+		// ---- 2) Build request -------------------------------------------------
+		const authHeader = variables.pageConstants()['api-auth']; // e.g., "Basic base64(user:app-password)" or "Bearer <token>"
+		const myHeaders = {
+			'Content-Disposition': `attachment; filename="${filename}"`,
+			'Content-Type': mime,
+			'Authorization': authHeader,
+			'Accept': 'application/json',
+		};
+
+		const requestOptions = {
+			method: 'POST',
+			headers: myHeaders,
+			// fetch accepts a Uint8Array directly as the body
+			body: bytes,
+			redirect: 'follow',
+		};
+
+		// ---- 3) Upload to WP --------------------------------------------------
+		const endpoint = 'https://www.service-line.co.uk/wp-json/wp/v2/media';
+		const response = await fetch(endpoint, requestOptions);
+
+		// Better error surfacing
+		if (!response.ok) {
+			const errText = await response.text().catch(() => '');
+			throw new Error(`Upload failed: ${response.status} ${errText}`);
+		}
+
+		const media = await response.json(); // WP media object with id, source_url, etc.
+
+		// ---- 4) Optional: patch metadata (alt/caption/title) ------------------
+		if (meta && media?.id) {
+			// Only send keys provided
+			const payload = {};
+			if (meta.alt_text != null) payload.alt_text = String(meta.alt_text);
+			if (meta.caption != null)  payload.caption  = String(meta.caption);
+			if (meta.title != null)    payload.title    = String(meta.title);
+			if (meta.description != null) payload.description = String(meta.description);
+
+			if (Object.keys(payload).length) {
+				const metaResp = await fetch(`${endpoint}/${media.id}`, {
+					method: 'POST', // WP supports POST for update
+					headers: {
+						'Authorization': authHeader,
+						'Content-Type': 'application/json',
+						'Accept': 'application/json',
+					},
+					body: JSON.stringify(payload),
+				});
+				if (metaResp.ok) {
+					const updated = await metaResp.json();
+					return updated;
+				}
+				// If meta update fails, still return the created media
+				console.warn('Meta update failed', await metaResp.text());
+			}
+		}
+
+		return media;
+	},
+};

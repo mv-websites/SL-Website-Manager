@@ -94,6 +94,13 @@ Long Description:`;
 		} catch(err) {
 			showAlert(Create_a_product.data.message, 'error')
 		}
-		
+	},
+	async testFunc() {
+		const testVar = await requests.uploadMediaBinaryOrUrl({
+			imageUrl: 'https://images.pexels.com/photos/34857354/pexels-photo-34857354.jpeg',
+			meta: { alt_text: 'Blue sofa', caption: 'New spring range' }
+		});
+		return testVar
+
 	}
 }
