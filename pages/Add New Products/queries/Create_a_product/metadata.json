@@ -11,16 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{{ \n{\n  \"name\": product_name.text,\n  \"type\": \"simple\",\n  \"status\": \"publish\",\n  \"catalog_visibility\": \"visible\",\n  \"description\": long_description.text,\n  \"short_description\": short_description.text,\n  \"sku\": product_sku.text,\n  \"weight\": weight.text,\n  \"dimensions\": { \"length\": length.text, \"width\": width.text, \"height\": height.text },\n  \"categories\": [{ \"id\": 567 }, { \"id\": 20 }],\n  \"images\": [{ \"id\": 14224 }, { \"id\": 14225 }],\n  \"meta_data\": [\n    { \"key\": \"wcpoa_attachment_name\",         \"value\": [\"Specification Sheet\"] },\n    { \"key\": \"wcpoa_attach_type\",             \"value\": [\"file_upload\"] },\n    { \"key\": \"wcpoa_attachment_url\",          \"value\": [`/${requests.uploadMediaBinary.data.media_details.sizes.full.file}`] },\n    { \"key\": \"wcpoa_attachment_description\",  \"value\": [`${spec_sheet.files[0].name}`] },\n    { \"key\": \"wcpoa_attachment_url\",          \"value\": [\"14228\"] },\n    // Row identifiers — keep ONE array with ONE value per row:\n    { \"key\": \"wcpoa_attachments_id\",          \"value\": [\"t7c2nulkdrpf2\"] },\n    // Product-level flags that (based on the UI) often need to be true:\n    { \"key\": \"wcpoa_product_page_enable\",     \"value\": [\"yes\"] },\n    { \"key\": \"wcpoa_product_open_window_flag\",\"value\": [\"no\"] },\n    { \"key\": \"wcpoa_product_logged_in_flag\",  \"value\": [\"no\"] },\n    { \"key\": \"wcpoa_order_status\",            \"value\": \"wc-all\" },\n    { \"key\": \"wcpoa_expired_date_enable\",     \"value\": [\"no\"] }\n  ]\n}\n}}",
+      "body": "{{ \n{\n  \"name\": product_name.text,\n  \"type\": \"simple\",\n  \"status\": \"publish\",\n  \"catalog_visibility\": \"visible\",\n  \"description\": long_description.text,\n  \"short_description\": short_description.text, \n  \"sku\": product_sku.text,\n  \"weight\": String(weight.text),\n\t\"brands\": [{ \"id\": brand.selectedOptionValue? brand.selectedOptionValue : \"\"}],\n  \"dimensions\": { \"length\": String(length.text), \"width\": String(width.text), \"height\": String(height.text) },\n  \"categories\": utils.categoryIdArray(),\n  \"images\": [{ \"id\": 14224 }, { \"id\": 14225 }],\n  \"meta_data\": [\n    { \"key\": \"wcpoa_attachment_name\",         \"value\": [\"Specification Sheet\"] },\n    { \"key\": \"wcpoa_attach_type\",             \"value\": [\"file_upload\"] },\n    { \"key\": \"wcpoa_attachment_url\",          \"value\": [appsmith.store.uploadInfo? `/${appsmith.store.uploadInfo.fileName}` : \"\"] },\n    { \"key\": \"wcpoa_attachment_description\",  \"value\": [appsmith.store.uploadInfo? appsmith.store.uploadInfo.fileName : \"\"] },\n    { \"key\": \"wcpoa_attachment_url\",          \"value\": [appsmith.store.uploadInfo? appsmith.store.uploadInfo.id : \"\"] },\n    // Row identifiers — keep ONE array with ONE value per row:\n    { \"key\": \"wcpoa_attachments_id\",          \"value\": [utils.generateAttachmentCode()] },\n    // Product-level flags that (based on the UI) often need to be true:\n    { \"key\": \"wcpoa_product_page_enable\",     \"value\": [\"yes\"] },\n    { \"key\": \"wcpoa_product_open_window_flag\",\"value\": [\"no\"] },\n    { \"key\": \"wcpoa_product_logged_in_flag\",  \"value\": [\"no\"] },\n    { \"key\": \"wcpoa_order_status\",            \"value\": \"wc-all\" },\n    { \"key\": \"wcpoa_expired_date_enable\",     \"value\": [\"no\"] }\n  ]\n}\n}}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "GET",
+      "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
+      "path": "/wp-json/wc/v3/products",
       "pluginSpecifiedTemplates": [
         {
           "value": true

@@ -133,7 +133,7 @@ export default {
 
 		return finalList;
 	},
-	async uploadMediaBinary(fileObject = spec_sheet.files[0]) {
+	async uploadMediaBinary(fileObject) {
 		const myHeaders = {
 			"Content-Disposition": `attachment; filename=${fileObject.name}`,
 			"Content-Type": fileObject.type,
@@ -162,7 +162,7 @@ export default {
 		);
 
 		const text = await response.json();  // actual WordPress response
-		console.log("Upload response:", text);
 		return text;
-	}
+	},
+	
 }

@@ -28,7 +28,7 @@ Format the long description using clear sections such as:
 
 Do not invent specifications, features, or claims that are not supported by the provided sources.
 
-Do not include in-line references.
+Do not include in-line reference links.
 
 Return the final output in this structure:
 
@@ -42,6 +42,50 @@ Long Description:`;
 		} catch {
 			showAlert("Failed to copy Prompt", 'error')
 		}
-
+	},
+	async insertSpecSheet(fileObject = spec_sheet.files[0]) {
+		try {
+			const uploadInfo = await requests.uploadMediaBinary(fileObject)
+			const uploadInfoFiltered = {
+				id: uploadInfo.id,
+				fileName: (uploadInfo.guid.rendered).split('/').pop(),
+				url: uploadInfo.guid.rendered
+			}
+			storeValue("uploadInfo", uploadInfoFiltered)
+			resetWidget('spec_sheet')
+			showAlert("Succesfully uploaded Spec Sheet to site!", "success")
+		} catch (err) {
+			removeValue("uploadInfo")
+			showAlert(`Failed to upload Spec Sheet. Err: ${err.message}`, "error")
+		}
+	},
+	clearAll() {
+		resetWidget('product_name')
+		resetWidget('brand')
+		resetWidget('product_sku')
+		resetWidget('category')
+		resetWidget('weight')
+		resetWidget('height')
+		resetWidget('length')
+		resetWidget('width')
+		resetWidget('short_description')
+		resetWidget('long_description')
+		resetWidget('spec_sheet')
+		Text3.setText("")
+		removeValue("uploadInfo")
+	},
+	generateAttachmentCode(length = 13) {
+		const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+		return Array.from({ length }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+	},
+	categoryIdArray() {
+		const categoryList = category.selectedOptionValues;
+		const categoryArray = [];
+		for (const value of categoryList) {
+			categoryArray.push({ id: value });
+		}
+		return categoryArray;
 	}
+
+
 }
