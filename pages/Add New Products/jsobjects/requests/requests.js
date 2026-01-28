@@ -132,5 +132,37 @@ export default {
 		List_all_brands.clear();
 
 		return finalList;
+	},
+	async uploadMediaBinary(fileObject = spec_sheet.files[0]) {
+		const myHeaders = {
+			"Content-Disposition": `attachment; filename=${fileObject.name}`,
+			"Content-Type": fileObject.type,
+			"Authorization": variables.pageConstants()['api-auth']
+		};
+
+		const file = fileObject.data;
+		const base64 = file.split(",")[1];
+
+		const binaryString = atob(base64);
+		const bytes = new Uint8Array(binaryString.length);
+		for (let i = 0; i < binaryString.length; i++) {
+			bytes[i] = binaryString.charCodeAt(i);
+		}
+
+		const requestOptions = {
+			method: "POST",
+			headers: myHeaders,
+			body: bytes,
+			redirect: "follow"
+		};
+
+		const response = await fetch(
+			"https://www.service-line.co.uk/wp-json/wp/v2/media",
+			requestOptions
+		);
+
+		const text = await response.json();  // actual WordPress response
+		console.log("Upload response:", text);
+		return text;
 	}
 }

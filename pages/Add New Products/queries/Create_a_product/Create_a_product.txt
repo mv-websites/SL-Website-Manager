@@ -1,0 +1,30 @@
+{{ 
+{
+  "name": product_name.text,
+  "type": "simple",
+  "status": "publish",
+  "catalog_visibility": "visible",
+  "description": long_description.text,
+  "short_description": short_description.text,
+  "sku": product_sku.text,
+  "weight": weight.text,
+  "dimensions": { "length": length.text, "width": width.text, "height": height.text },
+  "categories": [{ "id": 567 }, { "id": 20 }],
+  "images": [{ "id": 14224 }, { "id": 14225 }],
+  "meta_data": [
+    { "key": "wcpoa_attachment_name",         "value": ["Specification Sheet"] },
+    { "key": "wcpoa_attach_type",             "value": ["file_upload"] },
+    { "key": "wcpoa_attachment_url",          "value": [`/${requests.uploadMediaBinary.data.media_details.sizes.full.file}`] },
+    { "key": "wcpoa_attachment_description",  "value": [`${spec_sheet.files[0].name}`] },
+    { "key": "wcpoa_attachment_url",          "value": ["14228"] },
+    // Row identifiers — keep ONE array with ONE value per row:
+    { "key": "wcpoa_attachments_id",          "value": ["t7c2nulkdrpf2"] },
+    // Product-level flags that (based on the UI) often need to be true:
+    { "key": "wcpoa_product_page_enable",     "value": ["yes"] },
+    { "key": "wcpoa_product_open_window_flag","value": ["no"] },
+    { "key": "wcpoa_product_logged_in_flag",  "value": ["no"] },
+    { "key": "wcpoa_order_status",            "value": "wc-all" },
+    { "key": "wcpoa_expired_date_enable",     "value": ["no"] }
+  ]
+}
+}}

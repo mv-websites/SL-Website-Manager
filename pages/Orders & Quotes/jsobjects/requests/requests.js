@@ -33,7 +33,7 @@ export default {
 		const myHeaders = {
 			"Content-Disposition": `attachment; filename=${fileObject.name}`,
 			"Content-Type": fileObject.type,
-			"Authorization": "Basic c2wtYXBpLXNlcnZpY2U6UnZQUyAzU1ZZIE5zQ2QgVVMzRiBQa0hDIGs5YmE="
+			"Authorization": variables.pageConstants()['api-auth']
 		};
 
 		const file = fileObject.data;
