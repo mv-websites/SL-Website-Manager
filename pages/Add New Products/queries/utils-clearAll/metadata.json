@@ -25,7 +25,7 @@
     "fullyQualifiedName": "utils.clearAll",
     "name": "clearAll",
     "pageId": "Add New Products",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
