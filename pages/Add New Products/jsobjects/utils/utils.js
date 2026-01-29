@@ -148,6 +148,26 @@ Long Description:`;
 		} else {
 			return []
 		}
+	},
+	populateFields() {
+		const product = Retrieve_a_product.data
+		product_name.setValue(product.name)
+		brand.setSelectedOption(product.ct_brands[0].id)
+		product_sku.setValue(product.sku)
+		category.setSelectedOptions(product.categories.map(cat => (cat.id)))
+		weight.setValue(product.weight)
+		height.setValue(product.dimensions.height)
+		length.setValue(product.dimensions.length)
+		width.setValue(product.dimensions.width)
+		// short_description - Value Set in Element
+		// long_description - Value set in Element
+		const uploadInfoFiltered = {
+				id: product.meta_data.findIndex("key"),
+				fileName: (uploadInfo.guid.rendered).split('/').pop(),
+				url: uploadInfo.guid.rendered
+			}
+			storeValue("uploadInfo", uploadInfoFiltered)
+		return product
 	}
 
 }

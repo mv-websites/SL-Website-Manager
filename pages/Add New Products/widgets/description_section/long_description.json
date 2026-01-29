@@ -3,13 +3,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 74,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "",
+  "defaultText": "{{Retrieve_a_product.data?.description}}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
