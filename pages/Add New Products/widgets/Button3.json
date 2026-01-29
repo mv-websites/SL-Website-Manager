@@ -3,13 +3,10 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 143,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#0061a6",
   "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -34,6 +31,8 @@
   "mobileTopRow": 139,
   "needsErrorInfo": false,
   "onClick": "{{utils.clearAll();}}",
+  "originalBottomRow": 143,
+  "originalTopRow": 139,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,

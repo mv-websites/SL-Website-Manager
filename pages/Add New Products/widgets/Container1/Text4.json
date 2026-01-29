@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,43 +11,40 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
-  "fontStyle": "",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "zyg6204unk",
-  "leftColumn": 25,
+  "key": "1imxj8rl3x",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
-  "mobileLeftColumn": 25,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 4,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "overflow": "SCROLL",
-  "parentColumnSpace": 14.96875,
-  "parentId": "n4n4u69iua",
+  "overflow": "NONE",
+  "parentColumnSpace": 11.1484375,
+  "parentId": "g3o6lu2qx5",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{appsmith.store.uploadInfo? `Uploaded File: ${appsmith.store.uploadInfo.fileName}`: \"\"}}",
-  "textAlign": "CENTER",
-  "textColor": "#15803d",
-  "topRow": 4,
+  "text": "Add Images",
+  "textAlign": "LEFT",
+  "textColor": "#0061a6",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "kh73prlk24",
-  "widgetName": "Text3"
+  "widgetId": "u2gko4na7j",
+  "widgetName": "Text4"
 }
