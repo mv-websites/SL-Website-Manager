@@ -175,7 +175,14 @@ export default {
    * @param {Object} [opts.meta] - { alt_text, caption, title, description }
    * @returns {Promise<Object>} WordPress media object (JSON)
    */
-	async uploadMediaBinaryOrUrl(opts = {}) {
+	async uploadMediaBinaryOrUrl(opts = {
+			imageUrl: "https://assets.catering-appliance.com/media/inside-sqr-2048/62/79/williams-lj1-sa_img183860.jpg",
+			meta: {
+				alt_text: "Product E711 Countertop Convection Oven",
+				title: "Falcon E711 Convection Oven",
+				caption: "Product image",
+				description: "Uploaded from remote source"
+			}}) {
 		const { fileObject, imageUrl, meta } = opts;
 		if (!fileObject && !imageUrl) {
 			throw new Error('Provide either fileObject or imageUrl');
@@ -185,8 +192,9 @@ export default {
 		let bytes;            // Uint8Array
 		let filename;         // string
 		let mime;             // string
-
+		
 		if (fileObject) {
+			
 			// From FilePicker: data URL like "data:image/jpeg;base64,...."
 			const { name, type, data } = fileObject;
 			if (!data?.startsWith('data:')) {
@@ -203,7 +211,13 @@ export default {
 
 		} else {
 			// From remote URL: fetch as Blob and turn into bytes
-			const r = await fetch(imageUrl, { mode: 'cors' }); // may require CORS/allowlist on remote host
+			var r
+			try {console.log(imageUrl)
+				r = await fetch(imageUrl, { mode: 'cors' }); // may require CORS/allowlist on remote host
+			} catch (err) {
+				console.log("ERROR: ", r)
+			}
+
 			if (!r.ok) throw new Error(`Fetch image failed: ${r.status} ${r.statusText}`);
 			const blob = await r.blob();
 			const ab = await blob.arrayBuffer();

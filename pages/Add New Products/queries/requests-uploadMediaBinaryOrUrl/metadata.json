@@ -9,7 +9,7 @@
       "jsArguments": [
         {
           "name": "opts",
-          "value": "{{{}}}"
+          "value": "{{{\n\t\t\timageUrl: \"https://assets.catering-appliance.com/media/inside-sqr-2048/62/79/williams-lj1-sa_img183860.jpg\",\n\t\t\tmeta: {\n\t\t\t\talt_text: \"Product E711 Countertop Convection Oven\",\n\t\t\t\ttitle: \"Falcon E711 Convection Oven\",\n\t\t\t\tcaption: \"Product image\",\n\t\t\t\tdescription: \"Uploaded from remote source\"\n\t\t\t}}}}"
         }
       ],
       "paginationType": "NONE",

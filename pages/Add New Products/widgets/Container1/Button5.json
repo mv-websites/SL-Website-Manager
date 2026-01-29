@@ -25,7 +25,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{Input1.text? false : true}}",
+  "isDisabled": "{{Input1.text? true : true}}",
   "isLoading": false,
   "isVisible": true,
   "key": "g3w710ylpj",

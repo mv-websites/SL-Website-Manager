@@ -121,15 +121,21 @@ Long Description:`;
 	},
 	async addImageFromURL() {
 		const imageObject = {
-			imageUrl: Input1.text
+			imageUrl: Input1.text,
+			meta: {
+				alt_text: "Product E711 Countertop Convection Oven",
+				title: "Falcon E711 Convection Oven",
+				caption: "Product image",
+				description: "Uploaded from remote source"
+			}
 		}
 		try {
 			await requests.uploadMediaBinaryOrUrl(imageObject)
 			showAlert("Uploaded succesfully!", "success")
 			Media_get_images.run()
 			Input1.setValue("")
-		} catch {
-			showAlert(requests.uploadMediaBinary.data, "error")
+		} catch (err) {
+			showAlert(err.message, "error")
 		}
 	},
 	async addImageFromUpload() {
@@ -161,12 +167,12 @@ Long Description:`;
 		width.setValue(product.dimensions.width)
 		// short_description - Value Set in Element
 		// long_description - Value set in Element
-		const uploadInfoFiltered = {
-				id: product.meta_data.findIndex("key"),
-				fileName: (uploadInfo.guid.rendered).split('/').pop(),
-				url: uploadInfo.guid.rendered
-			}
-			storeValue("uploadInfo", uploadInfoFiltered)
+		// const uploadInfoFiltered = {
+		// id: product.meta_data.findIndex("key"),
+		// fileName: (uploadInfo.guid.rendered).split('/').pop(),
+		// url: uploadInfo.guid.rendered
+		// }
+		// storeValue("uploadInfo", uploadInfoFiltered)
 		return product
 	}
 
