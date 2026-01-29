@@ -35,7 +35,7 @@
     "dynamicBindingPathList": [],
     "name": "Retrieve_a_product",
     "pageId": "Add New Products",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
