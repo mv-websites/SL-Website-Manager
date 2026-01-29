@@ -7,7 +7,7 @@
     "metaWidgetId"
   ],
   "animateLoading": true,
-  "backgroundColor": "#d4d4d8",
+  "backgroundColor": "#93c5fd",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 69,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -46,7 +46,7 @@
       "noPad": true,
       "openParentPropertyPane": true,
       "parentColumnSpace": 1,
-      "parentId": "vbgo2cfq3r",
+      "parentId": "wubm8j9j2e",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -54,8 +54,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "cw6hnj3b0k",
-      "widgetName": "Canvas9"
+      "widgetId": "jdsalgbjf1",
+      "widgetName": "Canvas9Copy"
     }
   ],
   "currentItemsView": "{{[]}}",
@@ -83,9 +83,6 @@
     },
     {
       "key": "listData"
-    },
-    {
-      "key": "totalRecordsCount"
     }
   ],
   "dynamicTriggerPathList": [
@@ -103,10 +100,10 @@
   "itemBackgroundColor": "#FFFFFF",
   "itemSpacing": 8,
   "key": "l2cb0ru3vh",
-  "leftColumn": 23,
-  "listData": "{{Media_get_images.data}}",
-  "mainCanvasId": "cw6hnj3b0k",
-  "mainContainerId": "kjll1xumpj",
+  "leftColumn": 49,
+  "listData": "{{appsmith.store.imagesArray}}",
+  "mainCanvasId": "jdsalgbjf1",
+  "mainContainerId": "ulxawflkxo",
   "minWidth": 450,
   "mobileBottomRow": 44,
   "mobileLeftColumn": 0,
@@ -118,18 +115,18 @@
   "parentColumnSpace": 24.9970703125,
   "parentId": "g3o6lu2qx5",
   "parentRowSpace": 10,
-  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{List1Copy.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 37,
+  "rightColumn": 63,
   "selectedItemView": "{{{}}}",
-  "serverSidePagination": true,
+  "serverSidePagination": false,
   "templateHeight": 160,
   "topRow": 4,
-  "totalRecordsCount": "{{Media_get_images.responseMeta.headers[\"X-WP-Tota\"]}}",
+  "totalRecordsCount": "",
   "triggeredItemView": "{{{}}}",
   "type": "LIST_WIDGET_V2",
-  "widgetId": "vbgo2cfq3r",
-  "widgetName": "List1"
+  "widgetId": "wubm8j9j2e",
+  "widgetName": "List1Copy"
 }

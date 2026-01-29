@@ -217,7 +217,7 @@ export default {
 		}
 
 		// ---- 2) Build request -------------------------------------------------
-		const authHeader = variables.pageConstants()['api-auth']; // e.g., "Basic base64(user:app-password)" or "Bearer <token>"
+		const authHeader = variables.pageConstants()['api-auth']; 
 		const myHeaders = {
 			'Content-Disposition': `attachment; filename="${filename}"`,
 			'Content-Type': mime,

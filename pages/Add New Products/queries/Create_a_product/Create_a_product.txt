@@ -11,7 +11,7 @@
 	"brands": [{ "id": brand.selectedOptionValue? brand.selectedOptionValue : ""}],
   "dimensions": { "length": String(length.text), "width": String(width.text), "height": String(height.text) },
   "categories": utils.categoryIdArray(),
-  "images": [{ "id": 14224 }, { "id": 14225 }],
+  "images": utils.convertImagesArrayToIds(),
   "meta_data": [
     { "key": "wcpoa_attachment_name",         "value": ["Specification Sheet"] },
     { "key": "wcpoa_attach_type",             "value": ["file_upload"] },

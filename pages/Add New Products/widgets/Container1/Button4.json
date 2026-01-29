@@ -1,14 +1,22 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 35,
+  "bottomRow": 36,
   "boxShadow": "none",
   "buttonColor": "#0061a6",
-  "buttonVariant": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -16,23 +24,23 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "right",
+  "iconName": "arrow-right",
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{List1.selectedItem? false : true}}",
   "isLoading": false,
   "isVisible": true,
-  "key": "nr5n7hrs0s",
-  "leftColumn": 17,
+  "key": "hpxhxnboqx",
+  "leftColumn": 38,
   "minWidth": 120,
-  "mobileBottomRow": 18,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 14,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 56,
+  "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{utils.generateAiPrompt();}}",
-  "originalBottomRow": 35,
-  "originalTopRow": 31,
+  "onClick": "{{utils.addToLocalImageArray(List1.selectedItem.id, List1.selectedItem.source_url);}}",
   "parentColumnSpace": 30.25,
-  "parentId": "4gl262t40s",
+  "parentId": "g3o6lu2qx5",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -40,10 +48,10 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 48,
-  "text": "Copy Details & Open Copilot",
-  "topRow": 31,
+  "text": "Add",
+  "topRow": 32,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "wxokzqmp56",
-  "widgetName": "go_to_copilot"
+  "widgetId": "5xljcbg0yl",
+  "widgetName": "Button4"
 }

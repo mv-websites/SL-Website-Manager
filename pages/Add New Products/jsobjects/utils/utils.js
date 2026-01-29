@@ -71,8 +71,10 @@ Long Description:`;
 		resetWidget('short_description')
 		resetWidget('long_description')
 		resetWidget('spec_sheet')
+		resetWidget('FilePicker1')
 		Text3.setText("")
 		removeValue("uploadInfo")
+		removeValue("imagesArray")
 	},
 	generateAttachmentCode(length = 13) {
 		const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -101,6 +103,51 @@ Long Description:`;
 			meta: { alt_text: 'Blue sofa', caption: 'New spring range' }
 		});
 		return testVar
+	},
+	async addToLocalImageArray(id, url) {
+		const imageData = { id, url };
+		const current = appsmith.store.imagesArray ?? [];
+		const newArray = [...current, imageData];
+		await storeValue("imagesArray", newArray);
+		resetWidget("List1", true);
+	},
+	async removeImage(idToRemove) {
+		const current = appsmith.store.imagesArray ?? [];
 
+		if (!current.length) return;
+		const newArray = current.filter(img => img.id !== idToRemove);
+		await storeValue("imagesArray", newArray);
+		resetWidget("List1", true);
+	},
+	async addImageFromURL() {
+		const imageObject = {
+			imageUrl: Input1.text
+		}
+		try {
+			await requests.uploadMediaBinaryOrUrl(imageObject)
+			showAlert("Uploaded succesfully!", "success")
+			Media_get_images.run()
+			Input1.setValue("")
+		} catch {
+			showAlert(requests.uploadMediaBinary.data, "error")
+		}
+	},
+	async addImageFromUpload() {
+		try {
+			await requests.uploadMediaBinary(FilePicker1.files[0])
+			showAlert("Succesfully uploaded image!", "success")
+			resetWidget('FilePicker1')
+			Media_get_images.run()
+		} catch {
+			showAlert(requests.uploadMediaBinary.data, "error")
+		}
+	},
+	convertImagesArrayToIds(imagesArray = appsmith.store.imagesArray) {
+		if (imagesArray) {
+			return imagesArray.map(object => ({"id": object.id}))
+		} else {
+			return []
+		}
 	}
+
 }
