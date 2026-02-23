@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowClear": false,
+  "allowClear": true,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,

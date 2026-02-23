@@ -201,7 +201,7 @@
   "mobileTopRow": 15,
   "needsErrorInfo": false,
   "onPageChange": "{{DataFunctions.setTable1Data(Table1.pageNo);}}",
-  "originalBottomRow": 80,
+  "originalBottomRow": 120,
   "originalTopRow": 25,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
