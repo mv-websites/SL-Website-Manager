@@ -1,15 +1,15 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#eed9c4",
+  "backgroundColor": "#f5f7fa",
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 70,
+  "bottomRow": 79,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 200,
+      "bottomRow": 230,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -59,7 +59,7 @@
       "key": "boxShadow"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
@@ -75,8 +75,8 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 15,
   "needsErrorInfo": false,
-  "originalBottomRow": 70,
-  "originalTopRow": 50,
+  "originalBottomRow": 79,
+  "originalTopRow": 56,
   "parentColumnSpace": 22.96875,
   "parentId": "fdsesxha6k",
   "parentRowSpace": 10,
@@ -84,7 +84,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "shouldScrollContents": true,
-  "topRow": 50,
+  "topRow": 56,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "p84muoibk5",
