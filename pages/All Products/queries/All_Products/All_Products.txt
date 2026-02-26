@@ -1,31 +1,48 @@
-SELECT 
+SELECT
     ap.product_id, 
     ap.parent_id, 
     ap.product_type, 
-		pm_sku.meta_value AS sku,
-    wp_posts.post_title AS name, 
-    pm_price.meta_value AS price,
-    replace(img_posts.guid, 'https://dev.service-line.co.uk/', 'https://www.service-line.co.uk/') AS main_image_url,
+    pm._sku AS sku,
+    wp.post_title AS name, 
+    pm._price AS price,
+    REPLACE(img.guid, 
+        'https://dev.service-line.co.uk/', 
+        'https://www.service-line.co.uk/'
+    ) AS main_image_url,
     ap.product_url, 
     ap.all_categories, 
-    ap.hasVariants, 
+    ap.hasVariants,
     s.name AS supplier,
-		s.discount AS supplier_discount,
-		ps.markup_percent AS product_markup,
-		ps.aq_list_price,
-		ps.id as product_supplier_id
+    s.discount AS supplier_discount,
+    ps.markup_percent AS product_markup,
+    ps.aq_list_price,
+    ps.id AS product_supplier_id,
+    pm.delivery_fee,
+    pm.delivery_type
 FROM wp_qyxos.all_products ap
-LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps ON ap.product_id = ps.product_id
-LEFT JOIN wp_qyxos.WrARJWM7_suppliers s ON ps.supplier_id = s.id
-LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_price ON ap.product_id = pm_price.post_id 
-    AND pm_price.meta_key = '_price'
-LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_sku ON ap.product_id = pm_sku.post_id 
-    AND pm_sku.meta_key = '_sku'
-LEFT JOIN wp_qyxos.WrARJWM7_postmeta pm_thumb ON ap.product_id = pm_thumb.post_id 
-    AND pm_thumb.meta_key = '_thumbnail_id'
-LEFT JOIN wp_qyxos.WrARJWM7_posts img_posts ON pm_thumb.meta_value = img_posts.ID
-LEFT JOIN wp_qyxos.WrARJWM7_posts wp_posts ON ap.product_id = wp_posts.ID
+-- Supplier info
+LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps 
+       ON ap.product_id = ps.product_id
+LEFT JOIN wp_qyxos.WrARJWM7_suppliers s 
+       ON ps.supplier_id = s.id
+-- All postmeta in ONE pivoted join
+LEFT JOIN (
+    SELECT 
+        post_id,
+        MAX(CASE WHEN meta_key = '_price' THEN meta_value END) AS _price,
+        MAX(CASE WHEN meta_key = '_sku' THEN meta_value END) AS _sku,
+        MAX(CASE WHEN meta_key = '_thumbnail_id' THEN meta_value END) AS thumbnail_id,
+        MAX(CASE WHEN meta_key = 'delivery_fee' THEN meta_value END) AS delivery_fee,
+        MAX(CASE WHEN meta_key = 'delivery_type' THEN meta_value END) AS delivery_type
+    FROM wp_qyxos.WrARJWM7_postmeta
+    GROUP BY post_id
+) pm ON ap.product_id = pm.post_id
+-- Image post
+LEFT JOIN wp_qyxos.WrARJWM7_posts img 
+       ON pm.thumbnail_id = img.ID
+-- Product post
+LEFT JOIN wp_qyxos.WrARJWM7_posts wp 
+       ON ap.product_id = wp.ID
 WHERE ap.parent_id = 0
-	AND NOT FIND_IN_SET('Accessories', ap.all_categories)
-GROUP BY ap.product_id, ap.parent_id, ap.product_type
-ORDER BY pm_sku.meta_value ASC;
+  AND NOT FIND_IN_SET('Accessories', ap.all_categories)
+ORDER BY ap.product_id DESC;

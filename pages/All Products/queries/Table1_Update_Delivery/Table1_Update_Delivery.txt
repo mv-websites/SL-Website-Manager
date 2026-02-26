@@ -1,0 +1,8 @@
+{
+    "meta_data": [
+        {
+            "key": "delivery_fee",
+            "value": {{this.params.delivery_fee}}
+        }
+    ]
+}

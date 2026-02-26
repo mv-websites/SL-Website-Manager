@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 108,
+  "bottomRow": 116,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,8 +33,8 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 105,
   "needsErrorInfo": false,
-  "originalBottomRow": 108,
-  "originalTopRow": 104,
+  "originalBottomRow": 116,
+  "originalTopRow": 112,
   "overflow": "NONE",
   "parentColumnSpace": 35.328125,
   "parentId": "0",
@@ -40,10 +43,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 55,
   "shouldTruncate": false,
-  "text": "HELP: Does the website dislay different information to the data in this table? Select the 'Refresh Wordpress Lookup Tables' button on the right and wait a few minutes before refreshing table data.",
+  "text": "HELP: Does the website dislay different information to the data in this table? Select the 'Refresh Wordpress Lookup Tables' button on the right and wait a few minutes before refreshing table data. {{Table1.selectedRow.delivery_type}} {{Table1.selectedRow.delivery_fee}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 104,
+  "topRow": 112,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

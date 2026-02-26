@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 23,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,7 +30,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
+  "originalBottomRow": 23,
   "originalTopRow": 18,
   "overflow": "NONE",
   "parentColumnSpace": 35.328125,
@@ -38,7 +38,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 36,
+  "rightColumn": 16,
   "shouldTruncate": false,
   "text": "All changes will be applied to the website immediately. Refreshing the table will then pull in the latest information from the live site.",
   "textAlign": "LEFT",

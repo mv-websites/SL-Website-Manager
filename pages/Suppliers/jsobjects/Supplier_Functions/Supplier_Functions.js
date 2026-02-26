@@ -1,10 +1,25 @@
 export default {
-	calculatePrice (listPrice, supplierDiscount, markup) {
-		supplierDiscount = supplierDiscount/100;
-		markup = markup/100;
-		const priceAfterSupplierDiscount = (listPrice * (1-supplierDiscount)) || 1;
-		const price = (priceAfterSupplierDiscount === 1 ? null : (priceAfterSupplierDiscount * (1+markup)).toFixed(2))
-		return `${price}`
+	// calculatePrice (listPrice, supplierDiscount, markup) {
+		// supplierDiscount = supplierDiscount/100;
+		// markup = markup/100;
+		// const priceAfterSupplierDiscount = (listPrice * (1-supplierDiscount)) || 1;
+		// const price = (priceAfterSupplierDiscount === 1 ? null : (priceAfterSupplierDiscount * (1+markup)).toFixed(2))
+		// return `${price}`
+	// },
+		calculatePrice(listPrice, supplierDiscount, markup, deliveryFee) {
+		supplierDiscount = Number(supplierDiscount) / 100;
+		markup = Number(markup) / 100;
+
+		const priceAfterSupplierDiscount = Number(listPrice) * (1 - supplierDiscount);
+		const priceNum = priceAfterSupplierDiscount * (1 + markup);
+
+		const deliveryNum = Number(deliveryFee) || 0;
+
+		// Keep console for debugging
+		console.log("PRICE + DELIVERY: ", priceNum, '+', deliveryNum, '=', priceNum + deliveryNum);
+
+		// Return as string with 2 decimals (or as number, up to you)
+		return (priceNum + deliveryNum).toFixed(2);
 	},
 	async updateProductPricing () {
 		storeValue("loadingStatus", 0);

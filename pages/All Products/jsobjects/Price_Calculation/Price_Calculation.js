@@ -1,10 +1,19 @@
 export default{
-	calculatePrice (listPrice, supplierDiscount, markup) {
-		supplierDiscount = supplierDiscount/100;
-		markup = markup/100;
-		const priceAfterSupplierDiscount = (listPrice * (1-supplierDiscount)) || 1;
-		const price = priceAfterSupplierDiscount === 1 ? null : (priceAfterSupplierDiscount * (1+markup)).toFixed(2)
-		return `${price}`
+	calculatePrice(listPrice, supplierDiscount, markup, deliveryFee) {
+		console.log("calculatePrice Delivery Fee: ", deliveryFee);
+		supplierDiscount = Number(supplierDiscount) / 100;
+		markup = Number(markup) / 100;
+
+		const priceAfterSupplierDiscount = Number(listPrice) * (1 - supplierDiscount);
+		const priceNum = priceAfterSupplierDiscount * (1 + markup);
+
+		const deliveryNum = Number(deliveryFee) || 0;
+
+		// Keep console for debugging
+		console.log("PRICE + DELIVERY: ", priceNum, '+', deliveryNum, '=', priceNum + deliveryNum);
+
+		// Return as string with 2 decimals (or as number, up to you)
+		return (priceNum + deliveryNum).toFixed(2);
 	},
 	/**
 	* UPDATE PRICE FOR SIMPLE PRODUCTS
@@ -15,11 +24,12 @@ export default{
 			"product_id": Table1.updatedRow.product_id
 		})
 		const supplierDiscount = response[0].discount;
-		
+
 		// Calculate new price using updated row information
-		const updatedPrice = Price_Calculation.calculatePrice(Table1.updatedRow.aq_list_price, supplierDiscount, Table1.updatedRow.product_markup);
-		
-    // Update the price using WordPress update simple product API
+		const updatedPrice = Price_Calculation.calculatePrice(Table1.updatedRow.aq_list_price, supplierDiscount, Table1.updatedRow.product_markup, Table1.updatedRow.delivery_fee);
+		// console.log("UPDATED PRICE: ", updatedPrice)
+
+		// Update the price using WordPress update simple product API
 		try {
 			const response = await Table1_Update_Price.run({
 				body: {
@@ -33,7 +43,7 @@ export default{
 		} catch (err) {
 			console.log("API error:", err);
 			showAlert("Failed to Update", "error")
-    	return err;
+			return err;
 		}
 	},
 	/**
@@ -41,8 +51,8 @@ export default{
 	*/
 	async updatePriceVariation () {
 		// Calculate new price using updated row information
-		const updatedPrice = Price_Calculation.calculatePrice(Modal_Table.updatedRow.aq_list_price, JSON.parse(appsmith.store.modalValues).supplier_discount, JSON.parse(appsmith.store.modalValues).markup);
-		
+		const updatedPrice = Price_Calculation.calculatePrice(Modal_Table.updatedRow.aq_list_price, JSON.parse(appsmith.store.modalValues).supplier_discount, JSON.parse(appsmith.store.modalValues).markup, JSON.parse(appsmith.store.modalValues).delivery_fee);
+
 		// Update the price using WordPress update product variation API
 		try {
 			console.log("UPDATED PRICE: ", updatedPrice)
@@ -59,7 +69,7 @@ export default{
 		} catch (err) {
 			console.log("API error:", err);
 			showAlert("Failed to Update", "error")
-    	return err;
+			return err;
 		}
 	},
 	/**
@@ -73,14 +83,14 @@ export default{
 		const supplierDiscount = response[0].discount;
 		const variableProducts = await Custom_Queries.getVariations(JSON.parse(appsmith.store.modalValues).id)
 		const updatedPriceList = variableProducts.map((product) => {
-			const newPrice = Price_Calculation.calculatePrice(product.aq_list_price, supplierDiscount, Table1.updatedRow.product_markup)
-			
+			const newPrice = Price_Calculation.calculatePrice(product.aq_list_price, supplierDiscount, Table1.updatedRow.product_markup, Table1.updatedRow.delivery_fee)
+
 			return {
 				"id": product.product_id,
 				"regular_price": newPrice
 			}
 		})
-		
+
 		// Update the price using WordPress update product variation API
 		try {
 			const response = await Bulk_Update_Variations.run({
@@ -93,7 +103,7 @@ export default{
 		} catch (err) {
 			console.log("API error:", err);
 			showAlert("Failed to Update Variations", "error")
-    	return err;
+			return err;
 		}
 	}
 }
