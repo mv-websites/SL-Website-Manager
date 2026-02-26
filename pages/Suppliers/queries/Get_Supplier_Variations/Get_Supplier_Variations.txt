@@ -18,7 +18,8 @@ SELECT
 
     -- variant-specific fields
     ps_variant.aq_list_price,
-    ps_variant.id AS variant_product_supplier_id
+    ps_variant.id AS variant_product_supplier_id,
+		COALESCE(df.meta_value, 0) AS delivery_fee
 
 FROM wp_qyxos.all_products ap
 
@@ -31,6 +32,9 @@ LEFT JOIN wp_qyxos.WrARJWM7_suppliers s
 -- join variant's own supplier info
 LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps_variant
     ON ap.product_id = ps_variant.product_id
+LEFT JOIN wp_qyxos.WrARJWM7_postmeta df
+    ON ps_variant.product_id = df.post_id
+    AND df.meta_key = 'delivery_fee'
 
 WHERE ap.parent_id != 0
   AND ap.parent_id = {{this.params.parent_id}};

@@ -1,11 +1,4 @@
 export default {
-	// calculatePrice (listPrice, supplierDiscount, markup) {
-		// supplierDiscount = supplierDiscount/100;
-		// markup = markup/100;
-		// const priceAfterSupplierDiscount = (listPrice * (1-supplierDiscount)) || 1;
-		// const price = (priceAfterSupplierDiscount === 1 ? null : (priceAfterSupplierDiscount * (1+markup)).toFixed(2))
-		// return `${price}`
-	// },
 		calculatePrice(listPrice, supplierDiscount, markup, deliveryFee) {
 		supplierDiscount = Number(supplierDiscount) / 100;
 		markup = Number(markup) / 100;
@@ -32,7 +25,7 @@ export default {
 		for (let i = 0; i < loopCount; i++) {
 			const products = await Get_Supplier_Products.run({ offsetVar: i * 100 });
 			const mappedProducts = products.map((val) => {
-				const newPrice = Supplier_Functions.calculatePrice(val.aq_list_price, val.supplier_discount, val.product_markup)
+				const newPrice = Supplier_Functions.calculatePrice(val.aq_list_price, val.supplier_discount, val.product_markup, val.delivery_fee)
 				return {
 					"id": val.product_id,
 					"regular_price": newPrice
@@ -58,7 +51,7 @@ export default {
 					const variations = await Get_Supplier_Variations.run({"parent_id": id.parent_product_id});
 
 					const childVariations = variations.map((variation) => {
-						const newPrice = Supplier_Functions.calculatePrice(variation.aq_list_price, variation.supplier_discount, variation.product_markup)
+						const newPrice = Supplier_Functions.calculatePrice(variation.aq_list_price, variation.supplier_discount, variation.product_markup, variation.delivery_fee)
 						return {
 							"id": variation.product_id,
 							"regular_price": newPrice

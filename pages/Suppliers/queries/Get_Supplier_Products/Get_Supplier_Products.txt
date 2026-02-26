@@ -13,12 +13,16 @@ SELECT
 		s.discount AS supplier_discount,
 		ps.markup_percent AS product_markup,
 		ps.aq_list_price,
-		ps.id as product_supplier_id
+		ps.id as product_supplier_id,
+		COALESCE(df.meta_value, 0) AS delivery_fee
 FROM wp_qyxos.all_products ap
 LEFT JOIN wp_qyxos.WrARJWM7_product_suppliers ps 
     ON ap.product_id = ps.product_id
 LEFT JOIN wp_qyxos.WrARJWM7_suppliers s 
     ON ps.supplier_id = s.id
+LEFT JOIN wp_qyxos.WrARJWM7_postmeta df
+    ON ps.product_id = df.post_id
+    AND df.meta_key = 'delivery_fee'
 WHERE ap.parent_id = 0
 	AND s.id = {{Table1.updatedRow.id}}
 LIMIT
