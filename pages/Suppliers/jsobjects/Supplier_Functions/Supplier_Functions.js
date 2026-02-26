@@ -17,7 +17,7 @@ export default {
 	async updateProductPricing () {
 		storeValue("loadingStatus", 0);
 		showModal(LoadingModal.name)
-		const count = await Supplier_Product_Count.run({"id": Table1.updatedRow.id})
+		const count = await Supplier_Product_Count.run({"id": Table1.selectedRow.id})
 		const loopCount = Math.ceil((count[0]?.row_count || 1)/100);		
 		
 		// Update parent products
