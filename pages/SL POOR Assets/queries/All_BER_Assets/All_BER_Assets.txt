@@ -12,4 +12,5 @@ SELECT
     [EQ_CODE_(DB)] AS eq_code
 FROM MV_Customer.dbo.LiveEquipment
 WHERE Equip_Status_Description = 'SL POOR'
+	OR Equip_Status_Description = '10/SERVICEABLE'
 AND isServiceline = 'Yes';
