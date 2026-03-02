@@ -39,7 +39,7 @@ export default {
 	},
 	async getMergedEquipmentData() {
 		try {
-			showModal(Loading_Modal.name)
+			// showModal(Loading_Modal.name)
 			const liveEquipmentRows = await utils.BER_Assets_v3(); // await BER_Assets.run();
 			
 			// Get a list of refs to make more efficient queries and exclude unused data from queries below
@@ -91,7 +91,7 @@ export default {
 			storeValue("all_assets_ber", mergedData);
 			// All_Assets_BER.setData(mergedData);
 			Loading_Text.setText("")
-			closeModal(Loading_Modal.name)
+			// closeModal(Loading_Modal.name)
 			return mergedData;
 
 		} catch (error) {
