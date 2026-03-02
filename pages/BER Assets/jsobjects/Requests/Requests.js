@@ -39,11 +39,13 @@ export default {
 	},
 	async getMergedEquipmentData() {
 		try {
+			showModal(Loading_Modal.name)
 			const liveEquipmentRows = await utils.BER_Assets_v3(); // await BER_Assets.run();
 			
 			// Get a list of refs to make more efficient queries and exclude unused data from queries below
 			const allEquipmentRefs = liveEquipmentRows.map(asset => {return asset.eq_code})
 			
+			Loading_Text.setText("Merging custom data into assets")
 			const replacementRows = await Get_All_Asset_Rep_Stat.run({eq_refs: allEquipmentRefs});
 			const EqBerLinks = await Get_BER_Links.run({eq_refs: allEquipmentRefs})
 			
@@ -88,6 +90,8 @@ export default {
 
 			storeValue("all_assets_ber", mergedData);
 			// All_Assets_BER.setData(mergedData);
+			Loading_Text.setText("")
+			closeModal(Loading_Modal.name)
 			return mergedData;
 
 		} catch (error) {

@@ -1,6 +1,8 @@
 export default {
 	async BER_Assets_v3 () {
+		Loading_Text.setText("Fetching Siclops data")
 		const live = await All_BER_Assets.run(); // from DB1
+		Loading_Text.setText("Checking which assets have have replacement options assigned")
 		const replacements = await Assets_With_Replacement_Select.run(); // from DB2
 
 		// Create a Set of all replacement eq_codes for fast lookup
