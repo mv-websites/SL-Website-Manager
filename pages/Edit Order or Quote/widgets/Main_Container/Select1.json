@@ -20,6 +20,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -29,6 +32,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -40,7 +46,7 @@
   "isFilterable": false,
   "isLoading": false,
   "isRequired": true,
-  "isVisible": true,
+  "isVisible": "{{Project_Totals.isSwitchedOn}}",
   "key": "fe9hbfmr6p",
   "labelAlignment": "left",
   "labelPosition": "Top",

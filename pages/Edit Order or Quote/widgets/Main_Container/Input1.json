@@ -18,12 +18,18 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -32,7 +38,7 @@
   "isDisabled": "{{List1.listData.length > 0? false : true}}",
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{Project_Totals.isSwitchedOn}}",
   "key": "gq6m25fe14",
   "label": "£",
   "labelAlignment": "right",

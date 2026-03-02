@@ -27,6 +27,12 @@ export default {
 					"total": Input1.text.toString()
 				}
 			],
+			"meta_data": [
+				{
+					"key": "_project_totals",
+					"value": Project_Totals.isSwitchedOn? "true": "false"
+				}
+			],
 			"shipping": {
 				"first_name": ShipToFname.text,
 				"last_name": ShipToLname.text,

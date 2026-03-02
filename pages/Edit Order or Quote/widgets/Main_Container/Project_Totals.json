@@ -1,0 +1,52 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "RIGHT",
+  "animateLoading": true,
+  "bottomRow": 177,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{\n(Retrieve_an_order.data?.meta_data?.find(m => m.key === '_project_totals')?.value) ?? false\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "5rcyzg0tqy",
+  "label": "Project Totals",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
+  "leftColumn": 39,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 173,
+  "mobileLeftColumn": 27,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 169,
+  "needsErrorInfo": false,
+  "originalBottomRow": 177,
+  "originalTopRow": 173,
+  "parentColumnSpace": 30.25,
+  "parentId": "op43a4znbo",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 50,
+  "topRow": 173,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "yg7bct1dxn",
+  "widgetName": "Project_Totals"
+}
