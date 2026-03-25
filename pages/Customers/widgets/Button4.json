@@ -32,6 +32,8 @@
   "mobileTopRow": 15,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('https://alicloud.sharepoint.com/:x:/r/sites/AccountManagement876/_layouts/15/Doc2.aspx?action=edit&sourcedoc=%7Ba84ed322-fcad-4db3-aafd-7181cd378b43%7D&wdOrigin=TEAMS-MAGLEV.teamsSdk_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1753795137478&web=1&wdLOR=cE21E9C89-1741-F94F-96F3-A73F2B0692C1', {}, 'NEW_WINDOW');}}",
+  "originalBottomRow": 19,
+  "originalTopRow": 15,
   "parentColumnSpace": 30.5625,
   "parentId": "0",
   "parentRowSpace": 10,

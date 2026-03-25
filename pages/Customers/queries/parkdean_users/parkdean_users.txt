@@ -1,0 +1,13 @@
+SELECT
+    um.umeta_id,
+    u.ID AS user_id,
+    um.meta_key,
+    FROM_UNIXTIME(um.meta_value) AS last_login_datetime,
+    u.display_name,
+    u.user_email
+FROM wp_qyxos.WrARJWM7_users u
+LEFT JOIN wp_qyxos.WrARJWM7_usermeta um
+    ON um.user_id = u.ID
+    AND um.meta_key = 'wfls-last-login'
+WHERE u.user_email LIKE '%@Parkdean-resorts.com'
+ORDER BY last_login_datetime DESC;
