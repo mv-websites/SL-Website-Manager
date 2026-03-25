@@ -14,7 +14,12 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -27,6 +32,7 @@
   "mobileRightColumn": 39,
   "mobileTopRow": 121,
   "needsErrorInfo": false,
+  "onClick": "{{showModal(Parkdean_Resorts.name);}}",
   "originalBottomRow": 121,
   "originalTopRow": 112,
   "parentColumnSpace": 30.5625,
