@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    um.umeta_id,\n    u.ID AS user_id,\n    um.meta_key,\n    FROM_UNIXTIME(um.meta_value) AS last_login_datetime,\n    u.display_name,\n    u.user_email\nFROM wp_qyxos.WrARJWM7_users u\nLEFT JOIN wp_qyxos.WrARJWM7_usermeta um\n    ON um.user_id = u.ID\n    AND um.meta_key = 'wfls-last-login'\nWHERE u.user_email LIKE '%@Parkdean-resorts.com'\nORDER BY last_login_datetime DESC;\n",
+      "body": "SELECT\n    um.umeta_id,\n    u.ID AS user_id,\n    um.meta_key,\n    FROM_UNIXTIME(um.meta_value) AS last_login_datetime,\n    u.display_name,\n    u.user_email\nFROM wp_qyxos.WrARJWM7_users u\nLEFT JOIN wp_qyxos.WrARJWM7_usermeta um\n    ON um.user_id = u.ID\n    AND um.meta_key = 'wfls-last-login'\nWHERE u.user_email LIKE '%@Parkdean-resorts.com'\nORDER BY last_login_datetime DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

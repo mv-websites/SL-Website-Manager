@@ -48,7 +48,7 @@
     ],
     "name": "List_all_brands",
     "pageId": "Add New Products",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

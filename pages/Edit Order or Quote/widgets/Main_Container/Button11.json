@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 159,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "duplicate",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "8xhzp29pdf",
+  "leftColumn": 10,
+  "minWidth": 120,
+  "mobileBottomRow": 159,
+  "mobileLeftColumn": 10,
+  "mobileRightColumn": 26,
+  "mobileTopRow": 155,
+  "needsErrorInfo": false,
+  "onClick": "{{copyToClipboard('Free shipping\\nDelivery, installation, training, and removal of old equipment are provided free of charge for all products that require professional installation. Items that do not require installation such as microwaves, toasters, and similar appliances are supplied with free kerbside delivery only.').then(() => {\n  showAlert('Copied!', '');\n});}}",
+  "parentColumnSpace": 30.25,
+  "parentId": "op43a4znbo",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 21,
+  "text": "Copy 'Free Shipping' Text",
+  "topRow": 155,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2buyb5fpof",
+  "widgetName": "Button11"
+}
