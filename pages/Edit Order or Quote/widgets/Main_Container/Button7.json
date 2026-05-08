@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 179,
+  "bottomRow": 177,
   "boxShadow": "none",
   "buttonColor": "#0061a6",
   "buttonVariant": "SECONDARY",
@@ -43,7 +43,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 8,
   "text": "Download",
-  "topRow": 170,
+  "topRow": 168,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "rbhxcs0iww",
