@@ -26,6 +26,10 @@
         {
           "key": "per_page",
           "value": "100"
+        },
+        {
+          "key": "page",
+          "value": "{{this.params.page}}"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -37,10 +41,17 @@
       "name": "Wordpress APIs",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "path"
+      },
+      {
+        "key": "queryParameters[1].value"
+      }
+    ],
     "name": "Get_Categories",
     "pageId": "SL POOR Assets",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

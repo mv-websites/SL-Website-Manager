@@ -33,5 +33,13 @@ export default {
 			showAlert(err.message, "error")
 		}
 	},
+	async replacementOptionsModal(replacementTier) {
+		storeValue('replacementTier', replacementTier)
+		
+		DataFunctions.categoryDropdownData.data.length === 0?? await DataFunctions.categoryDropdownData();
+		
+		await DataFunctions.setTable1Data()
+		showModal(Replacement_Options_Modal.name)
+	}
 
 }

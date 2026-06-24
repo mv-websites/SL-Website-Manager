@@ -32,7 +32,7 @@ export default {
 	},
 	async setTable1Data (page, search) {
 		storeValue("isTableLoading", true); 
-		
+
 		const products = await DataFunctions.getProductsQuery(page, search);
 
 		storeValue("products", products);  
@@ -40,16 +40,31 @@ export default {
 		storeValue("isTableLoading", false); 
 	},
 	categoryTreeTransform(categories, parentId = 0) {
-    function buildTree(cats, parent) {
-    return cats
-      .filter(cat => cat.parent === parent)
-      .map(cat => ({
-        label: cat.name,
-        value: String(cat.id),
-        children: buildTree(cats, cat.id)
-      }));
-  }
+		function buildTree(cats, parent) {
+			return cats
+				.filter(cat => cat.parent === parent)
+				.map(cat => ({
+				label: cat.name,
+				value: String(cat.id),
+				children: buildTree(cats, cat.id)
+			}));
+		}
 
-  return buildTree(categories, parentId);
+		return buildTree(categories, parentId);
+	},
+	async categoryDropdownData() {
+		var isMoreCats = 1
+		var allCategories = []
+		var page = 1
+
+		while (isMoreCats) {
+			const categoryRequest = await Get_Categories.run({ page })
+			
+			allCategories.push(...categoryRequest);
+
+			categoryRequest.length === 100? page++ : isMoreCats = 0;
+
+		}
+		return DataFunctions.categoryTreeTransform(allCategories)
 	}
 }

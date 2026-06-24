@@ -29,7 +29,7 @@
         },
         {
           "key": "page",
-          "value": "1"
+          "value": "{{this.params.page}}"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -41,10 +41,17 @@
       "name": "Wordpress APIs",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "path"
+      },
+      {
+        "key": "queryParameters[1].value"
+      }
+    ],
     "name": "Get_Categories",
     "pageId": "BER Assets",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

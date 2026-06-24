@@ -44,7 +44,7 @@
   "mobileTopRow": 13,
   "needsErrorInfo": false,
   "onOptionChange": "{{DataFunctions.setTable1Data('1', '', );}}",
-  "options": "{{DataFunctions.categoryTreeTransform(Get_Categories.data)}}",
+  "options": "{{DataFunctions.categoryDropdownData.data}}",
   "originalBottomRow": 18,
   "originalTopRow": 11,
   "parentColumnSpace": 21.1875,
